@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <string>
+#include "toppings.h"
 
 using namespace std;
 
@@ -23,9 +24,17 @@ private:
     string base;
     int price;
     string place;
+    string toppings;
+    string other;
+    int numberOfToppings;
+    //Topping *toppings;
+    //int toppingCount;
     
 public:
+    UmsjonUI();
+    //int numberOfToppings(int _toppingCount);
     void umsjonUI();
+    //void addTopping(Topping topping);
     
 };
 
