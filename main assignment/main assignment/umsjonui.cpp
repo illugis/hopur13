@@ -13,23 +13,56 @@
 
 using namespace std;
 
+UmsjonUI::UmsjonUI() {
+    size = 12;
+    base = "þykkur";
+    price = 1000;
+    place = "";
+    
+}
+/*int UmsjonUI::numberOfToppings(int _toppingCount){
+    toppingCount = _toppingCount;
+    toppings = new Topping[_toppingCount];
+    
+    return _toppingCount;
+}
+void UmsjonUI::addTopping(Topping topping){
+    toppings[] = topping;
+}
+*/
 void UmsjonUI::umsjonUI() {
     
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
     cin >> size;
     
-    cout << '\t' << "Botn: ";
+    cout << '\t' << "Botn(þykkur eða þunnur): ";
+    cin >> base;
     cin >> base;
     
+    cout << "Hversu margar áleggstegundir? ";
+    cin >> numberOfToppings;
+    cout << "Hvaða álegg?" << endl;
+    for(int i = 0; i < numberOfToppings; i++){
+        cin >> toppings;
+    }
+
+    cout << "Ákveðnar samsetningar: " ;
     cout << endl;
     
-    cout << "Áleggstegundir: ";
-
-    cout << "Ákveðnar samsetningar: ";
     
-    cout << "Annað: ";
-    
+    cout << "Annað(y/n)? ";
+    char svar;
+    do{
+        cin >> svar;
+        
+        if(svar == 'y'){
+            cout << "brauðstangir og/eða gos? ";
+            cin >> other;
+            svar = 'n';
+        }
+    }
+    while(svar != 'n');
     cout << "Verð: ";
     cin >> price;
     

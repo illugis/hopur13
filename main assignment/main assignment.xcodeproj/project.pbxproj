@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		648446F51FD06DC400018D02 /* toppings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 648446F31FD06DC400018D02 /* toppings.cpp */; };
 		E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8AF1FCC3E4900C9F531 /* main.cpp */; };
 		E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8DF1FD0249500C9F531 /* mainui.cpp */; };
 		E29EC8E41FD02CF100C9F531 /* umsjonui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8E21FD02CF100C9F531 /* umsjonui.cpp */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		648446F31FD06DC400018D02 /* toppings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = toppings.cpp; sourceTree = "<group>"; };
+		648446F41FD06DC400018D02 /* toppings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toppings.h; sourceTree = "<group>"; };
 		E29EC8AC1FCC3E4900C9F531 /* main assignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "main assignment"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29EC8AF1FCC3E4900C9F531 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E29EC8DF1FD0249500C9F531 /* mainui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mainui.cpp; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				E29EC8AF1FCC3E4900C9F531 /* main.cpp */,
 				E29EC8DF1FD0249500C9F531 /* mainui.cpp */,
 				E29EC8E21FD02CF100C9F531 /* umsjonui.cpp */,
+				648446F31FD06DC400018D02 /* toppings.cpp */,
+				648446F41FD06DC400018D02 /* toppings.h */,
 				E29EC8E51FD0355700C9F531 /* sala.cpp */,
 				E29EC8E61FD0355700C9F531 /* sala.h */,
 				E29EC8E31FD02CF100C9F531 /* umsjonui.h */,
@@ -148,6 +153,7 @@
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,
 				E29EC8E71FD0355700C9F531 /* sala.cpp in Sources */,
 				E29EC8ED1FD0423200C9F531 /* afhending.cpp in Sources */,
+				648446F51FD06DC400018D02 /* toppings.cpp in Sources */,
 				E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

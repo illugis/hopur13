@@ -12,7 +12,6 @@
 
 using namespace std;
 
-void BaksturUI::baksturUI {
-    
+void BaksturUI::baksturUI() {
     
 }

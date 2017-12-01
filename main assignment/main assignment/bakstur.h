@@ -21,6 +21,7 @@ private:
     
     
 public:
+    void baksturUI();
     
     
 };

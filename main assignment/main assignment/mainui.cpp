@@ -29,7 +29,7 @@ void MainUI::startUI() {
         cin >> selection;
         
         if (selection == 'u') {
-            <#statements#>
+            umsjonui.umsjonUI();
         }
         else if (selection == 's') {
             
