@@ -7,3 +7,25 @@
 //
 
 #include "afhending.h"
+
+
+void AfhendingUI::afhendingUI(){
+    
+    cout << "Hver er þinn afhendingarstaður? ";
+    cout << umsjonui.getPlace() << endl;
+    
+    cout << "Listi af pöntunum fyrir " << umsjonui.getPlace() << ":" << endl;
+    //listi (ifstream örugglega)
+    
+    cout << "Tilbúnar pantanir fyrir " << umsjonui.getPlace() << ":" << endl;
+    //listi
+    
+    cout << "Veldu pöntun: " << endl;
+    
+    cout << "Hefur pöntun verið greidd(y/n)? ";
+    cin >> greitt;
+    
+    cout << "Hefur pöntun verið afhent(y/n)? ";
+    cin >> afhent;
+    
+}

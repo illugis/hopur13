@@ -10,6 +10,7 @@
 #define __main_assignment__bakstur__
 
 #include <stdio.h>
+#include "umsjonui.h"
 
 #include <iostream>
 
@@ -18,6 +19,7 @@ using namespace std;
 class BaksturUI {
     
 private:
+    UmsjonUI umsjonui;
     
     
 public:

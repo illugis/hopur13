@@ -20,6 +20,7 @@ class SalaUI {
 private:
     
     
+    
 public:
     void salaUI();
     

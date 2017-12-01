@@ -14,5 +14,4 @@ using namespace std;
 
 void SalaUI::salaUI() {
     
-    
 }
