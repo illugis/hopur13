@@ -14,9 +14,9 @@
 using namespace std;
 
 UmsjonUI::UmsjonUI() {
-    size = 12;
-    base = "þykkur";
-    price = 1000;
+    size = 0;
+    base = "";
+    price = 0;
     place = "";
     
 }
@@ -38,13 +38,13 @@ void UmsjonUI::umsjonUI() {
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
     cin >> size;
-    
     cout << '\t' << "Botn(þykkur eða þunnur): ";
     cin >> base;
     cin >> base;
     
     cout << "Hversu margar áleggstegundir? ";
     cin >> numberOfToppings;
+    
     cout << "Hvaða álegg?" << endl;
     for(int i = 0; i < numberOfToppings; i++){
         cin >> toppings;
@@ -53,19 +53,19 @@ void UmsjonUI::umsjonUI() {
     cout << "Ákveðnar samsetningar: " ;
     cout << endl;
     
-    
     cout << "Annað(y/n)? ";
     char svar;
     do{
         cin >> svar;
         
         if(svar == 'y'){
-            cout << "brauðstangir og/eða gos? ";
+            cout << "Brauðstangir og/eða gos? ";
             cin >> other;
             svar = 'n';
         }
     }
     while(svar != 'n');
+    
     cout << "Verð: ";
     cin >> price;
     

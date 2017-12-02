@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7AC5B1D7-198F-4291-94BF-DA3BF7027965</string>
+	<key>IDESourceControlProjectName</key>
+	<string>main assignment</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E25D2EFF4058796A68AB05A878F7DCA0D506400C</key>
+		<string>https://github.com/illugis/hopur13.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>main assignment/main assignment.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E25D2EFF4058796A68AB05A878F7DCA0D506400C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/illugis/hopur13.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E25D2EFF4058796A68AB05A878F7DCA0D506400C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E25D2EFF4058796A68AB05A878F7DCA0D506400C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hopur13</string>
+		</dict>
+	</array>
+</dict>
+</plist>

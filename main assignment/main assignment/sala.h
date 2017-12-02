@@ -18,7 +18,8 @@ using namespace std;
 class SalaUI {
     
 private:
-    
+    string delivery;
+    char payment;
     
     
 public:
