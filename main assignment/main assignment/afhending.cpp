@@ -24,6 +24,10 @@ void AfhendingUI::afhendingUI(){
     
     cout << "Hefur pöntun verið greidd(y/n)? ";
     cin >> greitt;
+   /* if(greitt == 'y'){
+        ofstream fout;
+        fout....
+    }*/
     
     cout << "Hefur pöntun verið afhent(y/n)? ";
     cin >> afhent;
