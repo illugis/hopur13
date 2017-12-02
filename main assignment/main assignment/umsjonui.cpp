@@ -30,6 +30,9 @@ void UmsjonUI::addTopping(Topping topping){
     toppings[] = topping;
 }
 */
+string UmsjonUI::getPlace(){
+    return place;
+}
 void UmsjonUI::umsjonUI() {
     
     cout << "Skrá gerð af pizzu" << endl;

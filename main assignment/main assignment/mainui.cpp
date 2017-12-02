@@ -32,13 +32,13 @@ void MainUI::startUI() {
             umsjonui.umsjonUI();
         }
         else if (selection == 's') {
-            
+            salaui.salaUI();
         }
         else if (selection == 'b') {
-            
+            baksturui.baksturUI();
         }
         else if (selection == 'a') {
-            
+            afhendingui.afhendingUI();
         }
     }
     while (selection != 'h');

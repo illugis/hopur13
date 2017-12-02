@@ -77,17 +77,17 @@
 			children = (
 				E29EC8AF1FCC3E4900C9F531 /* main.cpp */,
 				E29EC8DF1FD0249500C9F531 /* mainui.cpp */,
+				E29EC8E01FD0249500C9F531 /* mainui.h */,
 				E29EC8E21FD02CF100C9F531 /* umsjonui.cpp */,
-				648446F31FD06DC400018D02 /* toppings.cpp */,
-				648446F41FD06DC400018D02 /* toppings.h */,
+				E29EC8E31FD02CF100C9F531 /* umsjonui.h */,
 				E29EC8E51FD0355700C9F531 /* sala.cpp */,
 				E29EC8E61FD0355700C9F531 /* sala.h */,
-				E29EC8E31FD02CF100C9F531 /* umsjonui.h */,
-				E29EC8E01FD0249500C9F531 /* mainui.h */,
 				E29EC8E81FD041AD00C9F531 /* bakstur.cpp */,
+				E29EC8E91FD041AD00C9F531 /* bakstur.h */,
 				E29EC8EB1FD0423200C9F531 /* afhending.cpp */,
 				E29EC8EC1FD0423200C9F531 /* afhending.h */,
-				E29EC8E91FD041AD00C9F531 /* bakstur.h */,
+				648446F31FD06DC400018D02 /* toppings.cpp */,
+				648446F41FD06DC400018D02 /* toppings.h */,
 			);
 			path = "main assignment";
 			sourceTree = "<group>";

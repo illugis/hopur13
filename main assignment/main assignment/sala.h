@@ -21,6 +21,7 @@ private:
     string delivery;
     char payment;
     
+    
 public:
     void salaUI();
     
