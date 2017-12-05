@@ -8,15 +8,18 @@
 
 #ifndef toppings_hpp
 #define toppings_hpp
+#include <iostream>
+using namespace std;
 
 class Topping {
 private:
-    char name[32];
+    string name;
     int price;
 public:
     Topping();
-    Topping(char* name, int price);
-    ~Topping();
+    Topping(string name, int price);
+    friend istream& operator >> (istream& in, Topping& topping);
+    friend ostream& operator << (ostream& out, Topping& topping);
     
     
 };
