@@ -6,7 +6,7 @@
 //  Copyright (c) 2017 Bloc. All rights reserved.
 //
 
-#include "afhending.h"
+#include "afhendingui.h"
 
 
 void AfhendingUI::afhendingUI(){

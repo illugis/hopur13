@@ -31,11 +31,8 @@ private:
     //int toppingCount;
     
 public:
-    UmsjonUI();
-    //int numberOfToppings(int _toppingCount);
     void umsjonUI();
-    //void addTopping(Topping topping);
-    string getPlace();
+    
 };
 
 #endif /* defined(__main_assignment__umsjonui__) */
