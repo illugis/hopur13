@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640C26AC1FD6ED5500ADEB99 /* Pizza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26AA1FD6ED5500ADEB99 /* Pizza.cpp */; };
 		648446F51FD06DC400018D02 /* toppings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 648446F31FD06DC400018D02 /* toppings.cpp */; };
 		E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8AF1FCC3E4900C9F531 /* main.cpp */; };
 		E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8DF1FD0249500C9F531 /* mainui.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		640C26AA1FD6ED5500ADEB99 /* Pizza.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pizza.cpp; sourceTree = "<group>"; };
+		640C26AB1FD6ED5500ADEB99 /* Pizza.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pizza.hpp; sourceTree = "<group>"; };
 		648446F31FD06DC400018D02 /* toppings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = toppings.cpp; sourceTree = "<group>"; };
 		648446F41FD06DC400018D02 /* toppings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toppings.h; sourceTree = "<group>"; };
 		E29EC8AC1FCC3E4900C9F531 /* main assignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "main assignment"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +59,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640C26A81FD6EB0300ADEB99 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E29EC8DF1FD0249500C9F531 /* mainui.cpp */,
+				E29EC8E01FD0249500C9F531 /* mainui.h */,
+				E29EC8E21FD02CF100C9F531 /* umsjonui.cpp */,
+				E29EC8E31FD02CF100C9F531 /* umsjonui.h */,
+				E29EC8E51FD0355700C9F531 /* sala.cpp */,
+				E29EC8E61FD0355700C9F531 /* sala.h */,
+				E29EC8E81FD041AD00C9F531 /* bakstur.cpp */,
+				E29EC8E91FD041AD00C9F531 /* bakstur.h */,
+				E29EC8EB1FD0423200C9F531 /* afhending.cpp */,
+				E29EC8EC1FD0423200C9F531 /* afhending.h */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		640C26A91FD6EB1D00ADEB99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				648446F31FD06DC400018D02 /* toppings.cpp */,
+				648446F41FD06DC400018D02 /* toppings.h */,
+				640C26AA1FD6ED5500ADEB99 /* Pizza.cpp */,
+				640C26AB1FD6ED5500ADEB99 /* Pizza.hpp */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E29EC8A31FCC3E4900C9F531 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				E29EC8AF1FCC3E4900C9F531 /* main.cpp */,
+<<<<<<< HEAD
+				640C26A81FD6EB0300ADEB99 /* UI */,
+				640C26A91FD6EB1D00ADEB99 /* Models */,
+=======
 				E2F06CD91FD6EC58001716ED /* Models */,
 				E2F06CD81FD6EC17001716ED /* UI */,
 			);
@@ -104,6 +139,7 @@
 			children = (
 				648446F31FD06DC400018D02 /* toppings.cpp */,
 				648446F41FD06DC400018D02 /* toppings.h */,
+>>>>>>> 7e53107d67a2ca44a4e58e3f0c867a02923b2050
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -164,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640C26AC1FD6ED5500ADEB99 /* Pizza.cpp in Sources */,
 				E29EC8E41FD02CF100C9F531 /* umsjonui.cpp in Sources */,
 				E29EC8EA1FD041AD00C9F531 /* baksturui.cpp in Sources */,
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,
