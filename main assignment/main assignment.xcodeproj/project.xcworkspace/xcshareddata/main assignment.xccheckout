@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7AC5B1D7-198F-4291-94BF-DA3BF7027965</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>main assignment</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E25D2EFF4058796A68AB05A878F7DCA0D506400C</key>
 		<string>https://github.com/illugis/hopur13.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>main assignment/main assignment.xcodeproj/project.xcworkspace</string>
+	<string>main assignment/main assignment.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E25D2EFF4058796A68AB05A878F7DCA0D506400C</key>

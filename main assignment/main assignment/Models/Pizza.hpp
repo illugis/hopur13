@@ -16,10 +16,17 @@
 class Pizza {
 private:
     vector<Topping> toppings;
+    int size;
+    string crust;
     
 public:
     Pizza();
+    Pizza(int size, string crust, vector<Topping> toppings);
     void addTopping(Topping topping);
+    void setSize(int size);
+    void setCrust(string crust);
+    int getSize() const;
+    string getCrust() const;
     
     friend istream& operator >> (istream& in, Pizza& pizza);
     friend ostream& operator << (ostream& out, Pizza& pizza);

@@ -27,18 +27,27 @@ void UmsjonUI::umsjonUI() {
     
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
+    int size;
     cin >> size;
+    //pizza.setSize(size);
     cout << '\t' << "Botn(þykkur eða þunnur): ";
-    cin >> base;
-    cin >> base;
+    string crust;
+    cin >> crust;
+    //pizza.setCrust(crust);
     
     cout << "Hversu margar áleggstegundir? ";
+    int numberOfToppings;
     cin >> numberOfToppings;
     
-    cout << "Hvaða álegg?" << endl;
+    Pizza pizza;
+    
     for(int i = 0; i < numberOfToppings; i++){
+        Topping toppings;
         cin >> toppings;
+        pizza.addTopping(toppings);
+        
     }
+    //Pizza madePizza(size, crust, t);
 
     cout << "Ákveðnar samsetningar: " ;
     cout << endl;
