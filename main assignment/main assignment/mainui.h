@@ -14,6 +14,8 @@
 #include "baksturui.h"
 #include "afhendingui.h"
 
+#include "MainUIService.h"
+
 class MainUI {
     
 private:
@@ -24,7 +26,6 @@ private:
     
 public:
     void startUI();
-    
 };
 
 #endif /* defined(__main_assignment__mainui__) */

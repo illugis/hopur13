@@ -32,6 +32,7 @@ private:
     
 public:
     void umsjonUI();
+    void val_umsjonUI();
     
 };
 

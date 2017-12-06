@@ -12,12 +12,12 @@
 void AfhendingUI::afhendingUI(){
     
     cout << "Hver er þinn afhendingarstaður? ";
-    cout << umsjonui.getPlace() << endl;
+    //cout << umsjonui.getPlace() << endl;
     
-    cout << "Listi af pöntunum fyrir " << umsjonui.getPlace() << ":" << endl;
+    //cout << "Listi af pöntunum fyrir " << umsjonui.getPlace() << ":" << endl;
     //listi (ifstream örugglega)
     
-    cout << "Tilbúnar pantanir fyrir " << umsjonui.getPlace() << ":" << endl;
+    //cout << "Tilbúnar pantanir fyrir " << umsjonui.getPlace() << ":" << endl;
     //listi
     
     cout << "Veldu pöntun: " << endl;

@@ -13,7 +13,17 @@
 
 using namespace std;
 
+void UmsjonUI::val_umsjonUI() {
+    
+    cout << "Vinsamlegast veldu:" << endl;
+    cout << "\t 1. til að skrá \"custom\" pizzu" << endl;
+    cout << "\t 2. til að skrá pizzu af matseðli" << endl;
+    cout << "--> ";
+}
+
 void UmsjonUI::umsjonUI() {
+    
+    val_umsjonUI();
     
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
