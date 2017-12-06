@@ -9,12 +9,10 @@
 #ifndef __main_assignment__mainui__
 #define __main_assignment__mainui__
 
-#include <stdio.h>
 #include "umsjonui.h"
-#include "sala.h"
-#include "bakstur.h"
-#include "afhending.h"
-
+#include "salaui.h"
+#include "baksturui.h"
+#include "afhendingui.h"
 
 class MainUI {
     
@@ -23,7 +21,6 @@ private:
     SalaUI salaui;
     BaksturUI baksturui;
     AfhendingUI afhendingui;
-    
     
 public:
     void startUI();

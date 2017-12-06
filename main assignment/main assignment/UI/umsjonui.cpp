@@ -13,26 +13,6 @@
 
 using namespace std;
 
-UmsjonUI::UmsjonUI() {
-    size = 0;
-    base = "";
-    price = 0;
-    place = "";
-    
-}
-/*int UmsjonUI::numberOfToppings(int _toppingCount){
-    toppingCount = _toppingCount;
-    toppings = new Topping[_toppingCount];
-    
-    return _toppingCount;
-}
-void UmsjonUI::addTopping(Topping topping){
-    toppings[] = topping;
-}
-*/
-string UmsjonUI::getPlace(){
-    return place;
-}
 void UmsjonUI::umsjonUI() {
     
     cout << "Skrá gerð af pizzu" << endl;
