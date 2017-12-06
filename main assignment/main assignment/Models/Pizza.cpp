@@ -11,14 +11,28 @@
 Pizza::Pizza() {
     
 }
+Pizza::Pizza(int size, string crust, vector<Topping> toppings){
+    this->size = size;
+    this->crust = crust;
+    this->toppings = toppings;
+}
 void Pizza::addTopping(Topping topping){
     toppings.push_back(topping);
 }
-
+void Pizza::setSize(int size) {
+    this->size = size;
+}
+void Pizza::setCrust(string crust) {
+    this->crust = crust;
+}
+int Pizza::getSize() const{
+    return this->size;
+}
+string Pizza::getCrust() const{
+    return this->crust;
+}
 istream& operator >> (istream& in, Pizza& pizza){
-    int toppingCount;
-    in >> toppingCount;
-    
+
     Topping topping;
     for(int i = 0; i < pizza.toppings.size(); i++){
         in >> topping;

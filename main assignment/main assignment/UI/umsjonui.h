@@ -14,24 +14,20 @@
 #include <iostream>
 #include <string>
 #include "toppings.h"
+#include "Pizza.hpp"
 
 using namespace std;
 
 class UmsjonUI {
     
 private:
-    char size;
-    string base;
-    int price;
     string place;
-    string toppings;
     string other;
-    int numberOfToppings;
-    //Topping *toppings;
-    //int toppingCount;
+    Pizza pizza;
     
 public:
     void umsjonUI();
+    void val_umsjonUI();
     
 };
 
