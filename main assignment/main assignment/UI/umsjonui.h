@@ -24,10 +24,12 @@ private:
     string place;
     string other;
     Pizza pizza;
+    void val_umsjonUI();
+    void val_pizzaUI();
+    void val_menu_pizzaUI();
     
 public:
     void umsjonUI();
-    void val_umsjonUI();
     
 };
 

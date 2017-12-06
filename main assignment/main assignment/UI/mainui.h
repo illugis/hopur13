@@ -14,8 +14,6 @@
 #include "baksturui.h"
 #include "afhendingui.h"
 
-#include "MainUIService.h"
-
 class MainUI {
     
 private:
