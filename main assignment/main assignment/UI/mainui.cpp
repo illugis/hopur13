@@ -20,11 +20,11 @@ void MainUI::startUI() {
         
         cout << "VELKOMIN/N!" << endl << endl;
         cout << "Vinsamlegast veldu:" << endl;
-        cout << '\t' << "1. fyrir umsjón" << endl;
-        cout << '\t' << "2. fyrir sölu" << endl;
-        cout << '\t' << "3. fyrir bakstur" << endl;
-        cout << '\t' << "4. fyrir afhendingu" << endl;
-        cout << '\t' << "5. fyrir hætta" << endl;
+        cout << '\t' << "[1] fyrir umsjón" << endl;
+        cout << '\t' << "[2] fyrir sölu" << endl;
+        cout << '\t' << "[3] fyrir bakstur" << endl;
+        cout << '\t' << "[4] fyrir afhendingu" << endl;
+        cout << '\t' << "[5] fyrir hætta" << endl;
         
         cout << "--> ";
         cin >> selection;
