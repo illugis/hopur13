@@ -9,12 +9,14 @@
 #ifndef __main_assignment__umsjonui__
 #define __main_assignment__umsjonui__
 
-#include <stdio.h>
+#include "mainui.h"
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "toppings.h"
 #include "Pizza.hpp"
+#include "PizzaService.h"
 
 using namespace std;
 
@@ -24,10 +26,14 @@ private:
     string place;
     string other;
     Pizza pizza;
+    void val_umsjonUI();
+    void val_pizzaUI();
+    void val_menu_pizzaUI();
+    Pizza create_pizza();
+    PizzaService pizza_service;
     
 public:
     void umsjonUI();
-    void val_umsjonUI();
     
 };
 

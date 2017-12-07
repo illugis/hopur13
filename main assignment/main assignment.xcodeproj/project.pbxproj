@@ -15,6 +15,8 @@
 		E29EC8E71FD0355700C9F531 /* salaui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8E51FD0355700C9F531 /* salaui.cpp */; };
 		E29EC8EA1FD041AD00C9F531 /* baksturui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8E81FD041AD00C9F531 /* baksturui.cpp */; };
 		E29EC8ED1FD0423200C9F531 /* afhendingui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8EB1FD0423200C9F531 /* afhendingui.cpp */; };
+		E2F06CE31FD96336001716ED /* PizzaService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06CE11FD96336001716ED /* PizzaService.cpp */; };
+		E2F06CE61FD96982001716ED /* PizzaRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06CE41FD96982001716ED /* PizzaRepository.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +48,10 @@
 		E29EC8E91FD041AD00C9F531 /* baksturui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baksturui.h; sourceTree = "<group>"; };
 		E29EC8EB1FD0423200C9F531 /* afhendingui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = afhendingui.cpp; sourceTree = "<group>"; };
 		E29EC8EC1FD0423200C9F531 /* afhendingui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = afhendingui.h; sourceTree = "<group>"; };
+		E2F06CE11FD96336001716ED /* PizzaService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PizzaService.cpp; path = "main assignment/PizzaService.cpp"; sourceTree = SOURCE_ROOT; };
+		E2F06CE21FD96336001716ED /* PizzaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaService.h; path = "main assignment/PizzaService.h"; sourceTree = SOURCE_ROOT; };
+		E2F06CE41FD96982001716ED /* PizzaRepository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PizzaRepository.cpp; path = "main assignment/PizzaRepository.cpp"; sourceTree = SOURCE_ROOT; };
+		E2F06CE51FD96982001716ED /* PizzaRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaRepository.h; path = "main assignment/PizzaRepository.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,8 @@
 		640C26AD1FD822A300ADEB99 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E2F06CE11FD96336001716ED /* PizzaService.cpp */,
+				E2F06CE21FD96336001716ED /* PizzaService.h */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -97,6 +105,8 @@
 		640C26AE1FD822B600ADEB99 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				E2F06CE41FD96982001716ED /* PizzaRepository.cpp */,
+				E2F06CE51FD96982001716ED /* PizzaRepository.h */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -193,7 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F06CE61FD96982001716ED /* PizzaRepository.cpp in Sources */,
 				640C26AC1FD6ED5500ADEB99 /* Pizza.cpp in Sources */,
+				E2F06CE31FD96336001716ED /* PizzaService.cpp in Sources */,
 				E29EC8E41FD02CF100C9F531 /* umsjonui.cpp in Sources */,
 				E29EC8EA1FD041AD00C9F531 /* baksturui.cpp in Sources */,
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,

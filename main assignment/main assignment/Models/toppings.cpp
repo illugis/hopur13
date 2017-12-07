@@ -25,9 +25,9 @@ istream& operator >> (istream& in, Topping& topping){
     in >> topping.price;
     return in;
 }
-ostream& operator << (ostream& out, Topping& topping){
-    out << "Topping: " << topping.name << endl;
-    out << "price: " << topping.price << endl;
+ostream& operator << (ostream& out, const Topping& topping){
+    out << "Álegg: " << topping.name << endl;
+    out << "verð: " << topping.price << endl;
     
     return out;
 }

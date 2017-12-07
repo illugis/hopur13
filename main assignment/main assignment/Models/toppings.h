@@ -19,7 +19,7 @@ public:
     Topping();
     Topping(string name, int price);
     friend istream& operator >> (istream& in, Topping& topping);
-    friend ostream& operator << (ostream& out, Topping& topping);
+    friend ostream& operator << (ostream& out, const Topping& topping);
     
     
 };
