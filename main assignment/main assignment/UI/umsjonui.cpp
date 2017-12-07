@@ -66,7 +66,7 @@ void UmsjonUI::umsjonUI() {
     while(svar != 'n');
     
     cout << "Verð: ";
-    cin >> price;
+    //cin >> price;
     
     cout << endl;
     
