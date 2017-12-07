@@ -9,7 +9,7 @@
 #ifndef __main_assignment__sala__
 #define __main_assignment__sala__
 
-#include <stdio.h>
+
 
 #include <iostream>
 

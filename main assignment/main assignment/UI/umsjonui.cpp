@@ -9,6 +9,7 @@
 #include "mainui.h"
 #include "umsjonui.h"
 
+
 #include <iostream>
 
 using namespace std;
@@ -97,6 +98,7 @@ Pizza UmsjonUI::create_pizza() {
 
 void UmsjonUI::val_menu_pizzaUI() {
     
+
     char selection = '\0';
     
     cout << "Matseðill " << endl;

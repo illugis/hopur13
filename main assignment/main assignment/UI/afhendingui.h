@@ -9,7 +9,7 @@
 #ifndef __main_assignment__afhending__
 #define __main_assignment__afhending__
 
-#include <stdio.h>
+
 
 #include <iostream>
 #include "umsjonui.h"
