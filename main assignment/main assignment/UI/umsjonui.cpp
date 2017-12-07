@@ -17,6 +17,7 @@ void UmsjonUI::umsjonUI() {
     
     val_umsjonUI();
 
+    /*
     cout << "Ákveðnar samsetningar: " ;
     cout << endl;
     
@@ -40,6 +41,7 @@ void UmsjonUI::umsjonUI() {
     
     cout << "Afhendingarstaður: ";
     cin >> place;
+     */
 }
 
 void UmsjonUI::val_umsjonUI() {
@@ -49,7 +51,7 @@ void UmsjonUI::val_umsjonUI() {
     cout << "Vinsamlegast veldu:" << endl;
     cout << "\t [1] til að skrá pizzu að eigin vali" << endl;
     cout << "\t [2] til að skrá pizzu af matseðli" << endl;
-    //cout << "\t [3] tilbaka" << endl;
+    //cout << "\t [3] til baka" << endl;
     cout << "--> ";
     cin >> selection;
     
@@ -63,34 +65,11 @@ void UmsjonUI::val_umsjonUI() {
      
      }*/
 }
-/*
+
 void UmsjonUI::val_pizzaUI() {
     
     pizza_service.add_pizza(create_pizza());
     
-    cout << "Skrá gerð af pizzu" << endl;
-    cout << '\t' << "Stærð: ";
-    int size;
-    cin >> size;
-    //pizza.setSize(size);
-    cout << '\t' << "Botn(þykkur eða þunnur): ";
-    string crust;
-    cin >> crust;
-    //pizza.setCrust(crust);
-    
-    cout << "Hversu margar áleggstegundir? ";
-    int numberOfToppings;
-    cin >> numberOfToppings;
-    
-    Pizza pizza;
-    
-    for(int i = 0; i < numberOfToppings; i++){
-        Topping toppings;
-        cin >> toppings;
-        pizza.addTopping(toppings);
-        
-    }
-    //Pizza madePizza(size, crust, t);
      
 }
 
@@ -115,7 +94,7 @@ Pizza UmsjonUI::create_pizza() {
     Pizza pizza(size, crust, toppings, destination);
     return pizza;
 }
-*/
+
 void UmsjonUI::val_menu_pizzaUI() {
     
     char selection = '\0';
@@ -124,15 +103,81 @@ void UmsjonUI::val_menu_pizzaUI() {
     cout << "\t [1] Margarita" << endl;
     cout << "\t [2] Svepperoni" << endl;
     cout << "\t [3] Veganveisla" << endl;
+    //cout << "[4] til baka" << endl;
     
     if (selection == '1') {
         cout << "Margarita" << endl;
+        //Ekkert
+        //pizza_menu_service.add_pizza(create_pizza_menu_marg());
     }
     else if (selection == '2') {
         cout << "Svepperoni" << endl;
+        //Pepp og svepp
+        //pizza_menu_service.add_pizza(create_pizza_menu_svepperoni());
     }
     else if (selection == '3') {
         cout << "Veganveisla" << endl;
+        //Sveppir, ólífur, laukur, ananas, paprika
+        //pizza_menu_service.add_pizza(create_pizza_menu_vegan());
     }
 }
 
+Pizza UmsjonUI::create_pizza_menu_marg() {
+    
+    int numberOfToppings = 1;
+    string size, crust, destination;
+    cout << "Skrá gerð af pizzu" << endl;
+    cout << '\t' << "Stærð: ";
+    cin >> size;
+    cout << '\t' << "Botn (þykkur eða þunnur): ";
+    cin >> crust;
+    for(int i = 0; i < numberOfToppings; i++){
+        Topping toppings;
+        cin >> toppings;
+        pizza.addTopping(toppings);
+    }
+    cout << "Afhendingarstaður: ";
+    cin >> destination;
+    Pizza pizza(size, crust, toppings, destination);
+    return pizza;
+}
+
+Pizza UmsjonUI::create_pizza_menu_svepperoni() {
+    
+    int numberOfToppings = 2;
+    string size, crust, destination;
+    cout << "Skrá gerð af pizzu" << endl;
+    cout << '\t' << "Stærð: ";
+    cin >> size;
+    cout << '\t' << "Botn (þykkur eða þunnur): ";
+    cin >> crust;
+    for(int i = 0; i < numberOfToppings; i++){
+        Topping toppings;
+        cin >> toppings;
+        pizza.addTopping(toppings);
+    }
+    cout << "Afhendingarstaður: ";
+    cin >> destination;
+    Pizza pizza(size, crust, toppings, destination);
+    return pizza;
+}
+
+Pizza UmsjonUI::create_pizza_menu_vegan() {
+    
+    int numberOfToppings = 5;
+    string size, crust, destination;
+    cout << "Skrá gerð af pizzu" << endl;
+    cout << '\t' << "Stærð: ";
+    cin >> size;
+    cout << '\t' << "Botn (þykkur eða þunnur): ";
+    cin >> crust;
+    for(int i = 0; i < numberOfToppings; i++){
+        Topping toppings;
+        cin >> toppings;
+        pizza.addTopping(toppings);
+    }
+    cout << "Afhendingarstaður: ";
+    cin >> destination;
+    Pizza pizza(size, crust, toppings, destination);
+    return pizza;
+}

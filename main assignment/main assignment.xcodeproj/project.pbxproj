@@ -17,6 +17,7 @@
 		E29EC8ED1FD0423200C9F531 /* afhendingui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8EB1FD0423200C9F531 /* afhendingui.cpp */; };
 		E2F06CE31FD96336001716ED /* PizzaService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06CE11FD96336001716ED /* PizzaService.cpp */; };
 		E2F06CE61FD96982001716ED /* PizzaRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06CE41FD96982001716ED /* PizzaRepository.cpp */; };
+		E2F06CE91FD992C3001716ED /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06CE71FD992C3001716ED /* Order.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		E2F06CE21FD96336001716ED /* PizzaService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaService.h; path = "main assignment/PizzaService.h"; sourceTree = SOURCE_ROOT; };
 		E2F06CE41FD96982001716ED /* PizzaRepository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PizzaRepository.cpp; path = "main assignment/PizzaRepository.cpp"; sourceTree = SOURCE_ROOT; };
 		E2F06CE51FD96982001716ED /* PizzaRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaRepository.h; path = "main assignment/PizzaRepository.h"; sourceTree = SOURCE_ROOT; };
+		E2F06CE71FD992C3001716ED /* Order.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Order.cpp; sourceTree = "<group>"; };
+		E2F06CE81FD992C3001716ED /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				648446F41FD06DC400018D02 /* toppings.h */,
 				640C26AA1FD6ED5500ADEB99 /* Pizza.cpp */,
 				640C26AB1FD6ED5500ADEB99 /* Pizza.hpp */,
+				E2F06CE71FD992C3001716ED /* Order.cpp */,
+				E2F06CE81FD992C3001716ED /* Order.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,
 				E29EC8E71FD0355700C9F531 /* salaui.cpp in Sources */,
 				E29EC8ED1FD0423200C9F531 /* afhendingui.cpp in Sources */,
+				E2F06CE91FD992C3001716ED /* Order.cpp in Sources */,
 				648446F51FD06DC400018D02 /* toppings.cpp in Sources */,
 				E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */,
 			);

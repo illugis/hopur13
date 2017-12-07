@@ -20,6 +20,14 @@ int main() {
     
     mainui.startUI();
     
+    /*
+     
+     1. UI drasl (mainUI)
+     2. Vector sem parameter í constructor (umsjonui.cpp)
+     3. Er hægt að taka úr einni skrá ákveðnar upplýsingar og skrifa þær ásamt öðrum i aðra skrá?
+     4. Er hægt að setja constructor pizza inn í annan constructor (Order)?
     
+    */
+     
     return 0;
 }

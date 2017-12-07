@@ -11,7 +11,7 @@
 void PizzaRepository::add_pizza(const Pizza& pizza) {
     
     ofstream fout;
-    fout.open("pizzas.txt", ios::app);
+    fout.open("pizzas.dat", ios::binary|ios::app);
     if (fout.is_open()) {
         fout << pizza;
         fout.close();

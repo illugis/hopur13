@@ -30,6 +30,9 @@ private:
     void val_pizzaUI();
     void val_menu_pizzaUI();
     Pizza create_pizza();
+    Pizza create_pizza_menu_marg();
+    Pizza create_pizza_menu_svepperoni();
+    Pizza create_pizza_menu_vegan();
     PizzaService pizza_service;
     
 public:
