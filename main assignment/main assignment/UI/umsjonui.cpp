@@ -18,8 +18,9 @@ void UmsjonUI::val_umsjonUI() {
     char selection = '\0';
     
     cout << "Vinsamlegast veldu:" << endl;
-    cout << "\t 1. til að skrá \"custom\" pizzu" << endl;
+    cout << "\t 1. til að skrá pizzu að eigin vali" << endl;
     cout << "\t 2. til að skrá pizzu af matseðli" << endl;
+    //cout << "\t 3. tilbaka" << endl;
     cout << "--> ";
     cin >> selection;
     
@@ -29,6 +30,9 @@ void UmsjonUI::val_umsjonUI() {
     else if (selection == '2') {
         val_menu_pizzaUI();
     }
+    /*else if (selection == '3') {
+        
+    }*/
 }
 
 void UmsjonUI::umsjonUI() {
@@ -62,7 +66,9 @@ void UmsjonUI::umsjonUI() {
 
 void UmsjonUI::val_pizzaUI() {
     
-    cout << "Skrá gerð af pizzu" << endl;
+    pizza_service.add_pizza(create_pizza());
+    
+    /*cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
     int size;
     cin >> size;
@@ -85,6 +91,27 @@ void UmsjonUI::val_pizzaUI() {
         
     }
     //Pizza madePizza(size, crust, t);
+     */
+}
+
+Pizza UmsjonUI::create_pizza() {
+    
+    int size, numberOfToppings;
+    string crust;
+    cout << "Skrá gerð af pizzu" << endl;
+    cout << '\t' << "Stærð: ";
+    cin >> size;
+    cout << '\t' << "Botn (þykkur eða þunnur): ";
+    cin >> crust;
+    cout << "Hversu margar áleggstegundir? ";
+    cin >> numberOfToppings;
+    for(int i = 0; i < numberOfToppings; i++){
+        Topping toppings;
+        cin >> toppings;
+        pizza.addTopping(toppings);
+    }
+    Pizza pizza(size, crust, toppings);
+    return pizza;
 }
 
 void UmsjonUI::val_menu_pizzaUI() {
@@ -92,3 +119,4 @@ void UmsjonUI::val_menu_pizzaUI() {
     cout << "Sæll vertu " << endl;
     //insert code
 }
+

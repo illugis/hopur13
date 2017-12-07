@@ -29,7 +29,7 @@ public:
     string getCrust() const;
     
     friend istream& operator >> (istream& in, Pizza& pizza);
-    friend ostream& operator << (ostream& out, Pizza& pizza);
+    friend ostream& operator << (ostream& out, const Pizza& pizza);
     
     
 };
