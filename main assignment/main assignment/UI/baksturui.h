@@ -9,7 +9,6 @@
 #ifndef __main_assignment__bakstur__
 #define __main_assignment__bakstur__
 
-#include <stdio.h>
 #include "umsjonui.h"
 
 #include <iostream>

@@ -9,7 +9,7 @@
 #ifndef Pizza_hpp
 #define Pizza_hpp
 
-#include <stdio.h>
+
 #include <vector>
 #include "toppings.h"
 
