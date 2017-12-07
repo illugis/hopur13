@@ -12,11 +12,15 @@
 
 #include "Pizza.hpp"
 #include "PizzaRepository.h"
+#include "InvalidSizeException.h"
+#include "InvalidCrustException.h"
 
 class PizzaService {
     
 private:
     PizzaRepository pizza_repo;
+    bool isValidSize(const Pizza& pizza);
+    bool isValidCrust(const Pizza& pizza);
     
 public:
     void add_pizza(const Pizza& pizza);
