@@ -10,8 +10,6 @@
 #define __main_assignment__umsjonui__
 
 
-
-#include "mainui.h"
 #include <iostream>
 #include <string>
 #include <vector>
