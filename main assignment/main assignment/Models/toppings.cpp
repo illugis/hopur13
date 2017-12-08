@@ -12,10 +12,12 @@
 Topping::Topping(){
     
 }
+
 Topping::Topping(string name, int price){
     this->name = name;
     this->price = price;
 }
+
 istream& operator >> (istream& in, Topping& topping){
     cout << "Álegg: ";
     getline(in, topping.name);
@@ -25,6 +27,7 @@ istream& operator >> (istream& in, Topping& topping){
     in >> topping.price;
     return in;
 }
+
 ostream& operator << (ostream& out, const Topping& topping){
     out << "Álegg: " << topping.name << endl;
     out << "verð: " << topping.price << endl;
