@@ -8,7 +8,6 @@
 
 #include "salaui.h"
 
-
 #include <iostream>
 
 using namespace std;
@@ -19,6 +18,7 @@ void SalaUI::salaUI() {
     //Bæta því í skjal
     // Ná í skjal og birta
     
+    cout << "Bæta við pöntun?(y/n) ";
     //Bæta pizum (og öðru) við pöntun
     
     cout << "Heildarverð: "; //Ná í heildarverð
