@@ -19,6 +19,7 @@ private:
     string size;
     string crust;
     string destination;
+    bool verbose;
     
 public:
     Pizza();
