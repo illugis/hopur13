@@ -48,21 +48,30 @@ string Pizza::getDestination() const{
 }
 
 istream& operator >> (istream& in, Pizza& pizza){
-
+    cout << "Stærð: ";
+    in >> pizza.size;
+    cout << "Botn: ";
+    in >> pizza.crust;
+    cout << "Álegg: ";
     Topping topping;
     for(int i = 0; i < pizza.toppings.size(); i++){
         in >> topping;
         pizza.addTopping(topping);
     }
+    cout << "Afhendingarstaður: ";
+    in >> pizza.destination;
     return in;
 }
 
 ostream& operator << (ostream& out, const Pizza& pizza){
-    out << "Pizza with toppings: " << endl;
     
+    out << "Stærð: " << pizza.size << endl;
+    out << "Botn: " << pizza.crust << endl;
+    out << "Álegg: ";
     for(int i = 0; i < pizza.toppings.size(); i++){
         out << pizza.toppings[i] << " ";
     }
+    out << "Afhendingarstaður: " << pizza.destination << endl;
     return out;
 }
 
