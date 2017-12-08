@@ -16,18 +16,19 @@
 class Pizza {
 private:
     vector<Topping> toppings;
-    int size;
+    string size;
     string crust;
     string destination;
     
 public:
     Pizza();
-    Pizza(int size, string crust, vector<Topping> toppings, string destination);
+    Pizza(string size, string crust, vector<Topping> toppings, string destination);
     void addTopping(Topping topping);
-    void setSize(int size);
+    void setSize(string size);
     void setCrust(string crust);
-    int getSize() const;
+    string getSize() const;
     string getCrust() const;
+    vector<Topping> getTopping() const;
     string getDestination() const;
     
     friend istream& operator >> (istream& in, Pizza& pizza);

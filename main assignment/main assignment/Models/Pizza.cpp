@@ -12,7 +12,7 @@ Pizza::Pizza() {
     
 }
 
-Pizza::Pizza(int size, string crust, vector<Topping> toppings, string destination){
+Pizza::Pizza(string size, string crust, vector<Topping> toppings, string destination){
     this->size = size;
     this->crust = crust;
     this->toppings = toppings;
@@ -23,7 +23,7 @@ void Pizza::addTopping(Topping topping){
     toppings.push_back(topping);
 }
 
-void Pizza::setSize(int size) {
+void Pizza::setSize(string size) {
     this->size = size;
 }
 
@@ -31,12 +31,16 @@ void Pizza::setCrust(string crust) {
     this->crust = crust;
 }
 
-int Pizza::getSize() const{
+string Pizza::getSize() const{
     return this->size;
 }
 
 string Pizza::getCrust() const{
     return this->crust;
+}
+
+vector<Topping> Pizza::getTopping() const {
+    return this->toppings;
 }
 
 string Pizza::getDestination() const{

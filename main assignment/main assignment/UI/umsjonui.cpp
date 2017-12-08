@@ -69,9 +69,18 @@ void UmsjonUI::val_umsjonUI() {
 
 void UmsjonUI::val_pizzaUI() {
     
-    pizza_service.add_pizza(create_pizza());
-    
-     
+    try {
+        pizza_service.add_pizza(create_pizza());
+    }
+    catch (InvalidSizeException) {
+        cout << "Invalid size!" << endl;
+    }
+    catch (InvalidCrustException) {
+        cout << "Invalid crust!" << endl;
+    }
+    catch (InvalidDestinationException) {
+        cout << "Invalid destination!" << endl;
+    }
 }
 
 Pizza UmsjonUI::create_pizza() {
