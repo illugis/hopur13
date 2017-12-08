@@ -9,7 +9,7 @@
 #ifndef __main_assignment__bakstur__
 #define __main_assignment__bakstur__
 
-#include "umsjonui.h"
+#include "PizzaService.h"
 
 #include <iostream>
 
@@ -18,12 +18,11 @@ using namespace std;
 class BaksturUI {
     
 private:
-    UmsjonUI umsjonui;
-    
+    PizzaService pizza_service;
     
 public:
     void baksturUI();
-    
+    void getPizza_list();
     
 };
 

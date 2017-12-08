@@ -85,19 +85,21 @@ void UmsjonUI::val_pizzaUI() {
 
 Pizza UmsjonUI::create_pizza() {
     
-    int size, numberOfToppings;
-    string crust, destination;
+    int numberOfToppings;
+    vector<Topping> toppings;
+    string size, crust, destination;
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
     cin >> size;
-    cout << '\t' << "Botn (þykkur eða þunnur): ";
+    cout << '\t' << "Botn (thykkur eða thunnur): ";
     cin >> crust;
     cout << "Hversu margar áleggstegundir? ";
     cin >> numberOfToppings;
     for(int i = 0; i < numberOfToppings; i++){
-        Topping toppings;
-        cin >> toppings;
-        pizza.addTopping(toppings);
+        Topping top;
+        cin >> top;
+        toppings.push_back(top);
+        pizza.addTopping(top);
     }
     cout << "Afhendingarstaður: ";
     cin >> destination;
@@ -136,6 +138,7 @@ void UmsjonUI::val_menu_pizzaUI() {
 Pizza UmsjonUI::create_pizza_menu_marg() {
     
     int numberOfToppings = 1;
+    vector<Topping> toppings;
     string size, crust, destination;
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
@@ -156,6 +159,7 @@ Pizza UmsjonUI::create_pizza_menu_marg() {
 Pizza UmsjonUI::create_pizza_menu_svepperoni() {
     
     int numberOfToppings = 2;
+    vector<Topping> toppings;
     string size, crust, destination;
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";
@@ -176,6 +180,7 @@ Pizza UmsjonUI::create_pizza_menu_svepperoni() {
 Pizza UmsjonUI::create_pizza_menu_vegan() {
     
     int numberOfToppings = 5;
+    vector<Topping> toppings;
     string size, crust, destination;
     cout << "Skrá gerð af pizzu" << endl;
     cout << '\t' << "Stærð: ";

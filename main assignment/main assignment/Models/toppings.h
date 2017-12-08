@@ -13,9 +13,11 @@
 using namespace std;
 
 class Topping {
+    
 private:
     string name;
     int price;
+    
 public:
     Topping();
     Topping(string name, int price);
@@ -24,26 +26,5 @@ public:
     
     
 };
-
-
-
-
-
-
-
-#include <stdio.h>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif /* toppings_hpp */

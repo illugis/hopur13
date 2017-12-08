@@ -15,16 +15,9 @@ using namespace std;
 
 void BaksturUI::baksturUI() {
     
-    char afhendingars;
-    cout << "Veldu þinn Afhendingarstað: " << endl;
-    cout << '\t' << "'i' fyrir hjá Illuga" << endl;
-    cout << '\t' << "'g' fyrir hjá Gulla" << endl;
-    cout << '\t' << "'s' fyrir hjá Styrmi" << endl;
-    cout << "--> ";
-    cin >> afhendingars;
-    
     cout << "Listi yfir pantaðar pítsur:" << endl;
     //listi
+    getPizza_list();
     
     cout << "veldu pöntun" << endl;
     //cin >> pizza;
@@ -39,6 +32,9 @@ void BaksturUI::baksturUI() {
     
 }
 
-
+void BaksturUI::getPizza_list() {
+    
+    vector<Pizza> pizzas = pizza_service.read_pizza();
+}
 
 

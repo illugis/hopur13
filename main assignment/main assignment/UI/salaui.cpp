@@ -16,7 +16,8 @@ using namespace std;
 void SalaUI::salaUI() {
     
     cout << "Pöntun: " << endl;
-    // Ná í upplýsingar úr umsjón?
+    //Bæta því í skjal
+    // Ná í skjal og birta
     
     //Bæta pizum (og öðru) við pöntun
     

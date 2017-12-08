@@ -16,6 +16,11 @@ void PizzaService::add_pizza(const Pizza& pizza) {
     }
 }
 
+vector<Pizza> PizzaService::read_pizza() {
+    
+    return pizza_repo.read_pizza();
+}
+
 bool PizzaService::isValidSize(const Pizza& pizza) {
     
     string size = pizza.getSize();
@@ -33,7 +38,7 @@ bool PizzaService::isValidCrust(const Pizza& pizza) {
     string crust = pizza.getCrust();
     
     for (unsigned int i = 0; i < crust.length(); i++) {
-        if (!isalpha(crust[i])) {
+        if (!isalpha(crust[i]) && crust[i] != ' ') {
             throw (InvalidCrustException());
         }
     }
