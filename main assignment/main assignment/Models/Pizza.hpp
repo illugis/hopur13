@@ -28,6 +28,7 @@ public:
     void setCrust(string crust);
     string getSize() const;
     string getCrust() const;
+    vector<Topping> getTopping() const;
     string getDestination() const;
     
     friend istream& operator >> (istream& in, Pizza& pizza);

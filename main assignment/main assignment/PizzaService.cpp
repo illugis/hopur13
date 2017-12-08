@@ -39,3 +39,22 @@ bool PizzaService::isValidCrust(const Pizza& pizza) {
     }
     return true;
 }
+
+bool PizzaService::isValidDestination(const Pizza& pizza) {
+    
+    string destination = pizza.getDestination();
+    
+    for (unsigned int i = 0; i < destination.length(); i++) {
+        if (!isalpha(destination[i])) {
+            throw (InvalidDestinationException());
+        }
+    }
+    return true;
+}
+
+bool PizzaService::isValidTopping(const Pizza& pizza) {
+    
+    vector<Topping> toppings = pizza.getTopping();
+    
+    return true;
+}

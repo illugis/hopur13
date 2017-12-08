@@ -78,6 +78,9 @@ void UmsjonUI::val_pizzaUI() {
     catch (InvalidCrustException) {
         cout << "Invalid crust!" << endl;
     }
+    catch (InvalidDestinationException) {
+        cout << "Invalid destination!" << endl;
+    }
 }
 
 Pizza UmsjonUI::create_pizza() {

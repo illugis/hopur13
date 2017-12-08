@@ -14,6 +14,8 @@
 #include "PizzaRepository.h"
 #include "InvalidSizeException.h"
 #include "InvalidCrustException.h"
+#include "InvalidDestinationException.h"
+#include "InvalidToppingException.h"
 
 class PizzaService {
     
@@ -21,6 +23,8 @@ private:
     PizzaRepository pizza_repo;
     bool isValidSize(const Pizza& pizza);
     bool isValidCrust(const Pizza& pizza);
+    bool isValidDestination(const Pizza& pizza);
+    bool isValidTopping(const Pizza& pizza);
     
 public:
     void add_pizza(const Pizza& pizza);

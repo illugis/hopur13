@@ -39,6 +39,10 @@ string Pizza::getCrust() const{
     return this->crust;
 }
 
+vector<Topping> Pizza::getTopping() const {
+    return this->toppings;
+}
+
 string Pizza::getDestination() const{
     return this->destination;
 }
