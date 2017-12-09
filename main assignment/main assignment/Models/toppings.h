@@ -24,7 +24,6 @@ public:
     friend istream& operator >> (istream& in, Topping& topping);
     friend ostream& operator << (ostream& out, const Topping& topping);
     
-    
 };
 
 #endif /* toppings_hpp */

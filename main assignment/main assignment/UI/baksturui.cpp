@@ -10,10 +10,12 @@
 
 #include <iostream>
 
-
 using namespace std;
 
 void BaksturUI::baksturUI() {
+    
+    cout << "Vinsamlegast sláðu inn afhendingarstað: ";
+    //Notandi slær inn afhendingarstað
     
     cout << "Listi yfir pantaðar pítsur:" << endl;
     //listi
@@ -34,7 +36,5 @@ void BaksturUI::baksturUI() {
 
 void BaksturUI::getPizza_list() {
     
-    vector<Pizza> pizzas = pizza_service.read_pizza();
+    string pizzas = pizza_service.read_pizza();
 }
-
-

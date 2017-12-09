@@ -23,14 +23,16 @@ istream& operator >> (istream& in, Topping& topping){
     getline(in, topping.name);
     getline(in, topping.name);
     
-    cout << "Verð: ";
+    cout << "Verð (kr): ";
     in >> topping.price;
+    
     return in;
 }
 
 ostream& operator << (ostream& out, const Topping& topping){
+    
     out << topping.name << endl;
-    out << topping.price << endl;
+    out << "Verð (kr): " << topping.price << endl;
     
     return out;
 }

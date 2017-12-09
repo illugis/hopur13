@@ -11,22 +11,44 @@
 void PizzaRepository::add_pizza(const Pizza& pizza) {
     
     ofstream fout;
-    fout.open("pizzas.txt", ios::app);
-    fout << pizza << endl;
-    fout.close();
-    
-    
-    
+
    /*
     fout.open("pizzas.dat", ios::binary|ios::app);
     fout.write((char*)(&pizza), sizeof(Pizza));
     cout << endl;
     fout.close();
     */
+
+    fout.open("pizzas.txt");
+    if (fout.is_open()) {
+        fout << pizza << endl;
+        fout.close();
+    }
+    else {
+        cout << "File could not be open!" << endl;
+    }
 }
 
-vector<Pizza> PizzaRepository::read_pizza() {
+string PizzaRepository::read_pizza() {
     
+    string str;
+    ifstream fin;
+    
+    fin.open("pizzas.txt");
+    if (fin.is_open()) {
+        while (!fin.eof()) {
+            getline(fin, str);
+            cout << str << endl;
+        }
+        fin.close();
+    }
+    else {
+        cout << "Unable to read from file!" << endl;
+    }
+    
+    return str;
+    
+    /*
     vector<Pizza> pizzaList;
     Pizza temp;
     ifstream fin;
@@ -46,6 +68,7 @@ vector<Pizza> PizzaRepository::read_pizza() {
     
     
     /*fin.open("pizzas.dat", ios::binary);
+    fin.open("pizzas.txt");
     if (fin.is_open()) {
         fin.seekg(0, fin.end);
         int recordCount = fin.tellg() / sizeof(Pizza);
@@ -60,7 +83,12 @@ vector<Pizza> PizzaRepository::read_pizza() {
     }
     else {
         cout << "Could not open fiel!" << endl;
-    }*/
+    }
     return pizzaList;
 }
+*/
 
+}
+    
+    
+    
