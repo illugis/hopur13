@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		640C26AC1FD6ED5500ADEB99 /* Pizza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26AA1FD6ED5500ADEB99 /* Pizza.cpp */; };
+		640C26B81FDADC4F00ADEB99 /* InvalidDestinationException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B11FDADC4F00ADEB99 /* InvalidDestinationException.cpp */; };
+		640C26B91FDADC4F00ADEB99 /* InvalidSizeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B21FDADC4F00ADEB99 /* InvalidSizeException.cpp */; };
+		640C26BA1FDADC4F00ADEB99 /* InvalidToppingException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B31FDADC4F00ADEB99 /* InvalidToppingException.cpp */; };
+		640C26BB1FDADC4F00ADEB99 /* InvalidCrustException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B71FDADC4F00ADEB99 /* InvalidCrustException.cpp */; };
 		648446F51FD06DC400018D02 /* toppings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 648446F31FD06DC400018D02 /* toppings.cpp */; };
 		E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8AF1FCC3E4900C9F531 /* main.cpp */; };
 		E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8DF1FD0249500C9F531 /* mainui.cpp */; };
@@ -41,6 +45,14 @@
 /* Begin PBXFileReference section */
 		640C26AA1FD6ED5500ADEB99 /* Pizza.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pizza.cpp; sourceTree = "<group>"; };
 		640C26AB1FD6ED5500ADEB99 /* Pizza.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pizza.hpp; sourceTree = "<group>"; };
+		640C26B01FDADC4F00ADEB99 /* InvalidToppingException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvalidToppingException.h; path = "main assignment/Models/InvalidToppingException.h"; sourceTree = "<group>"; };
+		640C26B11FDADC4F00ADEB99 /* InvalidDestinationException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidDestinationException.cpp; path = "main assignment/Models/InvalidDestinationException.cpp"; sourceTree = "<group>"; };
+		640C26B21FDADC4F00ADEB99 /* InvalidSizeException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidSizeException.cpp; path = "main assignment/Models/InvalidSizeException.cpp"; sourceTree = "<group>"; };
+		640C26B31FDADC4F00ADEB99 /* InvalidToppingException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidToppingException.cpp; path = "main assignment/Models/InvalidToppingException.cpp"; sourceTree = "<group>"; };
+		640C26B41FDADC4F00ADEB99 /* InvalidCrustException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvalidCrustException.h; path = "main assignment/Models/InvalidCrustException.h"; sourceTree = "<group>"; };
+		640C26B51FDADC4F00ADEB99 /* InvalidSizeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvalidSizeException.h; path = "main assignment/Models/InvalidSizeException.h"; sourceTree = "<group>"; };
+		640C26B61FDADC4F00ADEB99 /* InvalidDestinationException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvalidDestinationException.h; path = "main assignment/Models/InvalidDestinationException.h"; sourceTree = "<group>"; };
+		640C26B71FDADC4F00ADEB99 /* InvalidCrustException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidCrustException.cpp; path = "main assignment/Models/InvalidCrustException.cpp"; sourceTree = "<group>"; };
 		648446F31FD06DC400018D02 /* toppings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = toppings.cpp; sourceTree = "<group>"; };
 		648446F41FD06DC400018D02 /* toppings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toppings.h; sourceTree = "<group>"; };
 		E29EC8AC1FCC3E4900C9F531 /* main assignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "main assignment"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +161,14 @@
 				E2F06CF11FDAA41A001716ED /* InvalidDestinationException.h */,
 				E2F06CF31FDAAA83001716ED /* InvalidToppingException.cpp */,
 				E2F06CF41FDAAA83001716ED /* InvalidToppingException.h */,
+				640C26B71FDADC4F00ADEB99 /* InvalidCrustException.cpp */,
+				640C26B41FDADC4F00ADEB99 /* InvalidCrustException.h */,
+				640C26B11FDADC4F00ADEB99 /* InvalidDestinationException.cpp */,
+				640C26B61FDADC4F00ADEB99 /* InvalidDestinationException.h */,
+				640C26B21FDADC4F00ADEB99 /* InvalidSizeException.cpp */,
+				640C26B51FDADC4F00ADEB99 /* InvalidSizeException.h */,
+				640C26B31FDADC4F00ADEB99 /* InvalidToppingException.cpp */,
+				640C26B01FDADC4F00ADEB99 /* InvalidToppingException.h */,
 			);
 			path = Exceptions;
 			sourceTree = "<group>";
@@ -243,7 +263,9 @@
 				E2F06CE31FD96336001716ED /* PizzaService.cpp in Sources */,
 				E29EC8E41FD02CF100C9F531 /* umsjonui.cpp in Sources */,
 				E2F06CF21FDAA41A001716ED /* InvalidDestinationException.cpp in Sources */,
+				640C26B81FDADC4F00ADEB99 /* InvalidDestinationException.cpp in Sources */,
 				E29EC8EA1FD041AD00C9F531 /* baksturui.cpp in Sources */,
+				640C26B91FDADC4F00ADEB99 /* InvalidSizeException.cpp in Sources */,
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,
 				E2F06CF51FDAAA83001716ED /* InvalidToppingException.cpp in Sources */,
 				E2F06CEF1FD9F44A001716ED /* InvalidCrustException.cpp in Sources */,
@@ -255,6 +277,8 @@
 				648446F51FD06DC400018D02 /* toppings.cpp in Sources */,
 				E2F06CEC1FD9ECC1001716ED /* InvalidSizeException.cpp in Sources */,
 				E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */,
+				640C26BA1FDADC4F00ADEB99 /* InvalidToppingException.cpp in Sources */,
+				640C26BB1FDADC4F00ADEB99 /* InvalidCrustException.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
