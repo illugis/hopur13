@@ -17,7 +17,7 @@ using namespace std;
 void UmsjonUI::umsjonUI() {
     
     val_umsjonUI();
-    annad_umsjonUI();
+    //annad_umsjonUI();
 }
 
 void UmsjonUI::val_umsjonUI() {
@@ -121,16 +121,19 @@ void UmsjonUI::val_menu_pizzaUI() {
     if (selection == '1') {
         cout << "Margarita" << endl;
         //Ekkert
+        //pizza_service.add_pizza_menu(create_pizza_menu_marg());
         //pizza_menu_service.add_pizza_menu(create_pizza_menu_marg());
     }
     else if (selection == '2') {
         cout << "Svepperoni" << endl;
         //Pepp og svepp
+        //pizza_service.add_pizza_menu(create_pizza_menu_svepperoni());
         //pizza_menu_service.add_pizza_menu(create_pizza_menu_svepperoni());
     }
     else if (selection == '3') {
         cout << "Veganveisla" << endl;
         //Sveppir, ólífur, laukur, ananas, paprika
+        //pizza_service.add_pizza_menu(create_pizza_menu_vegan());
         //pizza_menu_service.add_pizza_menu(create_pizza_menu_vegan());
     }
 }

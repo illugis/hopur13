@@ -14,6 +14,9 @@ using namespace std;
 
 void BaksturUI::baksturUI() {
     
+    cout << "Vinsamlegast sláðu inn afhendingarstað: ";
+    //Notandi slær inn afhendingarstað
+    
     cout << "Listi yfir pantaðar pítsur:" << endl;
     //listi
     getPizza_list();
