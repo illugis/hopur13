@@ -28,7 +28,7 @@ private:
     
 public:
     void add_pizza(const Pizza& pizza);
-    vector<Pizza> read_pizza();
+    string read_pizza();
     
 };
 

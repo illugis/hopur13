@@ -16,7 +16,7 @@ void PizzaService::add_pizza(const Pizza& pizza) {
     }
 }
 
-vector<Pizza> PizzaService::read_pizza() {
+string PizzaService::read_pizza() {
     
     return pizza_repo.read_pizza();
 }

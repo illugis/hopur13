@@ -27,7 +27,10 @@ private:
     Pizza pizza;
     void val_umsjonUI();
     void val_pizzaUI();
+    void val_main_menu_pizzaUI();
     void val_menu_pizzaUI();
+    void val_annad_umsjonUI();
+    void annad_umsjonUI();
     Pizza create_pizza();
     Pizza create_pizza_menu_marg();
     Pizza create_pizza_menu_svepperoni();

@@ -10,7 +10,6 @@
 
 #include <iostream>
 
-
 using namespace std;
 
 void BaksturUI::baksturUI() {
@@ -34,7 +33,5 @@ void BaksturUI::baksturUI() {
 
 void BaksturUI::getPizza_list() {
     
-    vector<Pizza> pizzas = pizza_service.read_pizza();
+    string pizzas = pizza_service.read_pizza();
 }
-
-

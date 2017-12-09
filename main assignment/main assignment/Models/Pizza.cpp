@@ -67,14 +67,10 @@ ostream& operator << (ostream& out, const Pizza& pizza){
     
     out << "Stærð: " << pizza.size << endl;
     out << "Botn: " << pizza.crust << endl;
-    out << "Álegg: ";
     for(int i = 0; i < pizza.toppings.size(); i++){
-        out << pizza.toppings[i] << " ";
+        out << "Álegg " << i+1 << ": " << pizza.toppings[i];
     }
-    out << "Afhendingarstaður: " << pizza.destination << endl;
+    out << "Afhendingarstaður " << pizza.destination << endl;
+    
     return out;
 }
-
-
-
-

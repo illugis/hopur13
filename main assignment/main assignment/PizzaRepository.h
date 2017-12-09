@@ -9,7 +9,6 @@
 #ifndef __main_assignment__PizzaRepository__
 #define __main_assignment__PizzaRepository__
 
-
 #include "Pizza.hpp"
 #include <fstream>
 
@@ -20,7 +19,7 @@ private:
 
 public:
     void add_pizza(const Pizza& pizza);
-    vector<Pizza> read_pizza();
+    string read_pizza();
     
 };
 

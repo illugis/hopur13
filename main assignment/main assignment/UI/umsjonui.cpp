@@ -17,7 +17,7 @@ using namespace std;
 void UmsjonUI::umsjonUI() {
     
     val_umsjonUI();
-
+    annad_umsjonUI();
 }
 
 void UmsjonUI::val_umsjonUI() {
@@ -35,7 +35,8 @@ void UmsjonUI::val_umsjonUI() {
         val_pizzaUI();
     }
     else if (selection == '2') {
-        val_menu_pizzaUI();
+        val_main_menu_pizzaUI();
+        //val_menu_pizzaUI();
     }
     /*else if (selection == '3') {
      
@@ -60,6 +61,7 @@ void UmsjonUI::val_pizzaUI() {
 
 Pizza UmsjonUI::create_pizza() {
     
+    char selection = '\0';
     int numberOfToppings;
     vector<Topping> toppings;
     string size, crust, destination;
@@ -75,11 +77,33 @@ Pizza UmsjonUI::create_pizza() {
         cin >> top;
         toppings.push_back(top);
         pizza.addTopping(top);
-    }
+    }/*
+    do {
+        cout << "Annað?(y/n) ";
+        cin >> selection;
+    }while (selection == 'y');*/
     cout << "Afhendingarstaður: ";
     cin >> destination;
     Pizza pizza(size, crust, toppings, destination);
     return pizza;
+}
+
+void UmsjonUI::val_main_menu_pizzaUI() {
+    
+    char selection = '\0';
+    
+    cout << "Vinsamlegast veldu eftirfarandi:" << endl;
+    cout << "\t [1] Stórar þykkbotna pítsur" << endl;
+    cout << "\t [2] Litlar þykkbotna pítsur" << endl;
+    cout << endl;
+    cout << "\t [3] Stórar þunnbotna pítsur" << endl;
+    cout << "\t [4] Litlar þunnbotna pítsur" << endl;
+    cout << "--> ";
+    cin >> selection;
+    
+    if (selection == '1') {
+        val_menu_pizzaUI();
+    }
 }
 
 void UmsjonUI::val_menu_pizzaUI() {
@@ -91,21 +115,23 @@ void UmsjonUI::val_menu_pizzaUI() {
     cout << "\t [2] Svepperoni" << endl;
     cout << "\t [3] Veganveisla" << endl;
     //cout << "[4] til baka" << endl;
+    cout << "--> ";
+    cin >> selection;
     
     if (selection == '1') {
         cout << "Margarita" << endl;
         //Ekkert
-        //pizza_menu_service.add_pizza(create_pizza_menu_marg());
+        //pizza_menu_service.add_pizza_menu(create_pizza_menu_marg());
     }
     else if (selection == '2') {
         cout << "Svepperoni" << endl;
         //Pepp og svepp
-        //pizza_menu_service.add_pizza(create_pizza_menu_svepperoni());
+        //pizza_menu_service.add_pizza_menu(create_pizza_menu_svepperoni());
     }
     else if (selection == '3') {
         cout << "Veganveisla" << endl;
         //Sveppir, ólífur, laukur, ananas, paprika
-        //pizza_menu_service.add_pizza(create_pizza_menu_vegan());
+        //pizza_menu_service.add_pizza_menu(create_pizza_menu_vegan());
     }
 }
 
@@ -171,3 +197,25 @@ Pizza UmsjonUI::create_pizza_menu_vegan() {
     Pizza pizza(size, crust, toppings, destination);
     return pizza;
 }
+/*
+void UmsjonUI::val_annad_umsjonUI() {
+    
+    char selection = '\0';
+    
+    cout << "Annað?(y/n) " << endl;
+    cout << "--> ";
+    cin >> selection;
+    
+    if (selection == 'y') {
+        annad_umsjonUI();
+    }
+    else if (selection == 'n') {
+        //main menu eða til baka
+    }
+}
+
+void UmsjonUI::annad_umsjonUI() {
+    
+    cout << "Annað: ";
+}
+*/
