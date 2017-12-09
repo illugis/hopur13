@@ -31,6 +31,10 @@ void Pizza::setCrust(string crust) {
     this->crust = crust;
 }
 
+void Pizza::checkVerbose(bool v) {
+    verbose = v;
+}
+
 string Pizza::getSize() const{
     return this->size;
 }
@@ -65,14 +69,25 @@ istream& operator >> (istream& in, Pizza& pizza){
 
 ostream& operator << (ostream& out, const Pizza& pizza){
     
-    out << "Stærð: " << pizza.size << endl;
-    out << "Botn: " << pizza.crust << endl;
+    if(pizza.verbose){
+    out << "Stærð: ";
+    }
+    out << pizza.size << endl;
+    if(pizza.verbose){
+    out << "Botn: ";
+    }
+    out << pizza.crust << endl;
 
     for(int i = 0; i < pizza.toppings.size(); i++){
-        out << "Álegg " << i+1 << ": " << pizza.toppings[i];
+        if(pizza.verbose){
+        out << "Álegg " << i+1 << ": ";
+        }
+        out << pizza.toppings[i];
     }
-
-    out << "Afhendingarstaður " << pizza.destination << endl;
+    if(pizza.verbose){
+    out << "Afhendingarstaður ";
+    }
+    out << pizza.destination << endl;
     
     return out;
 }

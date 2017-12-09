@@ -8,11 +8,11 @@
 
 #include "Order.h"
 
-Order::Order(Pizza pizza, string other, int price, string destination){
+Order::Order(Pizza pizza, string other, int price){
     this->pizza = pizza;
     this->other = other;
     this->price = price;
-    this->destination = destination;
+    //this->destination = destination;
 }
 
 string Order::getOther() const{
@@ -21,13 +21,14 @@ string Order::getOther() const{
 int Order::getPrice() const{
     return this->price;
 }
-string Order::getDestination() const{
+/*string Order::getDestination() const{
     return this->destination;
 }
+ */
 ostream& operator << (ostream& out, const Order order){
     out << "Pizza: " << order.pizza << endl;
     out << "Annað: " << order.other << endl;
-    out << "Afhendingarstaður: " << order.destination << endl;
+    //out << "Afhendingarstaður: " << order.destination << endl;
     
     return out;
 }
@@ -36,8 +37,8 @@ istream& operator >> (istream& in, Order order){
     in >> order.pizza;
     cout << "Annað: ";
     in >> order.other;
-    cout << "Afhendingarstaður: ";
-    in >> order.destination;
+    //cout << "Afhendingarstaður: ";
+    //in >> order.destination;
     
     return in;
 }

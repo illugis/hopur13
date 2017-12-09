@@ -10,6 +10,8 @@
 
 void PizzaRepository::add_pizza(const Pizza& pizza) {
     
+    //Pizza verbosePizza;
+    //verbosePizza.checkVerbose(true);
     ofstream fout;
 
    /*
@@ -19,8 +21,9 @@ void PizzaRepository::add_pizza(const Pizza& pizza) {
     fout.close();
     */
 
-    fout.open("pizzas.txt");
+    fout.open("pizzas.txt", ios::app);
     if (fout.is_open()) {
+        //verbosePizza.checkVerbose(false);
         fout << pizza << endl;
         fout.close();
     }
@@ -31,13 +34,16 @@ void PizzaRepository::add_pizza(const Pizza& pizza) {
 
 string PizzaRepository::read_pizza() {
     
+    //Pizza verbosePizza2;
     string str;
     ifstream fin;
     
     fin.open("pizzas.txt");
     if (fin.is_open()) {
         while (!fin.eof()) {
+            //verbosePizza2.checkVerbose(false);
             getline(fin, str);
+            //verbosePizza2.checkVerbose(true);
             cout << str << endl;
         }
         fin.close();
@@ -67,7 +73,7 @@ string PizzaRepository::read_pizza() {
     
     
     
-    /*fin.open("pizzas.dat", ios::binary);
+    fin.open("pizzas.dat", ios::binary);
     fin.open("pizzas.txt");
     if (fin.is_open()) {
         fin.seekg(0, fin.end);

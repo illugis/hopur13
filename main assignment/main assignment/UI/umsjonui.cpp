@@ -33,6 +33,7 @@ void UmsjonUI::val_umsjonUI() {
     
     if (selection == '1') {
         val_pizzaUI();
+        val_annad_umsjonUI();
     }
     else if (selection == '2') {
         val_main_menu_pizzaUI();
@@ -61,7 +62,6 @@ void UmsjonUI::val_pizzaUI() {
 
 Pizza UmsjonUI::create_pizza() {
     
-    char selection = '\0';
     int numberOfToppings;
     vector<Topping> toppings;
     string size, crust, destination;
@@ -77,16 +77,39 @@ Pizza UmsjonUI::create_pizza() {
         cin >> top;
         toppings.push_back(top);
         pizza.addTopping(top);
-    }/*
-    do {
-        cout << "Annað?(y/n) ";
-        cin >> selection;
-    }while (selection == 'y');*/
+    }
     cout << "Afhendingarstaður: ";
     cin >> destination;
     Pizza pizza(size, crust, toppings, destination);
     return pizza;
 }
+Order UmsjonUI::create_order() {
+    
+    int price;
+    char selection;
+    string other;
+    cout << "\t [1] Brauðstangir" << endl;
+    cout << "\t [2] Gos" << endl;
+    cout << "\t [3] Brauðstangir og gos" << endl;
+    cin >> selection;
+
+    if(selection == '1'){
+     price = 500;
+     other = "brauðstangir";
+    }
+    else if(selection == '2'){
+     price = 250;
+     other = "gos";
+    }
+    else if(selection == '3'){
+     price = 750;
+     other = "brauðstangir og gos";
+    }
+
+    Order order(create_pizza(), other, price);
+    return order;
+}
+
 
 void UmsjonUI::val_main_menu_pizzaUI() {
     
@@ -201,7 +224,7 @@ Pizza UmsjonUI::create_pizza_menu_vegan() {
     return pizza;
 }
 
-/*
+
 void UmsjonUI::val_annad_umsjonUI() {
     
     char selection = '\0';
@@ -220,7 +243,7 @@ void UmsjonUI::val_annad_umsjonUI() {
 
 void UmsjonUI::annad_umsjonUI() {
     
-    cout << "Annað: ";
+    order_service.add_order(create_order());
+    
 }
-*/
 
