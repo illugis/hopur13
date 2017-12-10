@@ -61,7 +61,6 @@ void UmsjonUI::val_pizzaUI() {
 
 Pizza UmsjonUI::create_pizza() {
     
-    char selection = '\0';
     int numberOfToppings;
     vector<Topping> toppings;
     string size, crust, destination;
@@ -77,11 +76,7 @@ Pizza UmsjonUI::create_pizza() {
         cin >> top;
         toppings.push_back(top);
         pizza.addTopping(top);
-    }/*
-    do {
-        cout << "Annað?(y/n) ";
-        cin >> selection;
-    }while (selection == 'y');*/
+    }
     cout << "Afhendingarstaður: ";
     cin >> destination;
     Pizza pizza(size, crust, toppings, destination);
@@ -201,24 +196,17 @@ Pizza UmsjonUI::create_pizza_menu_vegan() {
     return pizza;
 }
 /*
-void UmsjonUI::val_annad_umsjonUI() {
+void UmsjonUI::annad_umsjonUI() {
     
     char selection = '\0';
     
-    cout << "Annað?(y/n) " << endl;
+    cout << "Annað?(y/n)" << endl;
     cout << "--> ";
     cin >> selection;
     
-    if (selection == 'y') {
-        annad_umsjonUI();
+    while (selection == 'y') {
+        eitthvað
     }
-    else if (selection == 'n') {
-        //main menu eða til baka
-    }
-}
-
-void UmsjonUI::annad_umsjonUI() {
-    
-    cout << "Annað: ";
 }
 */
+

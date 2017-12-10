@@ -20,13 +20,14 @@ using namespace std;
 class Order {
     
 private:
+    string name;
     Pizza pizza;
     string other;
     int price;
     string destination;
     
 public:
-    Order(Pizza pizza, string other, int price, string destination);
+    Order(string name, Pizza pizza, string other, int price, string destination);
     string getOther() const;
     int getPrice() const;
     string getDestination() const;

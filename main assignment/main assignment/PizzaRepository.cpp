@@ -11,7 +11,20 @@
 void PizzaRepository::add_pizza(const Pizza& pizza) {
     
     ofstream fout;
-    fout.open("pizzas.txt");
+    fout.open("pizzas.txt", ios::app);
+    if (fout.is_open()) {
+        fout << pizza << endl;
+        fout.close();
+    }
+    else {
+        cout << "File could not be open!" << endl;
+    }
+}
+
+void PizzaRepository::add_pizza_menu(const Pizza& pizza) {
+    
+    ofstream fout;
+    fout.open("pizzas.txt", ios::app);
     if (fout.is_open()) {
         fout << pizza << endl;
         fout.close();

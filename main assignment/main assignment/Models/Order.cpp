@@ -8,7 +8,8 @@
 
 #include "Order.h"
 
-Order::Order(Pizza pizza, string other, int price, string destination){
+Order::Order(string name, Pizza pizza, string other, int price, string destination){
+    this->name = name;
     this->pizza = pizza;
     this->other = other;
     this->price = price;
