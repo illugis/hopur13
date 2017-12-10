@@ -21,6 +21,7 @@ private:
     PizzaService pizza_service;
     
 public:
+    BaksturUI();
     void baksturUI();
     void getPizza_list();
     

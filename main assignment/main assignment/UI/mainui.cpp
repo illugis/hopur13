@@ -13,6 +13,10 @@
 
 using namespace std;
 
+MainUI::MainUI(){
+    //EKKERT
+}
+
 void MainUI::startUI() {
     
     char selection = '\0';

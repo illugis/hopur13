@@ -8,6 +8,10 @@
 
 #include "afhendingui.h"
 
+AfhendingUI::AfhendingUI() {
+    
+}
+
 
 void AfhendingUI::afhendingUI(){
     

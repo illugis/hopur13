@@ -43,6 +43,7 @@ private:
     OrderService order_service;
     
 public:
+    UmsjonUI();
     void umsjonUI();
     
 };

@@ -26,6 +26,7 @@ private:
     //string destination;
     
 public:
+    Order();
     Order(Pizza pizza, string other, int price);
     string getOther() const;
     int getPrice() const;

@@ -6,13 +6,16 @@
 //  Copyright (c) 2017 Bloc. All rights reserved.
 //
 
-#include "mainui.h"
 #include "umsjonui.h"
 
 
 #include <iostream>
 
 using namespace std;
+
+UmsjonUI::UmsjonUI() {
+    
+}
 
 void UmsjonUI::umsjonUI() {
     
@@ -85,7 +88,7 @@ Pizza UmsjonUI::create_pizza() {
 }
 Order UmsjonUI::create_order() {
     
-    int price;
+    int price = 0;
     char selection;
     string other;
     cout << "\t [1] Brauðstangir" << endl;
@@ -105,7 +108,6 @@ Order UmsjonUI::create_order() {
      price = 750;
      other = "brauðstangir og gos";
     }
-
     Order order(create_pizza(), other, price);
     return order;
 }
