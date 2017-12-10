@@ -32,7 +32,7 @@ istream& operator >> (istream& in, Topping& topping){
 ostream& operator << (ostream& out, const Topping& topping){
     
     out << topping.name << endl;
-    out << "Verð (kr): " << topping.price << endl;
+    out << topping.price << endl;
     
     return out;
 }

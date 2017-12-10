@@ -12,6 +12,8 @@
 		640C26B91FDADC4F00ADEB99 /* InvalidSizeException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B21FDADC4F00ADEB99 /* InvalidSizeException.cpp */; };
 		640C26BA1FDADC4F00ADEB99 /* InvalidToppingException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B31FDADC4F00ADEB99 /* InvalidToppingException.cpp */; };
 		640C26BB1FDADC4F00ADEB99 /* InvalidCrustException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B71FDADC4F00ADEB99 /* InvalidCrustException.cpp */; };
+		640C26BE1FDC613100ADEB99 /* OrderService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26BC1FDC613100ADEB99 /* OrderService.cpp */; };
+		640C26C11FDC617D00ADEB99 /* OrderRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26BF1FDC617D00ADEB99 /* OrderRepository.cpp */; };
 		648446F51FD06DC400018D02 /* toppings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 648446F31FD06DC400018D02 /* toppings.cpp */; };
 		E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8AF1FCC3E4900C9F531 /* main.cpp */; };
 		E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8DF1FD0249500C9F531 /* mainui.cpp */; };
@@ -53,6 +55,10 @@
 		640C26B51FDADC4F00ADEB99 /* InvalidSizeException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvalidSizeException.h; path = "main assignment/Models/InvalidSizeException.h"; sourceTree = SOURCE_ROOT; };
 		640C26B61FDADC4F00ADEB99 /* InvalidDestinationException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InvalidDestinationException.h; path = "main assignment/Models/InvalidDestinationException.h"; sourceTree = SOURCE_ROOT; };
 		640C26B71FDADC4F00ADEB99 /* InvalidCrustException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidCrustException.cpp; path = "main assignment/Models/InvalidCrustException.cpp"; sourceTree = SOURCE_ROOT; };
+		640C26BC1FDC613100ADEB99 /* OrderService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrderService.cpp; sourceTree = "<group>"; };
+		640C26BD1FDC613100ADEB99 /* OrderService.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OrderService.hpp; sourceTree = "<group>"; };
+		640C26BF1FDC617D00ADEB99 /* OrderRepository.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrderRepository.cpp; sourceTree = "<group>"; };
+		640C26C01FDC617D00ADEB99 /* OrderRepository.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OrderRepository.hpp; sourceTree = "<group>"; };
 		648446F31FD06DC400018D02 /* toppings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = toppings.cpp; sourceTree = "<group>"; };
 		648446F41FD06DC400018D02 /* toppings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toppings.h; sourceTree = "<group>"; };
 		E29EC8AC1FCC3E4900C9F531 /* main assignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "main assignment"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				E2F06CE11FD96336001716ED /* PizzaService.cpp */,
+				640C26BC1FDC613100ADEB99 /* OrderService.cpp */,
+				640C26BD1FDC613100ADEB99 /* OrderService.hpp */,
 				E2F06CE21FD96336001716ED /* PizzaService.h */,
 				E2F06CF61FDB53E0001716ED /* PizzaMenuService.cpp */,
 				E2F06CF71FDB53E0001716ED /* PizzaMenuService.h */,
@@ -146,6 +154,8 @@
 				E2F06CE51FD96982001716ED /* PizzaRepository.h */,
 				E2F06CF91FDB5565001716ED /* PizzaMenuRepository.cpp */,
 				E2F06CFA1FDB5565001716ED /* PizzaMenuRepository.h */,
+				640C26BF1FDC617D00ADEB99 /* OrderRepository.cpp */,
+				640C26C01FDC617D00ADEB99 /* OrderRepository.hpp */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -258,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				640C26BE1FDC613100ADEB99 /* OrderService.cpp in Sources */,
 				E2F06CE61FD96982001716ED /* PizzaRepository.cpp in Sources */,
 				640C26AC1FD6ED5500ADEB99 /* Pizza.cpp in Sources */,
 				E2F06CE31FD96336001716ED /* PizzaService.cpp in Sources */,
@@ -271,6 +282,7 @@
 				E2F06CEF1FD9F44A001716ED /* InvalidCrustException.cpp in Sources */,
 				E2F06CF81FDB53E0001716ED /* PizzaMenuService.cpp in Sources */,
 				E29EC8E71FD0355700C9F531 /* salaui.cpp in Sources */,
+				640C26C11FDC617D00ADEB99 /* OrderRepository.cpp in Sources */,
 				E29EC8ED1FD0423200C9F531 /* afhendingui.cpp in Sources */,
 				E2F06CFB1FDB5565001716ED /* PizzaMenuRepository.cpp in Sources */,
 				E2F06CE91FD992C3001716ED /* Order.cpp in Sources */,

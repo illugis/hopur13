@@ -24,13 +24,13 @@ private:
     Pizza pizza;
     string other;
     int price;
-    string destination;
+    //string destination;
     
 public:
-    Order(string name, Pizza pizza, string other, int price, string destination);
+    Order(Pizza pizza, string other, int price);
     string getOther() const;
     int getPrice() const;
-    string getDestination() const;
+    //string getDestination() const;
     friend ostream& operator << (ostream& out, const Order order);
     friend istream& operator >> (istream& in, Order order);
     

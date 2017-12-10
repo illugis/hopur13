@@ -31,6 +31,10 @@ void Pizza::setCrust(string crust) {
     this->crust = crust;
 }
 
+void Pizza::checkVerbose(bool v) {
+    verbose = v;
+}
+
 string Pizza::getSize() const{
     return this->size;
 }
@@ -48,29 +52,42 @@ string Pizza::getDestination() const{
 }
 
 istream& operator >> (istream& in, Pizza& pizza){
-    cout << "Stærð: ";
+    //cout << "Stærð: ";
     in >> pizza.size;
-    cout << "Botn: ";
+    //cout << "Botn: ";
     in >> pizza.crust;
-    cout << "Álegg: ";
+    //cout << "Álegg: ";
     Topping topping;
     for(int i = 0; i < pizza.toppings.size(); i++){
         in >> topping;
         pizza.addTopping(topping);
     }
-    cout << "Afhendingarstaður: ";
+    //cout << "Afhendingarstaður: ";
     in >> pizza.destination;
     return in;
 }
 
 ostream& operator << (ostream& out, const Pizza& pizza){
     
-    out << "Stærð: " << pizza.size << endl;
-    out << "Botn: " << pizza.crust << endl;
-    for(int i = 0; i < pizza.toppings.size(); i++){
-        out << "Álegg " << i+1 << ": " << pizza.toppings[i];
+    if(pizza.verbose){
+    out << "Stærð: ";
     }
-    out << "Afhendingarstaður " << pizza.destination << endl;
+    out << pizza.size << endl;
+    if(pizza.verbose){
+    out << "Botn: ";
+    }
+    out << pizza.crust << endl;
+
+    for(int i = 0; i < pizza.toppings.size(); i++){
+        if(pizza.verbose){
+        out << "Álegg " << i+1 << ": ";
+        }
+        out << pizza.toppings[i];
+    }
+    if(pizza.verbose){
+    out << "Afhendingarstaður ";
+    }
+    out << pizza.destination << endl;
     
     return out;
 }

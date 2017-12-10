@@ -27,6 +27,7 @@ public:
     void addTopping(Topping topping);
     void setSize(string size);
     void setCrust(string crust);
+    void checkVerbose(bool v) ;
     string getSize() const;
     string getCrust() const;
     vector<Topping> getTopping() const;
