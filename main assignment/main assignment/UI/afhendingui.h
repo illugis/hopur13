@@ -12,14 +12,12 @@
 
 
 #include <iostream>
-#include "umsjonui.h"
 
 using namespace std;
 
 class AfhendingUI {
     
 private:
-    UmsjonUI umsjonui;
     char greitt;
     char afhent;
     

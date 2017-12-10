@@ -9,7 +9,6 @@
 #ifndef __main_assignment__mainui__
 #define __main_assignment__mainui__
 
-
 #include "umsjonui.h"
 #include "salaui.h"
 #include "baksturui.h"
