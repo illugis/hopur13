@@ -30,7 +30,7 @@ void UmsjonUI::val_umsjonUI() {
     cout << "Vinsamlegast veldu:" << endl;
     cout << "\t [1] til að skrá pizzu að eigin vali" << endl;
     cout << "\t [2] til að skrá pizzu af matseðli" << endl;
-    //cout << "\t [3] til baka" << endl;
+    cout << "\t [3] til baka" << endl;
     cout << "--> ";
     cin >> selection;
     
@@ -42,10 +42,11 @@ void UmsjonUI::val_umsjonUI() {
         val_main_menu_pizzaUI();
         //val_menu_pizzaUI();
     }
-    /*else if (selection == '3') {
+    else if (selection == '3') {
      
-     }*/
+     }
 }
+
 
 void UmsjonUI::val_pizzaUI() {
     
@@ -234,14 +235,18 @@ void UmsjonUI::val_annad_umsjonUI() {
     cout << "--> ";
     cin >> selection;
     
-    while (selection == 'y') {
-        //eitthvað
+    if(selection == 'y') {
+        create_order();
+        
+    }
+    else if(selection == 'n'){
+        
     }
 }
 
 void UmsjonUI::annad_umsjonUI() {
     
-    order_service.add_order(create_order());
+    //order_service.add_order(create_order());
     
 }
 

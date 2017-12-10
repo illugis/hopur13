@@ -27,7 +27,7 @@ private:
     bool isValidTopping(const Pizza& pizza);
     
 public:
-    void add_pizza(const Pizza& pizza);
+    void add_pizza(Pizza pizza);
     void add_pizza_menu(const Pizza& pizza);
     string read_pizza();
     

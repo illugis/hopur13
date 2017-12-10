@@ -19,8 +19,8 @@ private:
     OrderRepository order_repo;
     
 public:
-    void add_order(const Order& order);
-    string read_order();
+    //void add_order(const Order& order);
+    //string read_order();
     
 };
 

@@ -8,7 +8,7 @@
 
 #include "PizzaService.h"
 
-void PizzaService::add_pizza(const Pizza& pizza) {
+void PizzaService::add_pizza(Pizza pizza) {
     
     if (isValidSize(pizza) && isValidCrust(pizza)) {
         pizza_repo.add_pizza(pizza);
