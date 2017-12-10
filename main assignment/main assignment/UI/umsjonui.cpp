@@ -226,20 +226,16 @@ Pizza UmsjonUI::create_pizza_menu_vegan() {
     return pizza;
 }
 
-
 void UmsjonUI::val_annad_umsjonUI() {
     
     char selection = '\0';
     
-    cout << "Annað?(y/n) " << endl;
+    cout << "Annað?(y/n)" << endl;
     cout << "--> ";
     cin >> selection;
     
-    if (selection == 'y') {
-        annad_umsjonUI();
-    }
-    else if (selection == 'n') {
-        //main menu eða til baka
+    while (selection == 'y') {
+        //eitthvað
     }
 }
 

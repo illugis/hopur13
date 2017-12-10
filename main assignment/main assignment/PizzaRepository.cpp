@@ -13,6 +13,19 @@ void PizzaRepository::add_pizza(const Pizza& pizza) {
     //Pizza verbosePizza;
     //verbosePizza.checkVerbose(true);
     ofstream fout;
+    fout.open("pizzas.txt", ios::app);
+    if (fout.is_open()) {
+        fout << pizza << endl;
+        fout.close();
+    }
+    else {
+        cout << "File could not be open!" << endl;
+    }
+}
+
+void PizzaRepository::add_pizza_menu(const Pizza& pizza) {
+    
+    ofstream fout;
 
    /*
     fout.open("pizzas.dat", ios::binary|ios::app);
@@ -20,6 +33,7 @@ void PizzaRepository::add_pizza(const Pizza& pizza) {
     cout << endl;
     fout.close();
     */
+
 
     fout.open("pizzas.txt", ios::app);
     if (fout.is_open()) {

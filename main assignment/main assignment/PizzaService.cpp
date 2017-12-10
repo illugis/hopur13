@@ -16,6 +16,11 @@ void PizzaService::add_pizza(const Pizza& pizza) {
     }
 }
 
+void PizzaService::add_pizza_menu(const Pizza& pizza) {
+    
+    pizza_repo.add_pizza_menu(pizza);
+}
+
 string PizzaService::read_pizza() {
     
     return pizza_repo.read_pizza();

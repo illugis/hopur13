@@ -20,6 +20,7 @@ using namespace std;
 class Order {
     
 private:
+    string name;
     Pizza pizza;
     string other;
     int price;
