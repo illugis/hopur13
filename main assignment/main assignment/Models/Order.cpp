@@ -29,14 +29,14 @@ int Order::getPrice() const{
     return this->destination;
 }
  */
-ostream& operator << (ostream& out, const Order order){
+ostream& operator << (ostream& out, const Order& order){
     out << "Pizza: " << order.pizza << endl;
     out << "Annað: " << order.other << endl;
     //out << "Afhendingarstaður: " << order.destination << endl;
     
     return out;
 }
-istream& operator >> (istream& in, Order order){
+istream& operator >> (istream& in, Order& order){
     cout << "Pizza: ";
     in >> order.pizza;
     cout << "Annað: ";

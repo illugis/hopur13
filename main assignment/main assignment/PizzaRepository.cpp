@@ -8,13 +8,14 @@
 
 #include "PizzaRepository.h"
 
-void PizzaRepository::add_pizza(const Pizza& pizza) {
+void PizzaRepository::add_pizza(Pizza pizza) {
     
-    //Pizza verbosePizza;
-    //verbosePizza.checkVerbose(true);
+    
+    
     ofstream fout;
     fout.open("pizzas.txt", ios::app);
     if (fout.is_open()) {
+        pizza.checkVerbose(false);
         fout << pizza << endl;
         fout.close();
     }
@@ -37,7 +38,6 @@ void PizzaRepository::add_pizza_menu(const Pizza& pizza) {
 
     fout.open("pizzas.txt", ios::app);
     if (fout.is_open()) {
-        //verbosePizza.checkVerbose(false);
         fout << pizza << endl;
         fout.close();
     }
@@ -48,16 +48,16 @@ void PizzaRepository::add_pizza_menu(const Pizza& pizza) {
 
 string PizzaRepository::read_pizza() {
     
-    //Pizza verbosePizza2;
+    Pizza verbosePizza2;
     string str;
     ifstream fin;
     
     fin.open("pizzas.txt");
     if (fin.is_open()) {
         while (!fin.eof()) {
-            //verbosePizza2.checkVerbose(false);
+            verbosePizza2.checkVerbose(false);
             getline(fin, str);
-            //verbosePizza2.checkVerbose(true);
+            verbosePizza2.checkVerbose(true);
             cout << str << endl;
         }
         fin.close();

@@ -32,8 +32,8 @@ public:
     string getOther() const;
     int getPrice() const;
     //string getDestination() const;
-    friend ostream& operator << (ostream& out, const Order order);
-    friend istream& operator >> (istream& in, Order order);
+    friend ostream& operator << (ostream& out, const Order& order);
+    friend istream& operator >> (istream& in, Order& order);
     
 };
 

@@ -1,20 +1,18 @@
-stro
-thunnur
-pepp
-120
-hjardarhagi
-
-Stærð: stor
-thunnur
-beikon
-160
-hjadarhagi
-
 stor
 thunnur
 pepp
 120
-bbq
-100
 hjardarhagi
+
+stor
+thykkur
+pepp
+120
+hr
+
+stor
+thykkur
+rjom
+70
+hr
 
