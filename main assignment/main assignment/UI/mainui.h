@@ -23,6 +23,7 @@ private:
     AfhendingUI afhendingui;
     
 public:
+    MainUI();
     void startUI();
 };
 

@@ -22,6 +22,7 @@ private:
     char afhent;
     
 public:
+    AfhendingUI();
     void afhendingUI();
     string getPlace();
     

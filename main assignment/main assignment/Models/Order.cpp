@@ -8,6 +8,10 @@
 
 #include "Order.h"
 
+Order::Order() {
+    
+}
+
 Order::Order(Pizza pizza, string other, int price){
     this->pizza = pizza;
     this->other = other;

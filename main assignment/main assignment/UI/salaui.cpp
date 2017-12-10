@@ -12,6 +12,10 @@
 
 using namespace std;
 
+SalaUI::SalaUI() {
+    
+}
+
 void SalaUI::salaUI() {
     
     cout << "Pöntun: " << endl;

@@ -23,6 +23,7 @@ private:
     
     
 public:
+    SalaUI();
     void salaUI();
     
 };

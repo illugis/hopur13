@@ -12,6 +12,10 @@
 
 using namespace std;
 
+BaksturUI::BaksturUI(){
+    
+}
+
 void BaksturUI::baksturUI() {
     
     cout << "Vinsamlegast sláðu inn afhendingarstað: ";
