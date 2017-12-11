@@ -7,3 +7,17 @@
 //
 
 #include "DeliveryPlaceService.hpp"
+
+DeliveryPlaceService::DeliveryPlaceService() {
+    
+}
+void DeliveryPlaceService::storeAllDeliveryPlaces(const vector<DeliveryPlace> &deliveryplace){
+    
+    deliveryplace_repo.storeAllDeliveryPlaces(deliveryplace);
+}
+
+vector<DeliveryPlace> DeliveryPlaceService::retriveAllDeliveryPlaces(){
+    
+    return deliveryplace_repo.retriveAllDeliveryPlaces();
+}
+

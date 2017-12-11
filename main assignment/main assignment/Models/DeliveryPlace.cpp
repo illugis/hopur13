@@ -18,6 +18,7 @@ DeliveryPlace::DeliveryPlace(string name){
 }
 
 void DeliveryPlace::write(ofstream &fout) const{
+    
     int stringLength = name.length() + 1;
     
     fout.write((char*)(&stringLength), sizeof(int));
@@ -25,6 +26,7 @@ void DeliveryPlace::write(ofstream &fout) const{
 }
 
 void DeliveryPlace::read(ifstream &fin) {
+    
     int stringLength;
     
     fin.read((char*)(&stringLength), sizeof(int));
