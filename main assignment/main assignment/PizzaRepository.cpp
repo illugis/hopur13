@@ -8,6 +8,53 @@
 
 #include "PizzaRepository.h"
 
+using namespace std;
+
+PizzaRepository::PizzaRepository() {
+    
+    
+}
+
+void PizzaRepository::storeAllPizzas(const vector<Pizza> &pizza) {
+    
+    ofstream fout;
+    fout.open("pizzas.dat", ios::binary);
+    
+    int pizzaCount = pizza.size();
+    
+    fout.write((char*)(&pizzaCount), sizeof(int));
+    
+    for (int i = 0; i < pizzaCount; i++) {
+        pizza[i].write(fout);
+    }
+    
+    fout.close();
+}
+
+vector<Pizza> PizzaRepository::retrieveAllPizzas() {
+    
+    vector<Pizza> pizza;
+    Pizza pizza1;
+    
+    ifstream fin;
+    fin.open("pizzas.dat", ios::binary);
+    
+    if (fin.is_open()) {
+        int pizzaCount;
+        
+        fin.read((char*)(&pizzaCount), sizeof(int));
+        
+        for (int i = 0; i < pizzaCount; i++) {
+            pizza1.read(fin);
+            pizza.push_back(pizza1);
+        }
+        
+        fin.close();
+    }
+    
+    return pizza;
+}
+
 void PizzaRepository::add_pizza(Pizza pizza) {
     
     

@@ -9,91 +9,66 @@
 #include "Pizza.hpp"
 #include <fstream>
 
+using namespace std;
+
 Pizza::Pizza() {
     
 }
 
-Pizza::Pizza(string size, string crust, vector<Topping> toppings, int price, string destination){
-    this->size = size;
-    this->crust = crust;
-    this->toppings = toppings;
-    this->price = price;
-    this->destination = destination;
-}
 
 void Pizza::addTopping(Topping topping){
     
     toppings.push_back(topping);
 }
 
-void Pizza::setSize(string size) {
-    this->size = size;
-}
-
-void Pizza::setCrust(string crust) {
-    this->crust = crust;
-}
-
 void Pizza::checkVerbose(bool v) {
     verbose = v;
 }
 
-string Pizza::getSize() const{
-    return this->size;
+void Pizza::write(ofstream& fout) const {
+    
+    int toppingCount = toppings.size();
+    
+    fout.write((char*)(&toppingCount), sizeof(int));
+    
+    for (int i = 0; i < toppingCount; i++) {
+        toppings[i].write(fout);
+    }
 }
 
-string Pizza::getCrust() const{
-    return this->crust;
-}
-
-vector<Topping> Pizza::getTopping() const {
-    return this->toppings;
-}
-
-string Pizza::getDestination() const{
-    return this->destination;
+void Pizza::read(ifstream& fin) {
+    
+    int toppingCount;
+    fin.read((char*)(&toppingCount), sizeof(int));
+    
+    Topping topping;
+    for (int i = 0; i < toppingCount; i++) {
+        topping.read(fin);
+        addTopping(topping);
+    }
 }
 
 istream& operator >> (istream& in, Pizza& pizza){
-    //cout << "Stærð: ";
-    in >> pizza.size;
-    //cout << "Botn: ";
-    in >> pizza.crust;
-    //cout << "Álegg: ";
+    
+    int toppingCount;
+    in >> toppingCount;
+    
     Topping topping;
-    for(int i = 0; i < pizza.toppings.size(); i++){
+    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         in >> topping;
         pizza.addTopping(topping);
     }
-    //cout << "Afhendingarstaður: ";
-    in >> pizza.destination;
+    
     return in;
 }
 
 ostream& operator << (ostream& out, const Pizza& pizza){
     
-    if(pizza.verbose){
-    out << "Stærð: ";
-    }
-    out << pizza.size << endl;
-    if(pizza.verbose){
-    out << "Botn: ";
-    }
-    out << pizza.crust << endl;
-
-    for(int i = 0; i < pizza.toppings.size(); i++){
-        //if(pizza.verbose){
-        //out << "Álegg " << i+1 << ": ";
-        //}
-        out << pizza.toppings[i];
-    }
-    out << "Verð (kr): ";
-    out << pizza.price << endl;
+    out << "Pizza with toppings" << endl;
     
-    if(pizza.verbose){
-    out << "Afhendingarstaður: ";
+    for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
+        out << pizza.toppings[i] << endl;
     }
-    out << pizza.destination << endl;
     
     return out;
 }

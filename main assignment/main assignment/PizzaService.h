@@ -27,6 +27,10 @@ private:
     bool isValidTopping(const Pizza& pizza);
     
 public:
+    PizzaService();
+    void storeAllPizzas(const vector<Pizza> &pizza);
+    vector<Pizza> retrieveAllPizzas();
+    
     void add_pizza(Pizza pizza);
     void add_pizza_menu(const Pizza& pizza);
     string read_pizza();
