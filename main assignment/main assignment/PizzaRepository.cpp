@@ -56,7 +56,8 @@ string PizzaRepository::read_pizza() {
     if (fin.is_open()) {
         while (!fin.eof()) {
             verbosePizza2.checkVerbose(false);
-            getline(fin, str);
+            //getline(fin, str);
+            fin >> str;
             verbosePizza2.checkVerbose(true);
             cout << str << endl;
         }
