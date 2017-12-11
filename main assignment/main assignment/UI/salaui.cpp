@@ -63,7 +63,26 @@ void SalaUI::sala_menuUI() {
 
 void SalaUI::sala_orderUI() {
     
+    vector<Topping> toppings = toppings_service.retrieveAllToppings();
     
+    vector<Pizza> pizza;
+    
+    int toppingSelection = -1;
+    while (toppingSelection != 0) {
+        cout << "Vinsamlegast veldu eftirfarandi nr. til að bæta við áleggi (0 fyrir hætta)" << endl;
+        for (unsigned int i = 0; i < toppings.size(); i++) {
+            cout << "[" << i+1 << "] " << toppings[i] << endl;
+        }
+        cin >> toppingSelection;
+        
+        if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
+            pizza.addTopping(toppings[toppingSelection - 1]);
+        }
+    }
+    
+    pizza_service.storeAllPizzas(pizza);
+    
+    cout << endl;
 }
 
 

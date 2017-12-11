@@ -13,6 +13,7 @@
 #include "OrderService.hpp"
 #include "Pizza.hpp"
 #include "PizzaService.h"
+#include "ToppingsService.h"
 
 #include <iostream>
 
@@ -27,6 +28,8 @@ private:
     void sala_orderUI();
     Order create_order();
     
+    ToppingsService toppings_service;
+    PizzaService pizza_service;
     
 public:
     SalaUI();

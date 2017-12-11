@@ -171,7 +171,7 @@ void UmsjonUI::val_pizzaUI() {
         cout << "Invalid destination!" << endl;
     }
 }
-
+/*
 Pizza UmsjonUI::create_pizza() {
     
     int numberOfToppings, price;
@@ -255,7 +255,7 @@ void UmsjonUI::val_menu_pizzaUI() {
         //pizza_menu_service.add_pizza_menu(create_pizza_menu_vegan());
     }
 }
-*/
+
 void UmsjonUI::val_annad_umsjonUI() {
     
     char selection = '\0';
@@ -280,4 +280,4 @@ void UmsjonUI::annad_umsjonUI() {
     //order_service.add_order(create_order());
     
 }
-
+*/
