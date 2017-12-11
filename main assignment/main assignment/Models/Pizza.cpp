@@ -7,19 +7,22 @@
 //
 
 #include "Pizza.hpp"
+#include <fstream>
 
 Pizza::Pizza() {
     
 }
 
-Pizza::Pizza(string size, string crust, vector<Topping> toppings, string destination){
+Pizza::Pizza(string size, string crust, vector<Topping> toppings, int price, string destination){
     this->size = size;
     this->crust = crust;
     this->toppings = toppings;
+    this->price = price;
     this->destination = destination;
 }
 
 void Pizza::addTopping(Topping topping){
+    
     toppings.push_back(topping);
 }
 
@@ -79,13 +82,16 @@ ostream& operator << (ostream& out, const Pizza& pizza){
     out << pizza.crust << endl;
 
     for(int i = 0; i < pizza.toppings.size(); i++){
-        if(pizza.verbose){
-        out << "Álegg " << i+1 << ": ";
-        }
+        //if(pizza.verbose){
+        //out << "Álegg " << i+1 << ": ";
+        //}
         out << pizza.toppings[i];
     }
+    out << "Verð (kr): ";
+    out << pizza.price << endl;
+    
     if(pizza.verbose){
-    out << "Afhendingarstaður ";
+    out << "Afhendingarstaður: ";
     }
     out << pizza.destination << endl;
     

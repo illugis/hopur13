@@ -1,24 +1,24 @@
 //
-//  toppings.cpp
+//  crust.cpp
 //  main assignment
 //
-//  Created by illugi steingrimsson on 30/11/2017.
-//  Copyright © 2017 Bloc. All rights reserved.
+//  Created by Gunnlaugur Birgisson on 10/12/2017.
+//  Copyright (c) 2017 Bloc. All rights reserved.
 //
 
-#include "toppings.h"
+#include "Crust.h"
 #include <fstream>
 
-Topping::Topping(){
+Crust::Crust() {
     
 }
 
-Topping::Topping(string name, int price){
+Crust::Crust(string name, int price){
     this->name = name;
     this->price = price;
 }
 
-void Topping::write(ofstream& fout) const {
+void Crust::write(ofstream& fout) const {
     
     int stringLength = name.length() + 1;
     
@@ -28,7 +28,7 @@ void Topping::write(ofstream& fout) const {
     fout.write((char*)(&price), sizeof(int));
 }
 
-void Topping::read(ifstream& fin) {
+void Crust::read(ifstream& fin) {
     
     int stringLength;
     
@@ -44,21 +44,21 @@ void Topping::read(ifstream& fin) {
     delete [] str;
 }
 
-istream& operator >> (istream& in, Topping& topping){
-    cout << "Álegg: ";
+istream& operator >> (istream& in, Crust& crust){
+    cout << "Botn: ";
     in >> ws;
-    getline(in, topping.name);
+    getline(in, crust.name);
     
     cout << "Verð (kr): ";
-    in >> topping.price;
+    in >> crust.price;
     
     return in;
 }
 
-ostream& operator << (ostream& out, const Topping& topping){
+ostream& operator << (ostream& out, const Crust& crust){
     
-    out << topping.name << " ";
-    out << topping.price << endl;
+    out << crust.name << " ";
+    out << crust.price;
     
     return out;
 }

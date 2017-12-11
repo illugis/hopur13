@@ -18,6 +18,9 @@ SalaUI::SalaUI() {
 
 void SalaUI::salaUI() {
     
+    sala_menuUI();
+    
+    /*
     cout << "Pöntun: " << endl;
     //Bæta því í skjal
     // Ná í skjal og birta
@@ -40,4 +43,27 @@ void SalaUI::salaUI() {
     
     cout << "Athugasemdir: ";
     //fout getline(cin, str)
+     */
 }
+
+void SalaUI::sala_menuUI() {
+    
+    char selection = '\0';
+    
+    cout << "Veldu eftirfarandi: " << endl;
+    cout << "[1] til að skrá pöntun" << endl;
+    cout << "[2] til baka" << endl;
+    cout << "--> ";
+    cin >> selection;
+    
+    if (selection == '1') {
+        sala_orderUI();
+    }
+}
+
+void SalaUI::sala_orderUI() {
+    
+    
+}
+
+

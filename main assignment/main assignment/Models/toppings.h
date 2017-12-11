@@ -10,6 +10,8 @@
 #define toppings_hpp
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 class Topping {
@@ -21,6 +23,8 @@ private:
 public:
     Topping();
     Topping(string name, int price);
+    void write(ofstream& fout) const;
+    void read(ifstream& fin);
     friend istream& operator >> (istream& in, Topping& topping);
     friend ostream& operator << (ostream& out, const Topping& topping);
     

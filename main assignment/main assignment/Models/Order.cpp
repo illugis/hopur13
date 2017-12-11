@@ -12,7 +12,8 @@ Order::Order() {
     
 }
 
-Order::Order(Pizza pizza, string other, int price){
+Order::Order(string name, Pizza pizza, string other, int price){
+    this->name = name;
     this->pizza = pizza;
     this->other = other;
     this->price = price;

@@ -9,7 +9,10 @@
 #ifndef __main_assignment__sala__
 #define __main_assignment__sala__
 
-
+#include "Order.h"
+#include "OrderService.hpp"
+#include "Pizza.hpp"
+#include "PizzaService.h"
 
 #include <iostream>
 
@@ -20,6 +23,9 @@ class SalaUI {
 private:
     string delivery;
     char payment;
+    void sala_menuUI();
+    void sala_orderUI();
+    Order create_order();
     
     
 public:

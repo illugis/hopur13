@@ -9,12 +9,13 @@
 #ifndef Pizza_hpp
 #define Pizza_hpp
 
-
-#include <vector>
 #include "toppings.h"
+#include <vector>
 
 class Pizza {
+
 private:
+    int price;
     vector<Topping> toppings;
     string size;
     string crust;
@@ -23,7 +24,7 @@ private:
     
 public:
     Pizza();
-    Pizza(string size, string crust, vector<Topping> toppings, string destination);
+    Pizza(string size, string crust, vector<Topping> toppings, int price, string destination);
     void addTopping(Topping topping);
     void setSize(string size);
     void setCrust(string crust);
@@ -35,6 +36,9 @@ public:
     
     friend istream& operator >> (istream& in, Pizza& pizza);
     friend ostream& operator << (ostream& out, const Pizza& pizza);
+    
+    void write(ofstream& fout) const;
+    void read(ofstream& fout);
     
     
 };

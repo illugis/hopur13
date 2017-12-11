@@ -9,7 +9,6 @@
 #ifndef __main_assignment__umsjonui__
 #define __main_assignment__umsjonui__
 
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -18,6 +17,8 @@
 #include "PizzaService.h"
 #include "Order.h"
 #include "OrderService.hpp"
+#include "Crust.h"
+#include "CrustService.h"
 
 using namespace std;
 
@@ -28,19 +29,24 @@ private:
     string other;
     Pizza pizza;
     Order order;
+    Crust crust;
+    
+    vector<Crust> create_crust();
+    
     void val_umsjonUI();
     void val_pizzaUI();
-    void val_main_menu_pizzaUI();
     void val_menu_pizzaUI();
     void val_annad_umsjonUI();
     void annad_umsjonUI();
+    
+    void toppingsUI();
+    
     Order create_order();
     Pizza create_pizza();
-    Pizza create_pizza_menu_marg();
-    Pizza create_pizza_menu_svepperoni();
-    Pizza create_pizza_menu_vegan();
+
     PizzaService pizza_service;
     OrderService order_service;
+    CrustService crust_service;
     
 public:
     UmsjonUI();
