@@ -18,7 +18,6 @@ UmsjonUI::UmsjonUI() {
 void UmsjonUI::umsjonUI() {
     
     val_umsjonUI();
-    //annad_umsjonUI();
 }
 
 void UmsjonUI::val_umsjonUI() {
@@ -38,19 +37,21 @@ void UmsjonUI::val_umsjonUI() {
     
     if (selection == '1') {
         crust_service.storeAllCrust(create_crust());
-        //val_pizzaUI();
-        //val_annad_umsjonUI();
     }
     else if (selection == '2') {
-        cout << "Sæll vertu" << endl;
-        //val_main_menu_pizzaUI();
-        //val_menu_pizzaUI();
+        toppings_service.storeAllToppings(create_topping());
     }
     else if (selection == '3') {
         cout << "nr. 3";
     }
     else if (selection == '4') {
         other_service.storeAllOther(create_other());
+    }
+    else if (selection == '5') {
+        deliveryplace_service.storeAllDeliveryPlaces(create_deliveryplace());
+    }
+    else if (selection == '6') {
+        
     }
 }
 
@@ -78,6 +79,30 @@ vector<Crust> UmsjonUI::create_crust() {
     return crust;
 }
 
+vector<Topping> UmsjonUI::create_topping() {
+    
+    vector<Topping> topping = toppings_service.retrieveAllToppings();
+    
+    cout << "Álegg" << endl;
+    for (unsigned int i = 0; i < topping.size(); i++) {
+        cout << "[" << i+1 << "] " << topping[i] << endl;
+    }
+    
+    char selection = 'y';
+    Topping topping1;
+    while (selection == 'y') {
+        cout << endl;
+        
+        cout << "Bæta við áleggi?(y/n) ";
+        cin >> selection;
+        if (selection == 'y') {
+            cin >> topping1;
+            topping.push_back(topping1);
+        }
+    }
+    return topping;
+}
+
 vector<Other> UmsjonUI::create_other() {
     
     vector<Other> other = other_service.retrieveAllOther();
@@ -100,6 +125,30 @@ vector<Other> UmsjonUI::create_other() {
         }
     }
     return other;
+}
+
+vector<DeliveryPlace> UmsjonUI::create_deliveryplace() {
+    
+    vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
+    
+    cout << "Afhendingarstaðir" << endl;
+    for (unsigned int i = 0; i < deliveryplace.size(); i++) {
+        cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
+    }
+    
+    char selection = 'y';
+    DeliveryPlace deliveryplace1;
+    while (selection == 'y') {
+        cout << endl;
+        
+        cout << "Bæta við afhendingarstað?(y/n) ";
+        cin >> selection;
+        if (selection == 'y') {
+            cin >> deliveryplace1;
+            deliveryplace.push_back(deliveryplace1);
+        }
+    }
+    return deliveryplace;
 }
 
 void UmsjonUI::toppingsUI() {

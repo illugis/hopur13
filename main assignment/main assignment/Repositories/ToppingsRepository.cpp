@@ -19,7 +19,7 @@ ToppingsRepository::ToppingsRepository() {
 void ToppingsRepository::storeAllToppings(const vector<Topping> &toppings) {
     
     ofstream fout;
-    fout.open("toppings.bin", ios::binary);
+    fout.open("toppings.dat", ios::binary);
     
     int toppingCount = toppings.size();
     
@@ -38,7 +38,7 @@ vector<Topping> ToppingsRepository::retrieveAllToppings() {
     Topping topping;
     
     ifstream fin;
-    fin.open("toppings.bin", ios::binary);
+    fin.open("toppings.dat", ios::binary);
     
     if (fin.is_open()) {
         int toppingCount;

@@ -58,7 +58,7 @@ istream& operator >> (istream& in, Topping& topping){
 ostream& operator << (ostream& out, const Topping& topping){
     
     out << topping.name << " ";
-    out << topping.price << endl;
+    out << topping.price;
     
     return out;
 }

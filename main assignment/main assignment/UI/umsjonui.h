@@ -12,13 +12,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "toppings.h"
 #include "Pizza.hpp"
 #include "PizzaService.h"
 #include "Order.h"
 #include "OrderService.hpp"
 #include "Crust.h"
 #include "CrustService.h"
+#include "toppings.h"
+#include "ToppingsService.h"
 #include "Other.h"
 #include "OtherService.h"
 #include "DeliveryPlace.hpp"
@@ -31,11 +32,14 @@ class UmsjonUI {
 private:
     Pizza pizza;
     Order order;
+    
     Crust crust;
+    Topping topping;
     Other other;
     DeliveryPlace deliveryplace;
     
     vector<Crust> create_crust();
+    vector<Topping> create_topping();
     vector<Other> create_other();
     vector<DeliveryPlace> create_deliveryplace();
     
@@ -52,7 +56,9 @@ private:
 
     PizzaService pizza_service;
     OrderService order_service;
+    
     CrustService crust_service;
+    ToppingsService toppings_service;
     OtherService other_service;
     DeliveryPlaceService deliveryplace_service;
     
