@@ -14,6 +14,9 @@
 		640C26BB1FDADC4F00ADEB99 /* InvalidCrustException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26B71FDADC4F00ADEB99 /* InvalidCrustException.cpp */; };
 		640C26BE1FDC613100ADEB99 /* OrderService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26BC1FDC613100ADEB99 /* OrderService.cpp */; };
 		640C26C11FDC617D00ADEB99 /* OrderRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26BF1FDC617D00ADEB99 /* OrderRepository.cpp */; };
+		640C26C41FDEAD2200ADEB99 /* DeliveryPlace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26C21FDEAD2200ADEB99 /* DeliveryPlace.cpp */; };
+		640C26C71FDEB01D00ADEB99 /* DeliveryPlaceService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26C51FDEB01D00ADEB99 /* DeliveryPlaceService.cpp */; };
+		640C26CA1FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 640C26C81FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp */; };
 		648446F51FD06DC400018D02 /* toppings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 648446F31FD06DC400018D02 /* toppings.cpp */; };
 		E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8AF1FCC3E4900C9F531 /* main.cpp */; };
 		E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29EC8DF1FD0249500C9F531 /* mainui.cpp */; };
@@ -64,6 +67,12 @@
 		640C26BD1FDC613100ADEB99 /* OrderService.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OrderService.hpp; sourceTree = "<group>"; };
 		640C26BF1FDC617D00ADEB99 /* OrderRepository.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrderRepository.cpp; sourceTree = "<group>"; };
 		640C26C01FDC617D00ADEB99 /* OrderRepository.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OrderRepository.hpp; sourceTree = "<group>"; };
+		640C26C21FDEAD2200ADEB99 /* DeliveryPlace.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlace.cpp; sourceTree = "<group>"; };
+		640C26C31FDEAD2200ADEB99 /* DeliveryPlace.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DeliveryPlace.hpp; sourceTree = "<group>"; };
+		640C26C51FDEB01D00ADEB99 /* DeliveryPlaceService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlaceService.cpp; sourceTree = "<group>"; };
+		640C26C61FDEB01D00ADEB99 /* DeliveryPlaceService.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DeliveryPlaceService.hpp; sourceTree = "<group>"; };
+		640C26C81FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DeliveryPlaceRepository.cpp; sourceTree = "<group>"; };
+		640C26C91FDEB24400ADEB99 /* DeliveryPlaceRepository.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DeliveryPlaceRepository.hpp; sourceTree = "<group>"; };
 		648446F31FD06DC400018D02 /* toppings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = toppings.cpp; sourceTree = "<group>"; };
 		648446F41FD06DC400018D02 /* toppings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toppings.h; sourceTree = "<group>"; };
 		E29EC8AC1FCC3E4900C9F531 /* main assignment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "main assignment"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,8 +156,13 @@
 				E2F06CE81FD992C3001716ED /* Order.h */,
 				E2F06CFC1FDDE07F001716ED /* Crust.cpp */,
 				E2F06CFD1FDDE07F001716ED /* Crust.h */,
+<<<<<<< HEAD
 				E2F06D081FDEAD87001716ED /* Other.cpp */,
 				E2F06D091FDEAD87001716ED /* Other.h */,
+=======
+				640C26C21FDEAD2200ADEB99 /* DeliveryPlace.cpp */,
+				640C26C31FDEAD2200ADEB99 /* DeliveryPlace.hpp */,
+>>>>>>> 25cdca5ceade5095392854af94d25a204610fd22
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,8 +176,13 @@
 				E2F06CE21FD96336001716ED /* PizzaService.h */,
 				E2F06D021FDE988B001716ED /* CrustService.cpp */,
 				E2F06D031FDE988B001716ED /* CrustService.h */,
+<<<<<<< HEAD
 				E2F06D0B1FDEAF06001716ED /* OtherService.cpp */,
 				E2F06D0C1FDEAF06001716ED /* OtherService.h */,
+=======
+				640C26C51FDEB01D00ADEB99 /* DeliveryPlaceService.cpp */,
+				640C26C61FDEB01D00ADEB99 /* DeliveryPlaceService.hpp */,
+>>>>>>> 25cdca5ceade5095392854af94d25a204610fd22
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -179,8 +198,13 @@
 				E2F06D001FDDE279001716ED /* ToppingsRepository.h */,
 				E2F06D051FDE9905001716ED /* CrustRepository.cpp */,
 				E2F06D061FDE9905001716ED /* CrustRepository.h */,
+<<<<<<< HEAD
 				E2F06D0E1FDEB08F001716ED /* OtherRepository.cpp */,
 				E2F06D0F1FDEB08F001716ED /* OtherRepository.h */,
+=======
+				640C26C81FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp */,
+				640C26C91FDEB24400ADEB99 /* DeliveryPlaceRepository.hpp */,
+>>>>>>> 25cdca5ceade5095392854af94d25a204610fd22
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -307,8 +331,10 @@
 				640C26B91FDADC4F00ADEB99 /* InvalidSizeException.cpp in Sources */,
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,
 				E2F06CF51FDAAA83001716ED /* InvalidToppingException.cpp in Sources */,
+				640C26CA1FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp in Sources */,
 				E2F06CEF1FD9F44A001716ED /* InvalidCrustException.cpp in Sources */,
 				E29EC8E71FD0355700C9F531 /* salaui.cpp in Sources */,
+				640C26C71FDEB01D00ADEB99 /* DeliveryPlaceService.cpp in Sources */,
 				640C26C11FDC617D00ADEB99 /* OrderRepository.cpp in Sources */,
 				E2F06D0A1FDEAD87001716ED /* Other.cpp in Sources */,
 				E2F06D071FDE9905001716ED /* CrustRepository.cpp in Sources */,
@@ -321,6 +347,7 @@
 				E2F06D011FDDE279001716ED /* ToppingsRepository.cpp in Sources */,
 				640C26BA1FDADC4F00ADEB99 /* InvalidToppingException.cpp in Sources */,
 				640C26BB1FDADC4F00ADEB99 /* InvalidCrustException.cpp in Sources */,
+				640C26C41FDEAD2200ADEB99 /* DeliveryPlace.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
