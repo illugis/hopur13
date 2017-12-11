@@ -17,6 +17,8 @@
 #include "PizzaService.h"
 #include "Order.h"
 #include "OrderService.hpp"
+#include "Crust.h"
+#include "CrustService.h"
 
 using namespace std;
 
@@ -27,6 +29,9 @@ private:
     string other;
     Pizza pizza;
     Order order;
+    Crust crust;
+    
+    vector<Crust> create_crust();
     
     void val_umsjonUI();
     void val_pizzaUI();
@@ -34,13 +39,14 @@ private:
     void val_annad_umsjonUI();
     void annad_umsjonUI();
     
-    void crustUI();
     void toppingsUI();
     
     Order create_order();
     Pizza create_pizza();
+
     PizzaService pizza_service;
     OrderService order_service;
+    CrustService crust_service;
     
 public:
     UmsjonUI();

@@ -9,6 +9,10 @@
 #include "Crust.h"
 #include <fstream>
 
+Crust::Crust() {
+    
+}
+
 Crust::Crust(string name, int price){
     this->name = name;
     this->price = price;
@@ -40,21 +44,21 @@ void Crust::read(ifstream& fin) {
     delete [] str;
 }
 
-istream& operator >> (istream& in, Crust& topping){
+istream& operator >> (istream& in, Crust& crust){
     cout << "Botn: ";
     in >> ws;
-    getline(in, topping.name);
+    getline(in, crust.name);
     
     cout << "Verð (kr): ";
-    in >> topping.price;
+    in >> crust.price;
     
     return in;
 }
 
-ostream& operator << (ostream& out, const Crust& topping){
+ostream& operator << (ostream& out, const Crust& crust){
     
-    out << topping.name << " ";
-    out << topping.price << endl;
+    out << crust.name << " ";
+    out << crust.price;
     
     return out;
 }

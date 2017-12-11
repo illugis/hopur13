@@ -10,6 +10,8 @@
 #define __main_assignment__crust__
 
 #include <iostream>
+#include <string>
+#pragma once
 
 using namespace std;
 
@@ -22,9 +24,10 @@ private:
     int price;
     
 public:
+    Crust();
     Crust(string name, int price);
     void write(ofstream& fout) const;
     void read(ifstream& fin);
-    friend istream& operator >> (istream& in, Crust& topping);
-    friend ostream& operator << (ostream& out, const Crust& topping);
+    friend istream& operator >> (istream& in, Crust& crust);
+    friend ostream& operator << (ostream& out, const Crust& crust);
 };

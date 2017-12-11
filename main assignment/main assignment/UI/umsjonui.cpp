@@ -37,7 +37,8 @@ void UmsjonUI::val_umsjonUI() {
     cin >> selection;
     
     if (selection == '1') {
-        val_pizzaUI();
+        crust_service.storeAllCrust(create_crust());
+        //val_pizzaUI();
         //val_annad_umsjonUI();
     }
     else if (selection == '2') {
@@ -50,9 +51,28 @@ void UmsjonUI::val_umsjonUI() {
      }
 }
 
-void UmsjonUI::crustUI() {
+vector<Crust> UmsjonUI::create_crust() {
     
+    vector<Crust> crust = crust_service.retrieveAllCrust();
     
+    cout << "Botnar" << endl;
+    for (unsigned int i = 0; i < crust.size(); i++) {
+        cout << "[" << i+1 << "] " << crust[i] << endl;
+    }
+    
+    char selection = 'y';
+    Crust crust1;
+    while (selection == 'y') {
+        cout << endl;
+        
+        cout << "Bæta við botn?(y/n) ";
+        cin >> selection;
+        if (selection == 'y') {
+            cin >> crust1;
+            crust.push_back(crust1);
+        }
+    }
+    return crust;
 }
 
 void UmsjonUI::toppingsUI() {
