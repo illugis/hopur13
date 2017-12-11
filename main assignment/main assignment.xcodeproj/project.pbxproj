@@ -156,13 +156,11 @@
 				E2F06CE81FD992C3001716ED /* Order.h */,
 				E2F06CFC1FDDE07F001716ED /* Crust.cpp */,
 				E2F06CFD1FDDE07F001716ED /* Crust.h */,
-<<<<<<< HEAD
 				E2F06D081FDEAD87001716ED /* Other.cpp */,
 				E2F06D091FDEAD87001716ED /* Other.h */,
-=======
 				640C26C21FDEAD2200ADEB99 /* DeliveryPlace.cpp */,
 				640C26C31FDEAD2200ADEB99 /* DeliveryPlace.hpp */,
->>>>>>> 25cdca5ceade5095392854af94d25a204610fd22
+
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,13 +174,10 @@
 				E2F06CE21FD96336001716ED /* PizzaService.h */,
 				E2F06D021FDE988B001716ED /* CrustService.cpp */,
 				E2F06D031FDE988B001716ED /* CrustService.h */,
-<<<<<<< HEAD
 				E2F06D0B1FDEAF06001716ED /* OtherService.cpp */,
 				E2F06D0C1FDEAF06001716ED /* OtherService.h */,
-=======
 				640C26C51FDEB01D00ADEB99 /* DeliveryPlaceService.cpp */,
 				640C26C61FDEB01D00ADEB99 /* DeliveryPlaceService.hpp */,
->>>>>>> 25cdca5ceade5095392854af94d25a204610fd22
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -198,13 +193,10 @@
 				E2F06D001FDDE279001716ED /* ToppingsRepository.h */,
 				E2F06D051FDE9905001716ED /* CrustRepository.cpp */,
 				E2F06D061FDE9905001716ED /* CrustRepository.h */,
-<<<<<<< HEAD
 				E2F06D0E1FDEB08F001716ED /* OtherRepository.cpp */,
 				E2F06D0F1FDEB08F001716ED /* OtherRepository.h */,
-=======
 				640C26C81FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp */,
 				640C26C91FDEB24400ADEB99 /* DeliveryPlaceRepository.hpp */,
->>>>>>> 25cdca5ceade5095392854af94d25a204610fd22
 			);
 			path = Repositories;
 			sourceTree = "<group>";
