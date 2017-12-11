@@ -9,15 +9,16 @@
 #ifndef DeliveryPlaceService_hpp
 #define DeliveryPlaceService_hpp
 
-#include <stdio.h>
 #include "DeliveryPlace.hpp"
+#include "DeliveryPlaceRepository.hpp"
 
 class DeliveryPlaceService {
 private:
+    DeliveryPlaceRepository deliveryplace_repo;
     
 public:
     DeliveryPlaceService();
-    void storeAllDeliveryPlaces(const vector<DeliveryPlace> &DeliveryPlace);
+    void storeAllDeliveryPlaces(const vector<DeliveryPlace> &deliveryplace);
     vector<DeliveryPlace> retriveAllDeliveryPlaces();
     
 };
