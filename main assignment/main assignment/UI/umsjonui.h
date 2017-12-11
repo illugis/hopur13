@@ -19,6 +19,7 @@
 #include "OrderService.hpp"
 #include "Crust.h"
 #include "CrustService.h"
+#include "DeliveryPlace.hpp"
 
 using namespace std;
 
@@ -30,8 +31,10 @@ private:
     Pizza pizza;
     Order order;
     Crust crust;
+    DeliveryPlace deliveryplace;
     
     vector<Crust> create_crust();
+    vector<DeliveryPlace> create_deliveryplace();
     
     void val_umsjonUI();
     void val_pizzaUI();
