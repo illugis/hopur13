@@ -1,24 +1,24 @@
 //
-//  crust.cpp
+//  Other.cpp
 //  main assignment
 //
-//  Created by Gunnlaugur Birgisson on 10/12/2017.
+//  Created by Gunnlaugur Birgisson on 11/12/2017.
 //  Copyright (c) 2017 Bloc. All rights reserved.
 //
 
-#include "Crust.h"
+#include "Other.h"
 #include <fstream>
 
-Crust::Crust() {
+Other::Other() {
     
 }
 
-Crust::Crust(string name, int price){
+Other::Other(string name, int price){
     this->name = name;
     this->price = price;
 }
 
-void Crust::write(ofstream& fout) const {
+void Other::write(ofstream& fout) const {
     
     int stringLength = name.length() + 1;
     
@@ -28,7 +28,7 @@ void Crust::write(ofstream& fout) const {
     fout.write((char*)(&price), sizeof(int));
 }
 
-void Crust::read(ifstream& fin) {
+void Other::read(ifstream& fin) {
     
     int stringLength;
     
@@ -44,21 +44,21 @@ void Crust::read(ifstream& fin) {
     delete [] str;
 }
 
-istream& operator >> (istream& in, Crust& crust){
-    cout << "Botn: ";
+istream& operator >> (istream& in, Other& other){
+    cout << "Nafn: ";
     in >> ws;
-    getline(in, crust.name);
+    getline(in, other.name);
     
     cout << "Verð (kr): ";
-    in >> crust.price;
+    in >> other.price;
     
     return in;
 }
 
-ostream& operator << (ostream& out, const Crust& crust){
+ostream& operator << (ostream& out, const Other& other){
     
-    out << crust.name << " ";
-    out << crust.price;
+    out << other.name << " ";
+    out << other.price;
     
     return out;
 }
