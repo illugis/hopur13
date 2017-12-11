@@ -47,8 +47,11 @@ void UmsjonUI::val_umsjonUI() {
         //val_menu_pizzaUI();
     }
     else if (selection == '3') {
-     
-     }
+        cout << "nr. 3";
+    }
+    else if (selection == '4') {
+        other_service.storeAllOther(create_other());
+    }
 }
 
 vector<Crust> UmsjonUI::create_crust() {
@@ -73,6 +76,30 @@ vector<Crust> UmsjonUI::create_crust() {
         }
     }
     return crust;
+}
+
+vector<Other> UmsjonUI::create_other() {
+    
+    vector<Other> other = other_service.retrieveAllOther();
+    
+    cout << "Annað" << endl;
+    for (unsigned int i = 0; i < other.size(); i++) {
+        cout << "[" << i+1 << "] " << other[i] << endl;
+    }
+    
+    char selection = 'y';
+    Other other1;
+    while (selection == 'y') {
+        cout << endl;
+        
+        cout << "Bæta við öðru?(y/n) ";
+        cin >> selection;
+        if (selection == 'y') {
+            cin >> other1;
+            other.push_back(other1);
+        }
+    }
+    return other;
 }
 
 void UmsjonUI::toppingsUI() {

@@ -19,21 +19,24 @@
 #include "OrderService.hpp"
 #include "Crust.h"
 #include "CrustService.h"
+#include "Other.h"
+#include "OtherService.h"
 #include "DeliveryPlace.hpp"
+#include "DeliveryPlaceService.hpp"
 
 using namespace std;
 
 class UmsjonUI {
     
 private:
-    string place;
-    string other;
     Pizza pizza;
     Order order;
     Crust crust;
+    Other other;
     DeliveryPlace deliveryplace;
     
     vector<Crust> create_crust();
+    vector<Other> create_other();
     vector<DeliveryPlace> create_deliveryplace();
     
     void val_umsjonUI();
@@ -50,6 +53,8 @@ private:
     PizzaService pizza_service;
     OrderService order_service;
     CrustService crust_service;
+    OtherService other_service;
+    DeliveryPlaceService deliveryplace_service;
     
 public:
     UmsjonUI();
