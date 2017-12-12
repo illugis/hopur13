@@ -21,17 +21,22 @@ class Order {
     
 private:
     string name;
-    Pizza pizza;
+    //Pizza pizza;
     string other;
     int price;
     //string destination;
     
 public:
     Order();
-    Order(string name, Pizza pizza, string other, int price);
+    Order(string name, int price);
+    
     string getOther() const;
     int getPrice() const;
     //string getDestination() const;
+    
+    void write(ofstream& fout) const;
+    void read(ifstream& fin);
+    
     friend ostream& operator << (ostream& out, const Order& order);
     friend istream& operator >> (istream& in, Order& order);
     
