@@ -23,6 +23,10 @@ private:
 public:
     BaksturUI();
     void baksturUI();
+    
+    
+    
+    
     void getPizza_list();
     
 };

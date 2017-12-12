@@ -47,7 +47,7 @@ vector<Pizza> PizzaRepository::retrieveAllPizzas() {
         for (int i = 0; i < pizzaCount; i++) {
             pizza1.read(fin);
             pizza.push_back(pizza1);
-            
+            cout << pizza[i] << endl;
         }
         
         fin.close();

@@ -21,6 +21,11 @@ void Pizza::addTopping(Topping topping){
     toppings.push_back(topping);
 }
 
+void Pizza::addCrust(Crust crust){
+    
+    this->crust.push_back(crust);
+}
+
 void Pizza::checkVerbose(bool v) {
     verbose = v;
 }
@@ -64,7 +69,7 @@ istream& operator >> (istream& in, Pizza& pizza){
 
 ostream& operator << (ostream& out, const Pizza& pizza){
     
-    out << "Pizza with toppings" << endl;
+    //out << pizza.crust << endl;
     
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         out << pizza.toppings[i] << endl;

@@ -23,7 +23,7 @@ void BaksturUI::baksturUI() {
     
     cout << "Listi yfir pantaðar pítsur:" << endl;
     //listi
-    getPizza_list();
+    pizza_service.retrieveAllPizzas();
     
     cout << "veldu pöntun" << endl;
     //cin >> pizza;
@@ -37,6 +37,7 @@ void BaksturUI::baksturUI() {
     cin >> isReady;
     
 }
+
 
 void BaksturUI::getPizza_list() {
     

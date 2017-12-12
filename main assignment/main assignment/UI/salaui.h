@@ -14,6 +14,8 @@
 #include "Pizza.hpp"
 #include "PizzaService.h"
 #include "ToppingsService.h"
+#include "Crust.h"
+#include "CrustService.h"
 
 #include <iostream>
 
@@ -32,6 +34,7 @@ private:
     vector<Order> make_order();
     OrderService order_service;
     
+    CrustService crust_service;
     ToppingsService toppings_service;
     PizzaService pizza_service;
     

@@ -67,12 +67,22 @@ void SalaUI::sala_menuUI() {
 
 void SalaUI::sala_orderUI() {
     
-    //vector<Crust> crust = crust_service.retrieveAllCrust();
+    vector<Crust> crust = crust_service.retrieveAllCrust();
     vector<Topping> toppings = toppings_service.retrieveAllToppings();
     //vector<DeliveryPlace> deliveryplace_service.retrieveAllDeliveryPlaces();
     
     vector<Pizza> pizza;
     Pizza temp;
+    
+    /*int crustSelection;
+    cout << "Vinsamlegast veldu eftirfarandi nr. til að velja stærð og botn" << endl;
+    for(unsigned int i = 0; i < crust.size(); i++){
+        cout << "[" << i+1 << "] " << crust[i] << endl;
+    }
+    cin >> crustSelection;
+    
+    temp.addCrust((crust[crustSelection - 1]));
+    */
     
     int toppingSelection = -1;
     while (toppingSelection != 0) {

@@ -25,6 +25,7 @@ public:
     Pizza();
    
     void addTopping(Topping topping);
+    void addCrust(Crust crust);
     void checkVerbose(bool v) ;
     
     void write(ofstream& fout) const;
