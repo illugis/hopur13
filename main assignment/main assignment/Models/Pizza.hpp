@@ -11,6 +11,7 @@
 
 #include "Crust.h"
 #include "toppings.h"
+#include "DeliveryPlace.hpp"
 #include <vector>
 #pragma once
 
@@ -19,6 +20,7 @@ class Pizza {
 private:
     vector<Crust> crust;
     vector<Topping> toppings;
+    vector<DeliveryPlace> deliveryplace;
     bool verbose;
     
 public:
@@ -26,7 +28,8 @@ public:
    
     void addTopping(Topping topping);
     void addCrust(Crust crust);
-    void checkVerbose(bool v) ;
+    void addDeliveryPlace(DeliveryPlace deliveryplace);
+    void checkVerbose(bool v);
     
     void write(ofstream& fout) const;
     void read(ifstream& fin);

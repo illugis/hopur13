@@ -26,6 +26,11 @@ void Pizza::addCrust(Crust crust){
     this->crust.push_back(crust);
 }
 
+void Pizza::addDeliveryPlace(DeliveryPlace deliveryplace) {
+    
+    this->deliveryplace.push_back(deliveryplace);
+}
+
 void Pizza::checkVerbose(bool v) {
     verbose = v;
 }

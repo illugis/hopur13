@@ -16,6 +16,10 @@
 #include "ToppingsService.h"
 #include "Crust.h"
 #include "CrustService.h"
+#include "Other.h"
+#include "OtherService.h"
+#include "DeliveryPlace.hpp"
+#include "DeliveryPlaceService.hpp"
 
 #include <iostream>
 
@@ -26,19 +30,22 @@ class SalaUI {
 private:
     void sala_menuUI();
     
-    void sala_orderUI();
-    
     void make_order();
+    void make_pizza();
+    void make_other();
     
     Order create_order();
     
     Order order;
+    Pizza pizza;
     //vector<Order> make_order();
     OrderService order_service;
     
     CrustService crust_service;
     ToppingsService toppings_service;
     PizzaService pizza_service;
+    OtherService other_service;
+    DeliveryPlaceService deliveryplace_service;
     
 public:
     SalaUI();
