@@ -9,7 +9,6 @@
 #ifndef OrderService_hpp
 #define OrderService_hpp
 
-#include <stdio.h>
 #include "Order.h"
 #include "OrderRepository.hpp"
 
@@ -19,9 +18,9 @@ private:
     OrderRepository order_repo;
     
 public:
-    //void add_order(const Order& order);
-    //string read_order();
-    
+    OrderService();
+    void storeAllOrders(const vector<Order> &order);
+    vector<Order> retrieveAllOrders();
 };
 
 #endif /* OrderService_hpp */

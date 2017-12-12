@@ -9,9 +9,8 @@
 #ifndef OrderRepository_hpp
 #define OrderRepository_hpp
 
-#include <stdio.h>
-#include <fstream>
 #include "Order.h"
+#include <fstream>
 
 class OrderRepository {
 
@@ -19,8 +18,9 @@ private:
     
     
 public:
-    void add_order(const Order& order);
-    string read_order();
+    OrderRepository();
+    void storeAllOrders(const vector<Order> &order);
+    vector<Order> retrieveAllOrders();
     
 };
 

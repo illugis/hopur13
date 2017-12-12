@@ -82,7 +82,7 @@ void SalaUI::sala_orderUI() {
         cin >> toppingSelection;
         
         if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
-            pizza.addTopping(toppings[toppingSelection - 1]);
+            pizza.push_back(addTopping(toppings[toppingSelection - 1]));
         }
     }
     

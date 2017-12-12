@@ -28,6 +28,10 @@ private:
     void sala_orderUI();
     Order create_order();
     
+    Order order;
+    vector<Order> make_order();
+    OrderService order_service;
+    
     ToppingsService toppings_service;
     PizzaService pizza_service;
     

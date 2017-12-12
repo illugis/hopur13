@@ -7,16 +7,17 @@
 //
 
 #include "OrderService.hpp"
-/*
-void OrderService::add_order(const Order& order) {
+
+OrderService::OrderService() {
     
-    order_repo.add_order(order);
 }
 
-string OrderService::read_order() {
+void OrderService::storeAllOrders(const vector<Order> &order) {
     
-    return order_repo.read_order();
+    order_repo.storeAllOrders(order);
 }
 
-
-*/
+vector<Order> OrderService::retrieveAllOrders() {
+    
+    return order_repo.retrieveAllOrders();
+}
