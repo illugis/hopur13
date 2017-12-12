@@ -42,7 +42,7 @@ void SalaUI::sala_menuUI() {
 
 void SalaUI::sala_orderUI() {
     
-    vector<Crust> crust = crust_service.retrieveAllCrust();
+    //vector<Crust> crust = crust_service.retrieveAllCrust();
     vector<Topping> toppings = toppings_service.retrieveAllToppings();
     //vector<DeliveryPlace> deliveryplace_service.retrieveAllDeliveryPlaces();
     
