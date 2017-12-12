@@ -22,6 +22,7 @@ private:
     vector<Topping> toppings;
     vector<DeliveryPlace> deliveryplace;
     bool verbose;
+    Crust _crust;
     
 public:
     Pizza();

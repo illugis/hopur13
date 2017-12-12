@@ -91,7 +91,6 @@ void SalaUI::make_order() {
      
      if(crustSelection > 0 && crustSelection <= (int)crust.size()) {
          pizzatemp.addCrust(crust[crustSelection -1]);
-         //pizza.push_back(pizzatemp);
      }
      
      int toppingSelection = -1;
@@ -104,7 +103,6 @@ void SalaUI::make_order() {
  
         if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
             pizzatemp.addTopping(toppings[toppingSelection - 1]);
-            pizza.push_back(pizzatemp);
         }
      }
      
@@ -117,9 +115,9 @@ void SalaUI::make_order() {
      
      if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
          pizzatemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
-         //pizza.push_back(pizzatemp);
      }
  
+     pizza.push_back(pizzatemp);
      pizza_service.storeAllPizzas(pizza);
  
      cout << endl;
