@@ -24,14 +24,16 @@ using namespace std;
 class SalaUI {
     
 private:
-    string delivery;
-    char payment;
     void sala_menuUI();
+    
     void sala_orderUI();
+    
+    void make_order();
+    
     Order create_order();
     
     Order order;
-    vector<Order> make_order();
+    //vector<Order> make_order();
     OrderService order_service;
     
     CrustService crust_service;

@@ -19,31 +19,6 @@ SalaUI::SalaUI() {
 void SalaUI::salaUI() {
     
     sala_menuUI();
-    
-    /*
-    cout << "Pöntun: " << endl;
-    //Bæta því í skjal
-    // Ná í skjal og birta
-    
-    cout << "Bæta við pöntun?(y/n) ";
-    //Bæta pizum (og öðru) við pöntun
-    
-    cout << "Heildarverð: "; //Ná í heildarverð
-    
-    cout << "Sent eða sótt? ";
-    cin >> delivery;
-    
-    cout << "Pöntun greidd?(y/n) ";
-    if (payment == 'y') {
-        //fout --> "Greitt"
-    }
-    else if (payment == 'n') {
-        //fout --> "Ógreitt"
-    }
-    
-    cout << "Athugasemdir: ";
-    //fout getline(cin, str)
-     */
 }
 
 void SalaUI::sala_menuUI() {
@@ -137,16 +112,6 @@ void SalaUI::sala_orderUI() {
  order_service.storeAllOrders(pizza);
  
 }
-nafn
- pepperoni
- sveppir
- gos
- brauðstangir
- 1500
- kringlan
- 
- nafn2
- 
  
  void SalaUI::make_pizza() {
  
