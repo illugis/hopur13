@@ -7,22 +7,19 @@
 //
 
 #include "Order.h"
+#include <fstream>
 
 Order::Order() {
     
 }
 
-Order::Order(string name, Pizza pizza, string other, int price){
+Order::Order(string name, int price){
+   
     this->name = name;
-    this->pizza = pizza;
-    this->other = other;
     this->price = price;
-    //this->destination = destination;
 }
 
-string Order::getOther() const{
-    return this->other;
-}
+
 int Order::getPrice() const{
     return this->price;
 }
@@ -30,31 +27,41 @@ int Order::getPrice() const{
     return this->destination;
 }
  */
+
+void Order::write(ofstream& fout) const {
+    
+    int stringLength = name.length() + 1;
+    
+    fout.write((char*)(&stringLength), sizeof(int));
+    fout.write(name.c_str(), stringLength);
+    
+    fout.write((char*)(&price), sizeof(int));
+}
+
+void Order::read(ifstream& fin) {
+    
+    int stringLength;
+    
+    fin.read((char*)(&stringLength), sizeof(int));
+    char* str = new char[stringLength];
+    
+    fin.read(str, stringLength);
+    
+    name = str;
+    
+    fin.read((char*)(&price), sizeof(int));
+    
+    delete [] str;
+}
+
 ostream& operator << (ostream& out, const Order& order){
-    out << "Pizza: " << order.pizza << endl;
-    out << "Annað: " << order.other << endl;
-    //out << "Afhendingarstaður: " << order.destination << endl;
+    
     
     return out;
 }
+
 istream& operator >> (istream& in, Order& order){
-    cout << "Pizza: ";
-    in >> order.pizza;
-    cout << "Annað: ";
-    in >> order.other;
-    //cout << "Afhendingarstaður: ";
-    //in >> order.destination;
+    
     
     return in;
 }
-
-
-
-
-
-
-
-
-
-
-
