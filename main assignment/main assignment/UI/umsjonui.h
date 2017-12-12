@@ -24,6 +24,7 @@
 #include "OtherService.h"
 #include "DeliveryPlace.hpp"
 #include "DeliveryPlaceService.hpp"
+#pragma once
 
 using namespace std;
 
@@ -52,7 +53,7 @@ private:
     void toppingsUI();
     
     Order create_order();
-    Pizza create_pizza();
+    //Pizza create_pizza();
 
     PizzaService pizza_service;
     OrderService order_service;

@@ -57,11 +57,11 @@ void UmsjonUI::val_umsjonUI() {
 
 vector<Crust> UmsjonUI::create_crust() {
     
-    vector<Crust> crust = crust_service.retrieveAllCrust();
+    vector<Crust> crusts = crust_service.retrieveAllCrust();
     
     cout << "Botnar" << endl;
-    for (unsigned int i = 0; i < crust.size(); i++) {
-        cout << "[" << i+1 << "] " << crust[i] << endl;
+    for (unsigned int i = 0; i < crusts.size(); i++) {
+        cout << "[" << i+1 << "] " << crusts[i] << endl;
     }
     
     char selection = 'y';
@@ -73,10 +73,10 @@ vector<Crust> UmsjonUI::create_crust() {
         cin >> selection;
         if (selection == 'y') {
             cin >> crust1;
-            crust.push_back(crust1);
+            crusts.push_back(crust1);
         }
     }
-    return crust;
+    return crusts;
 }
 
 vector<Topping> UmsjonUI::create_topping() {
@@ -159,7 +159,7 @@ void UmsjonUI::toppingsUI() {
 void UmsjonUI::val_pizzaUI() {
     
     try {
-        pizza_service.add_pizza(create_pizza());
+       // pizza_service.add_pizza(create_pizza());
     }
     catch (InvalidSizeException) {
         cout << "Invalid size!" << endl;

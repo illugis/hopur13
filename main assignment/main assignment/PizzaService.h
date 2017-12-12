@@ -16,15 +16,12 @@
 #include "InvalidCrustException.h"
 #include "InvalidDestinationException.h"
 #include "InvalidToppingException.h"
+#pragma once
 
 class PizzaService {
     
 private:
     PizzaRepository pizza_repo;
-    bool isValidSize(const Pizza& pizza);
-    bool isValidCrust(const Pizza& pizza);
-    bool isValidDestination(const Pizza& pizza);
-    bool isValidTopping(const Pizza& pizza);
     
 public:
     PizzaService();

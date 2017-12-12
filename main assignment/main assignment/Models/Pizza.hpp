@@ -12,6 +12,7 @@
 #include "Crust.h"
 #include "toppings.h"
 #include <vector>
+#pragma once
 
 class Pizza {
 

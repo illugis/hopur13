@@ -72,6 +72,7 @@ void SalaUI::sala_orderUI() {
     //vector<DeliveryPlace> deliveryplace_service.retrieveAllDeliveryPlaces();
     
     vector<Pizza> pizza;
+    Pizza temp;
     
     int toppingSelection = -1;
     while (toppingSelection != 0) {
@@ -82,9 +83,11 @@ void SalaUI::sala_orderUI() {
         cin >> toppingSelection;
         
         if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
-            pizza.push_back(addTopping(toppings[toppingSelection - 1]));
+            temp.addTopping((toppings[toppingSelection - 1]));
+            pizza.push_back(temp);
         }
     }
+    
     
     pizza_service.storeAllPizzas(pizza);
     
@@ -124,6 +127,15 @@ void SalaUI::sala_orderUI() {
  order_service.storeAllOrders(pizza);
  
 }
+nafn
+ pepperoni
+ sveppir
+ gos
+ brauðstangir
+ 1500
+ kringlan
+ 
+ nafn2
  
  
  void SalaUI::make_pizza() {

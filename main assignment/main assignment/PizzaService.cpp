@@ -15,10 +15,8 @@ PizzaService::PizzaService() {
 
 void PizzaService::add_pizza(Pizza pizza) {
     
-    if (isValidSize(pizza) && isValidCrust(pizza)) {
         pizza_repo.add_pizza(pizza);
         //tengja við repo
-    }
 }
 
 void PizzaService::storeAllPizzas(const vector<Pizza> &pizza) {
