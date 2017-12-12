@@ -28,6 +28,8 @@ public:
     Crust(string name, int price);
     void write(ofstream& fout) const;
     void read(ifstream& fin);
+    string getCrustName() const;
+    int getCrustPrice() const;
     friend istream& operator >> (istream& in, Crust& crust);
     friend ostream& operator << (ostream& out, const Crust& crust);
 };

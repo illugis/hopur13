@@ -18,6 +18,14 @@ Topping::Topping(string name, int price){
     this->price = price;
 }
 
+string Topping::getToppingName() const{
+    return this->name;
+}
+
+int Topping::getToppingPrice() const{
+    return this->price;
+}
+
 void Topping::write(ofstream& fout) const {
     
     int stringLength = name.length() + 1;

@@ -25,6 +25,8 @@ public:
     Topping(string name, int price);
     void write(ofstream& fout) const;
     void read(ifstream& fin);
+    string getToppingName() const;
+    int getToppingPrice() const;
     friend istream& operator >> (istream& in, Topping& topping);
     friend ostream& operator << (ostream& out, const Topping& topping);
     

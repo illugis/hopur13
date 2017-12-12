@@ -18,6 +18,14 @@ Other::Other(string name, int price){
     this->price = price;
 }
 
+string Other::getOtherName() const{
+    return this->name;
+}
+
+int Other::getOtherPrice() const{
+    return this-> price;
+}
+
 void Other::write(ofstream& fout) const {
     
     int stringLength = name.length() + 1;

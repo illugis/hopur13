@@ -18,6 +18,13 @@ Crust::Crust(string name, int price){
     this->price = price;
 }
 
+string Crust::getCrustName() const{
+    return this->name;
+}
+int Crust::getCrustPrice() const{
+    return this->price;
+}
+
 void Crust::write(ofstream& fout) const {
     
     int stringLength = name.length() + 1;

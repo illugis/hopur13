@@ -23,6 +23,8 @@ public:
     DeliveryPlace(string name);
     void write(ofstream& fout) const;
     void read(ifstream& fin);
+    string getDeliveryPlaceName() const;
+    void setDeliveryPlaceName(string name);
     friend istream& operator >> (istream& in, DeliveryPlace& deliveryplace);
     friend ostream& operator << (ostream& out, const DeliveryPlace& deliveryplace);
     

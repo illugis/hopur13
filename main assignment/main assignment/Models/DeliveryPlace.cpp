@@ -17,6 +17,14 @@ DeliveryPlace::DeliveryPlace(string name){
     this->name = name;
 }
 
+string DeliveryPlace::getDeliveryPlaceName() const{
+    return this->name;
+}
+
+void DeliveryPlace::setDeliveryPlaceName(string name) {
+    this->name = name;
+}
+
 void DeliveryPlace::write(ofstream &fout) const{
     
     int stringLength = name.length() + 1;

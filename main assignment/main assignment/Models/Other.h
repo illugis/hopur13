@@ -26,6 +26,8 @@ public:
     Other(string name, int price);
     void write(ofstream& fout) const;
     void read(ifstream& fin);
+    string getOtherName() const;
+    int getOtherPrice() const;
     friend istream& operator >> (istream& in, Other& other);
     friend ostream& operator << (ostream& out, const Other& other);
     
