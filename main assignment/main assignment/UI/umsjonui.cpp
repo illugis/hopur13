@@ -59,7 +59,7 @@ vector<Crust> UmsjonUI::create_crust() {
     
     vector<Crust> crusts = crust_service.retrieveAllCrust();
     
-    cout << "Botnar" << endl;
+    cout << "Listi yfir botna:" << endl;
     for (unsigned int i = 0; i < crusts.size(); i++) {
         cout << "[" << i+1 << "] " << crusts[i] << endl;
     }
@@ -74,6 +74,7 @@ vector<Crust> UmsjonUI::create_crust() {
         if (selection == 'y') {
             cin >> crust1;
             crusts.push_back(crust1);
+            cout << "Botni hefur verið bætt við í kerfi" << endl;
         }
     }
     return crusts;
@@ -83,7 +84,7 @@ vector<Topping> UmsjonUI::create_topping() {
     
     vector<Topping> topping = toppings_service.retrieveAllToppings();
     
-    cout << "Álegg" << endl;
+    cout << "Listi yfir álegg:" << endl;
     for (unsigned int i = 0; i < topping.size(); i++) {
         cout << "[" << i+1 << "] " << topping[i] << endl;
     }
@@ -98,6 +99,7 @@ vector<Topping> UmsjonUI::create_topping() {
         if (selection == 'y') {
             cin >> topping1;
             topping.push_back(topping1);
+            cout << "Áleggi hefur verið bætt við í kerfi" << endl;
         }
     }
     return topping;
@@ -107,7 +109,7 @@ vector<Other> UmsjonUI::create_other() {
     
     vector<Other> other = other_service.retrieveAllOther();
     
-    cout << "Annað" << endl;
+    cout << "Listi yfir annað:" << endl;
     for (unsigned int i = 0; i < other.size(); i++) {
         cout << "[" << i+1 << "] " << other[i] << endl;
     }
@@ -122,6 +124,7 @@ vector<Other> UmsjonUI::create_other() {
         if (selection == 'y') {
             cin >> other1;
             other.push_back(other1);
+            cout << "Öðru hefur verið bætt við í kerfi" << endl;
         }
     }
     return other;
@@ -131,7 +134,7 @@ vector<DeliveryPlace> UmsjonUI::create_deliveryplace() {
     
     vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
     
-    cout << "Afhendingarstaðir" << endl;
+    cout << "Listi yfir afhendingarstaði:" << endl;
     for (unsigned int i = 0; i < deliveryplace.size(); i++) {
         cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
     }
@@ -146,6 +149,7 @@ vector<DeliveryPlace> UmsjonUI::create_deliveryplace() {
         if (selection == 'y') {
             cin >> deliveryplace1;
             deliveryplace.push_back(deliveryplace1);
+            cout << "Afhendingarstað hefur verið bætt við í kerfi" << endl;
         }
     }
     return deliveryplace;
