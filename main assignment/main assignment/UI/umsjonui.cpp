@@ -42,7 +42,7 @@ void UmsjonUI::val_umsjonUI() {
         toppings_service.storeAllToppings(create_topping());
     }
     else if (selection == '3') {
-        cout << "nr. 3";
+        pizzamenu_service.storeAllPizzaMenus(create_pizzamenu());
     }
     else if (selection == '4') {
         other_service.storeAllOther(create_other());
@@ -82,11 +82,11 @@ vector<Crust> UmsjonUI::create_crust() {
 
 vector<Topping> UmsjonUI::create_topping() {
     
-    vector<Topping> topping = toppings_service.retrieveAllToppings();
+    vector<Topping> toppings = toppings_service.retrieveAllToppings();
     
     cout << "Listi yfir álegg:" << endl;
-    for (unsigned int i = 0; i < topping.size(); i++) {
-        cout << "[" << i+1 << "] " << topping[i] << endl;
+    for (unsigned int i = 0; i < toppings.size(); i++) {
+        cout << "[" << i+1 << "] " << toppings[i] << endl;
     }
     
     char selection = 'y';
@@ -98,11 +98,85 @@ vector<Topping> UmsjonUI::create_topping() {
         cin >> selection;
         if (selection == 'y') {
             cin >> topping1;
-            topping.push_back(topping1);
+            toppings.push_back(topping1);
             cout << "Áleggi hefur verið bætt við í kerfi" << endl;
         }
     }
-    return topping;
+    return toppings;
+}
+
+vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
+    
+    vector<Crust> crusts = crust_service.retrieveAllCrust();
+    vector<Topping> toppings = toppings_service.retrieveAllToppings();
+    
+    vector<PizzaMenu> pizzamenus = pizzamenu_service.retrieveAllPizzaMenus();
+    PizzaMenu pizzamenu;
+    
+    cout << "Listi yfir pítsur á matseðli:" << endl;
+    for (unsigned int i = 0; i < pizzamenus.size(); i++) {
+        cout << "[" << i+1 << "] " << pizzamenus[i] << endl;
+    }
+    
+    char selection = 'y';
+    Topping topping1;
+    while (selection == 'y') {
+        cout << endl;
+        
+        cout << "Bæta við pítsu á matseðil?(y/n) ";
+        cin >> selection;
+        if (selection == 'y') {
+            while (selection == 'y') {
+                cout << endl;
+                
+                cout << "Bæta við botn?(y/n) ";
+                cin >> selection;
+                if (selection == 'y') {
+                    cout << "Listi yfir botna:" << endl;
+                    for (unsigned int i = 0; i < crusts.size(); i++) {
+                        cout << "[" << i+1 << "] " << crusts[i] << endl;
+                    }
+                    
+                    int crustSelection = -1;
+                    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir botn á pítsu" << endl;
+                    for (unsigned int i = 0; i < crusts.size(); i++) {
+                        cout << "[" << i+1 << "] " << crusts[i] << endl;
+                    }
+                    cin >> crustSelection;
+                    
+                    if(crustSelection > 0 && crustSelection <= (int)crusts.size()) {
+                        pizzamenu.addCrust(crusts[crustSelection -1]);
+                    }
+                }
+            }
+            
+            while (selection == 'y') {
+                cout << endl;
+                
+                cout << "Bæta við áleggi?(y/n) ";
+                cin >> selection;
+                if (selection == 'y') {
+                    cout << "Listi yfir álegg:" << endl;
+                    for (unsigned int i = 0; i < toppings.size(); i++) {
+                        cout << "[" << i+1 << "] " << toppings[i] << endl;
+                    }
+                    
+                    int toppingSelection = -1;
+                    while (toppingSelection != 0) {
+                        cout << "Vinsamlegast veldu eftirfarandi nr. til að bæta við áleggi (0 fyrir hætta)" << endl;
+                        for (unsigned int i = 0; i < toppings.size(); i++) {
+                            cout << "[" << i+1 << "] " << toppings[i] << endl;
+                        }
+                        cin >> toppingSelection;
+                        
+                        if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
+                            pizzamenu.addTopping(toppings[toppingSelection - 1]);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 vector<Other> UmsjonUI::create_other() {
