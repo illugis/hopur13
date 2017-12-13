@@ -25,17 +25,6 @@ void BaksturUI::baksturUI() {
     //listi
     pizza_service.retrieveAllPizzas();
     
-    cout << "veldu pöntun" << endl;
-    //cin >> pizza;
-    
-    char inTheMaking;
-    cout << "Pítsan komin í vinnslu(y/n)? ";
-    cin >> inTheMaking;
-    
-    char isReady;
-    cout << "Er pítsan tilbúin(y/n)? ";
-    cin >> isReady;
-    
 }
 
 

@@ -11,9 +11,10 @@
 
 #include "Pizza.hpp"
 
-#include <stdio.h>
 #include <iostream>
 #include <string>
+#include <vector>
+#pragma once
 
 using namespace std;
 
@@ -25,6 +26,8 @@ private:
     string other;
     int price;
     //string destination;
+    
+    vector<Order> orders;
     
 public:
     Order();

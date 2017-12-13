@@ -41,35 +41,71 @@ void SalaUI::sala_menuUI() {
 }
 
 void SalaUI::make_order() {
- 
-    Order order;
     
-    string name;
-    cout << "Nafn: ";
-    cin >> name;
- 
+    vector<Order> orders;
+    Order ordertemp;
+    
+    string name, delivery, payment, comment;
     char selection = 'y';
-    while (selection == 'y') {
-        cout << "Bæta við pítsu?(y/n)";
-        cin >> selection;
-        if (selection == 'y') {
-            make_pizza();
+    char loopSelection = 'y';
+    
+    do {
+        cout << "Nafn: ";
+        cin >> name;
+        ordertemp.addName(name);
+        
+        while (selection == 'y') {
+            cout << "Bæta við pítsu?(y/n) ";
+            cin >> selection;
+            if (selection == 'y') {
+                make_pizza();
+            }
         }
-    }
-/*
-    while (selection == 'y') {
-        cout << "Bæta við öðru?(y/n)";
-        cin >> selection;
-        if (selection == 'y') {
-            make_other();
+        
+        while (selection == 'y') {
+            cout << "Bæta við öðru?(y/n) ";
+            cin >> selection;
+            if (selection == 'y') {
+                make_other();
+            }
         }
+        
+        cout << "Heildarverð: ";
+        
+        cout << "Sent eða sótt?" << endl;
+        cin >> delivery;
+        ordertemp.addDelivery(delivery);
+        
+        cout << "Pöntun greidd eða ógreidd?" << endl;
+        cin >> payment;
+        ordertemp.addPayment(payment);
+        
+        //Mögulega annað fall sem sér um þetta?
+        vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
+        int deliveryplaceSelection = -1;
+        cout << "Vinsamlegast veldu eftirfarandi nr. fyrir afhendingarstað" << endl;
+        for (unsigned int i = 0; i < deliveryplace.size(); i++) {
+            cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
+        }
+        cin >> deliveryplaceSelection;
+        
+        if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
+            ordertemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
+        }
+        
+        cout << "Skrá athugasemd?(y/n) ";
+        if (selection == 'y') {
+            cin >> comment;
+            ordertemp.addComment(comment);
+        }
+        
+        orders.push_back(ordertemp);
+        order_service.storeAllOrders(orders);
+        
+        cout << "Skrá aðra pöntun?(y/n) ";
+        cin >> loopSelection;
     }
- */
- cout << "Heildarverð: ";
- 
- //Eitthvað meira
- 
- 
+    while (loopSelection == 'y');
  
 }
  
@@ -149,4 +185,35 @@ void SalaUI::make_other() {
     cout << endl;
  
 }
-*/
+
+
+ 
+
+ Order order;
+ 
+ string name;
+ cout << "Nafn: ";
+ cin >> name;
+ 
+ char selection = 'y';
+ while (selection == 'y') {
+ cout << "Bæta við pítsu?(y/n)";
+ cin >> selection;
+ if (selection == 'y') {
+ make_pizza();
+ }
+ }
+ 
+ while (selection == 'y') {
+ cout << "Bæta við öðru?(y/n)";
+ cin >> selection;
+ if (selection == 'y') {
+ make_other();
+ }
+ }
+ 
+ cout << "Heildarverð: ";
+ 
+ //Eitthvað meira
+ 
+ */
