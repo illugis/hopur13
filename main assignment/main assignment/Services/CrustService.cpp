@@ -21,3 +21,20 @@ vector<Crust> CrustService::retrieveAllCrust() {
     
     return crust_repo.retrieveAllCrust();
 }
+
+bool CrustService::validateError(const Crust& crust) {
+    string name = crust.getCrustName();
+    
+    for(unsigned int i = 0; i < name.length(); i++){
+        if(!isalpha(name[i]) || name[i] != ' ' || name.length() > 25) {
+            throw (InvalidCrustException());
+        }
+    }
+    
+    int price = crust.getCrustPrice();
+    if(!isdigit(price) && price < 0){
+        throw (InvalidCrustPriceException());
+    }
+    return true;
+}
+

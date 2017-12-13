@@ -12,10 +12,6 @@
 
 #include "Pizza.hpp"
 #include "PizzaRepository.h"
-#include "InvalidSizeException.h"
-#include "InvalidCrustException.h"
-#include "InvalidDestinationException.h"
-#include "InvalidToppingException.h"
 #pragma once
 
 class PizzaService {

@@ -37,12 +37,13 @@ void Pizza::checkVerbose(bool v) {
 
 void Pizza::write(ofstream& fout) const {
     
-    /*int crustCount = crust.size();
+   /* int crustCount = crust.size();
     
     fout.write((char*)(&crustCount), sizeof(crustCount));
     
     _crust.write(fout);
     */
+    fout.write((char*)(&crust), sizeof(int));
     
     int toppingCount = toppings.size();
     
@@ -54,7 +55,7 @@ void Pizza::write(ofstream& fout) const {
 }
 
 void Pizza::read(ifstream& fin) {
-  /*
+  
     int crustCount;
     
     fin.read((char*)(&crustCount), sizeof(crustCount));
@@ -63,7 +64,7 @@ void Pizza::read(ifstream& fin) {
     for (int i = 0; i < crustCount; i++) {
         crust.read(fin);
     }
-   */
+   
     int toppingCount;
     fin.read((char*)(&toppingCount), sizeof(toppingCount));
     
@@ -89,13 +90,13 @@ istream& operator >> (istream& in, Pizza& pizza){
 }
 
 ostream& operator << (ostream& out, const Pizza& pizza){
-    /*
+    
     out << pizza._crust << endl;
     for (unsigned int i = 0; i < pizza.crust.size(); i++) {
         out << pizza.crust[i] << endl;
         out << "hallo" << endl;
     }
-    */
+    
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         out << pizza.toppings[i] << endl;
     }

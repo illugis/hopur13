@@ -11,11 +11,14 @@
 
 #include "Crust.h"
 #include "CrustRepository.h"
+#include "InvalidCrustException.h"
+#include "InvalidCrustPriceException.h"
 
 class CrustService {
     
 private:
     CrustRepository crust_repo;
+    bool validateError(const Crust& crust);
     
 public:
     CrustService();

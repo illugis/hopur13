@@ -157,18 +157,7 @@ vector<DeliveryPlace> UmsjonUI::create_deliveryplace() {
 
 void UmsjonUI::val_pizzaUI() {
     
-    try {
-       // pizza_service.add_pizza(create_pizza());
-    }
-    catch (InvalidSizeException) {
-        cout << "Invalid size!" << endl;
-    }
-    catch (InvalidCrustException) {
-        cout << "Invalid crust!" << endl;
-    }
-    catch (InvalidDestinationException) {
-        cout << "Invalid destination!" << endl;
-    }
+    
 }
 /*
 Pizza UmsjonUI::create_pizza() {

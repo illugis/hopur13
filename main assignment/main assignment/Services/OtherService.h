@@ -11,11 +11,14 @@
 
 #include "Other.h"
 #include "OtherRepository.h"
+#include "InvalidOtherException.hpp"
+#include "InvalidOtherPriceException.hpp"
 
 class OtherService {
     
 private:
     OtherRepository other_repo;
+    bool InvalidError(const Other& other);
     
 public:
     OtherService();

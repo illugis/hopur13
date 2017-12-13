@@ -72,6 +72,7 @@ void SalaUI::make_order() {
         
         cout << "Heildarverð: ";
         
+        
         cout << "Sent eða sótt?" << endl;
         cin >> delivery;
         ordertemp.addDelivery(delivery);
@@ -108,7 +109,7 @@ void SalaUI::make_order() {
     while (loopSelection == 'y');
  
 }
- 
+
  void SalaUI::make_pizza() {
  
      vector<Crust> crust = crust_service.retrieveAllCrust();

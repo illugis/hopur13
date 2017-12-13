@@ -11,10 +11,12 @@
 
 #include "DeliveryPlace.hpp"
 #include "DeliveryPlaceRepository.hpp"
+#include "InvalidDestinationException.h"
 
 class DeliveryPlaceService {
 private:
     DeliveryPlaceRepository deliveryplace_repo;
+    bool InvalidError(const DeliveryPlace& deliveryplace);
     
 public:
     DeliveryPlaceService();
