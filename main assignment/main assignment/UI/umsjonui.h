@@ -9,9 +9,6 @@
 #ifndef __main_assignment__umsjonui__
 #define __main_assignment__umsjonui__
 
-#include <iostream>
-#include <string>
-#include <vector>
 #include "Pizza.hpp"
 #include "PizzaService.h"
 #include "Order.h"
@@ -24,6 +21,9 @@
 #include "OtherService.h"
 #include "DeliveryPlace.hpp"
 #include "DeliveryPlaceService.hpp"
+#include <iostream>
+#include <string>
+#include <vector>
 #pragma once
 
 using namespace std;
@@ -32,7 +32,6 @@ class UmsjonUI {
     
 private:
     Pizza pizza;
-    Order order;
     
     Crust crust;
     Topping topping;
@@ -47,16 +46,10 @@ private:
     void val_umsjonUI();
     void val_pizzaUI();
     void val_menu_pizzaUI();
-    void val_annad_umsjonUI();
-    void annad_umsjonUI();
     
-    void toppingsUI();
-    
-    Order create_order();
     //Pizza create_pizza();
 
     PizzaService pizza_service;
-    OrderService order_service;
     
     CrustService crust_service;
     ToppingsService toppings_service;
