@@ -18,7 +18,7 @@ PizzaRepository::PizzaRepository() {
 void PizzaRepository::storeAllPizzas(const vector<Pizza> &pizza) {
     
     ofstream fout;
-    fout.open("pizzas.dat", ios::binary);
+    fout.open("pizzas.dat", ios::binary|ios::app);
     
     int pizzaCount = pizza.size();
     
@@ -33,6 +33,35 @@ void PizzaRepository::storeAllPizzas(const vector<Pizza> &pizza) {
 
 vector<Pizza> PizzaRepository::retrieveAllPizzas() {
     
+  /*
+    vector<Pizza> pizzaList;
+    Pizza temp;
+    ifstream fin;
+    fin.open("pizzas.dat", ios::binary);
+    if(fin.is_open()){
+        fin.seekg(0, fin.end);
+        int pizzaCount = fin.tellg() / sizeof(Pizza);
+        fin.seekg(0, fin.beg);
+        
+        for(unsigned int i = 0; i < pizzaCount; i++){
+            
+            fin.read((char*)(&temp), sizeof(Pizza));
+            pizzaList.push_back(temp);
+            
+            cout << pizzaList[i] << endl;
+            
+        }
+        fin.close();
+    }
+    else{
+        cout << "Could not open file" << endl;
+    }
+    return pizzaList;
+    
+  */
+    
+    
+    
     vector<Pizza> pizza;
     Pizza pizza1;
     
@@ -40,11 +69,12 @@ vector<Pizza> PizzaRepository::retrieveAllPizzas() {
     fin.open("pizzas.dat", ios::binary);
     
     if (fin.is_open()) {
+        
         int pizzaCount;
         
         fin.read((char*)(&pizzaCount), sizeof(int));
         
-        for (int i = 0; i < pizzaCount; i++) {
+        for (unsigned int i = 0; i < pizzaCount; i++) {
             pizza1.read(fin);
             pizza.push_back(pizza1);
             cout << pizza[i] << endl;
