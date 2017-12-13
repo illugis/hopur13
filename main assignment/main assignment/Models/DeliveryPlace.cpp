@@ -48,6 +48,7 @@ void DeliveryPlace::read(ifstream &fin) {
 }
 
 istream& operator >> (istream& in, DeliveryPlace& deliveryplace){
+    
     cout << "Afhendingarstaður: ";
     in >> ws;
     getline(in, deliveryplace.name);

@@ -17,6 +17,8 @@
 #include "CrustService.h"
 #include "toppings.h"
 #include "ToppingsService.h"
+#include "PizzaMenu.h"
+#include "PizzaMenuService.h"
 #include "Other.h"
 #include "OtherService.h"
 #include "DeliveryPlace.hpp"
@@ -40,6 +42,7 @@ private:
     
     vector<Crust> create_crust();
     vector<Topping> create_topping();
+    vector<PizzaMenu> create_pizzamenu();
     vector<Other> create_other();
     vector<DeliveryPlace> create_deliveryplace();
     
@@ -53,6 +56,7 @@ private:
     
     CrustService crust_service;
     ToppingsService toppings_service;
+    PizzaMenuSerivce pizzamenu_service;
     OtherService other_service;
     DeliveryPlaceService deliveryplace_service;
     

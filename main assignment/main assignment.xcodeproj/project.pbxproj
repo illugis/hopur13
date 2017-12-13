@@ -39,6 +39,9 @@
 		E2F06D0D1FDEAF06001716ED /* OtherService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06D0B1FDEAF06001716ED /* OtherService.cpp */; };
 		E2F06D101FDEB08F001716ED /* OtherRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06D0E1FDEB08F001716ED /* OtherRepository.cpp */; };
 		E2F06D131FDEC691001716ED /* ToppingsService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06D111FDEC691001716ED /* ToppingsService.cpp */; };
+		E2F06D161FE157FC001716ED /* PizzaMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06D141FE157FC001716ED /* PizzaMenu.cpp */; };
+		E2F06D191FE17599001716ED /* PizzaMenuService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06D171FE17599001716ED /* PizzaMenuService.cpp */; };
+		E2F06D1C1FE17735001716ED /* PizzaMenuRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2F06D1A1FE17735001716ED /* PizzaMenuRepository.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +121,12 @@
 		E2F06D0F1FDEB08F001716ED /* OtherRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherRepository.h; sourceTree = "<group>"; };
 		E2F06D111FDEC691001716ED /* ToppingsService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ToppingsService.cpp; sourceTree = "<group>"; };
 		E2F06D121FDEC691001716ED /* ToppingsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToppingsService.h; sourceTree = "<group>"; };
+		E2F06D141FE157FC001716ED /* PizzaMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PizzaMenu.cpp; sourceTree = "<group>"; };
+		E2F06D151FE157FC001716ED /* PizzaMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaMenu.h; sourceTree = "<group>"; };
+		E2F06D171FE17599001716ED /* PizzaMenuService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PizzaMenuService.cpp; sourceTree = "<group>"; };
+		E2F06D181FE17599001716ED /* PizzaMenuService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaMenuService.h; sourceTree = "<group>"; };
+		E2F06D1A1FE17735001716ED /* PizzaMenuRepository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PizzaMenuRepository.cpp; sourceTree = "<group>"; };
+		E2F06D1B1FE17735001716ED /* PizzaMenuRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaMenuRepository.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +172,8 @@
 				E2F06D091FDEAD87001716ED /* Other.h */,
 				640C26C21FDEAD2200ADEB99 /* DeliveryPlace.cpp */,
 				640C26C31FDEAD2200ADEB99 /* DeliveryPlace.hpp */,
+				E2F06D141FE157FC001716ED /* PizzaMenu.cpp */,
+				E2F06D151FE157FC001716ED /* PizzaMenu.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +193,8 @@
 				640C26C61FDEB01D00ADEB99 /* DeliveryPlaceService.hpp */,
 				E2F06D111FDEC691001716ED /* ToppingsService.cpp */,
 				E2F06D121FDEC691001716ED /* ToppingsService.h */,
+				E2F06D171FE17599001716ED /* PizzaMenuService.cpp */,
+				E2F06D181FE17599001716ED /* PizzaMenuService.h */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,6 +214,8 @@
 				E2F06D0F1FDEB08F001716ED /* OtherRepository.h */,
 				640C26C81FDEB24400ADEB99 /* DeliveryPlaceRepository.cpp */,
 				640C26C91FDEB24400ADEB99 /* DeliveryPlaceRepository.hpp */,
+				E2F06D1A1FE17735001716ED /* PizzaMenuRepository.cpp */,
+				E2F06D1B1FE17735001716ED /* PizzaMenuRepository.h */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -317,6 +332,7 @@
 				E2F06CFE1FDDE07F001716ED /* Crust.cpp in Sources */,
 				E2F06CE61FD96982001716ED /* PizzaRepository.cpp in Sources */,
 				E2F06D041FDE988B001716ED /* CrustService.cpp in Sources */,
+				E2F06D161FE157FC001716ED /* PizzaMenu.cpp in Sources */,
 				640C26AC1FD6ED5500ADEB99 /* Pizza.cpp in Sources */,
 				E2F06D0D1FDEAF06001716ED /* OtherService.cpp in Sources */,
 				E2F06CE31FD96336001716ED /* PizzaService.cpp in Sources */,
@@ -325,6 +341,7 @@
 				E2F06D131FDEC691001716ED /* ToppingsService.cpp in Sources */,
 				640C26B81FDADC4F00ADEB99 /* InvalidDestinationException.cpp in Sources */,
 				E29EC8EA1FD041AD00C9F531 /* baksturui.cpp in Sources */,
+				E2F06D1C1FE17735001716ED /* PizzaMenuRepository.cpp in Sources */,
 				640C26B91FDADC4F00ADEB99 /* InvalidSizeException.cpp in Sources */,
 				E29EC8E11FD0249500C9F531 /* mainui.cpp in Sources */,
 				E2F06CF51FDAAA83001716ED /* InvalidToppingException.cpp in Sources */,
@@ -343,6 +360,7 @@
 				E29EC8B01FCC3E4900C9F531 /* main.cpp in Sources */,
 				E2F06D011FDDE279001716ED /* ToppingsRepository.cpp in Sources */,
 				640C26BA1FDADC4F00ADEB99 /* InvalidToppingException.cpp in Sources */,
+				E2F06D191FE17599001716ED /* PizzaMenuService.cpp in Sources */,
 				640C26BB1FDADC4F00ADEB99 /* InvalidCrustException.cpp in Sources */,
 				640C26C41FDEAD2200ADEB99 /* DeliveryPlace.cpp in Sources */,
 			);
