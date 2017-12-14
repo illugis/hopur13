@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-class InvalidSizeException { };
+class InvalidCrustPriceException { };
 
 #endif /* defined(__main_assignment__InvalidSizeExceptions__) */

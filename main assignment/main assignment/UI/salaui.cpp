@@ -73,7 +73,7 @@ void SalaUI::make_order() {
         }
         
         cout << "Heildarverð: ";
-        
+    
         cout << "Sent eða sótt?" << endl;
         cin >> delivery;
         //ordertemp.addDelivery(delivery);
@@ -109,16 +109,16 @@ void SalaUI::make_order() {
         cin >> loopSelection;
     }
     while (loopSelection == 'y');
- 
+
 }
- 
+
  void SalaUI::make_pizza() {
  
      vector<Crust> crust = crust_service.retrieveAllCrust();
      vector<Topping> toppings = toppings_service.retrieveAllToppings();
      vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
  
-     vector<Pizza> pizza;
+     vector<Pizza> pizza = pizza_service.retrieveAllPizzas();
      Pizza pizzatemp;
  
      int crustSelection = -1;
@@ -155,13 +155,14 @@ void SalaUI::make_order() {
      if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
          pizzatemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
      }
- 
+     cout << pizzatemp << endl;
      pizza.push_back(pizzatemp);
      pizza_service.storeAllPizzas(pizza);
  
      cout << endl;
  
  }
+
 /*
 void SalaUI::make_other() {
  

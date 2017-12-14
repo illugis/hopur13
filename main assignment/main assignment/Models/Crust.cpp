@@ -65,7 +65,7 @@ istream& operator >> (istream& in, Crust& crust){
 ostream& operator << (ostream& out, const Crust& crust){
     
     out << crust.name << " ";
-    out << crust.price;
+    out << crust.price << " ";
     
     return out;
 }

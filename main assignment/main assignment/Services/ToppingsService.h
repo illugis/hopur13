@@ -11,11 +11,14 @@
 
 #include "toppings.h"
 #include "ToppingsRepository.h"
+#include "InvalidToppingException.h"
+#include "InvalidToppingPriceException.hpp"
 
 class ToppingsService {
     
 private:
     ToppingsRepository toppings_repo;
+    bool InvalidError(const Topping& topping);
     
 public:
     ToppingsService();

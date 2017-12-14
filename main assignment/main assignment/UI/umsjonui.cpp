@@ -43,7 +43,7 @@ void UmsjonUI::val_umsjonUI() {
         toppings_service.storeAllToppings(create_topping());
     }
     else if (selection == '3') {
-        pizzamenu_service.storeAllPizzaMenus(create_pizzamenu());
+        //pizzamenu_service.storeAllPizzaMenus(create_pizzamenu());
     }
     else if (selection == '4') {
         other_service.storeAllOther(create_other());
@@ -107,24 +107,26 @@ vector<Topping> UmsjonUI::create_topping() {
 }
 /*
 vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
-    
+
     vector<Crust> crusts = crust_service.retrieveAllCrust();
     vector<Topping> toppings = toppings_service.retrieveAllToppings();
-    
+
     vector<PizzaMenu> pizzamenus = pizzamenu_service.retrieveAllPizzaMenus();
     PizzaMenu pizzamenu;
-    
-    cout << "Listi yfir pítsur á matseðli í kerfi:" << endl;
+
+
+    cout << "Listi yfir pítsur á matseðli:" << endl;
+
     for (unsigned int i = 0; i < pizzamenus.size(); i++) {
         cout << "[" << i+1 << "] " << pizzamenus[i] << endl;
     }
-    
+
     char selection = 'y';
     Topping topping1;
     while (selection == 'y') {
         cout << endl;
         
-        cout << "Bæta við pítsu á matseðil?(y/n) ";
+        cout << "Bæta við pítsu af matseðli?(y/n) ";
         cin >> selection;
         if (selection == 'y') {
             while (selection == 'y') {
@@ -246,7 +248,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
     
     return pizzamenus;
 }
-
+*/
 vector<Other> UmsjonUI::create_other() {
     
     vector<Other> other = other_service.retrieveAllOther();
@@ -299,18 +301,7 @@ vector<DeliveryPlace> UmsjonUI::create_deliveryplace() {
 
 void UmsjonUI::val_pizzaUI() {
     
-    try {
-       // pizza_service.add_pizza(create_pizza());
-    }
-    catch (InvalidSizeException) {
-        cout << "Invalid size!" << endl;
-    }
-    catch (InvalidCrustException) {
-        cout << "Invalid crust!" << endl;
-    }
-    catch (InvalidDestinationException) {
-        cout << "Invalid destination!" << endl;
-    }
+    
 }
 /*
 Pizza UmsjonUI::create_pizza() {
