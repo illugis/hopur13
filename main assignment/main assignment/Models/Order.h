@@ -37,6 +37,8 @@ public:
     int getPrice() const;
     //string getDestination() const;
     
+    void addName(string name);
+    
     void write(ofstream& fout) const;
     void read(ifstream& fin);
     

@@ -23,7 +23,8 @@ void MainUI::startUI() {
     
     do {
         
-        cout << "VELKOMIN/N!" << endl << endl;
+        cout << "VELKOMIN/N!" << endl;
+        cout << "-----------" << endl;
         cout << "Vinsamlegast veldu:" << endl;
         cout << '\t' << "[1] fyrir umsjón" << endl;
         cout << '\t' << "[2] fyrir sölu" << endl;
@@ -33,6 +34,7 @@ void MainUI::startUI() {
         
         cout << "--> ";
         cin >> selection;
+        cout << endl;
         
         if (selection == '1') {
             umsjonui.umsjonUI();

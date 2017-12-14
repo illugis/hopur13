@@ -18,6 +18,8 @@ BaksturUI::BaksturUI(){
 
 void BaksturUI::baksturUI() {
     
+    cout << "BAKSTUR" << endl;
+    cout << "-------" << endl;
     cout << "Vinsamlegast sláðu inn afhendingarstað: ";
     //Notandi slær inn afhendingarstað
     

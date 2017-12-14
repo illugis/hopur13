@@ -53,7 +53,7 @@ void PizzaMenu::read(ifstream &fin) {
 
 istream& operator >> (istream& in, PizzaMenu& pizzamenu){
     
-    cout << "Afhendingarstaður: ";
+    cout << "Nafn á pítsu: ";
     in >> ws;
     getline(in, pizzamenu.name);
     

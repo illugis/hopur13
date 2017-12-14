@@ -25,7 +25,8 @@ void SalaUI::sala_menuUI() {
     
     char selection = '\0';
     
-    cout << "SALA" << endl << endl;
+    cout << "SALA" << endl;
+    cout << "----" << endl;
     cout << "Vinsamlegast veldu: " << endl;
     cout << "[1] til að skrá pöntun" << endl;
     cout << "[2] til baka" << endl;
@@ -52,6 +53,7 @@ void SalaUI::make_order() {
     do {
         cout << "Nafn: ";
         cin >> name;
+        cout << endl;
         ordertemp.addName(name);
         
         while (selection == 'y') {
@@ -66,7 +68,7 @@ void SalaUI::make_order() {
             cout << "Bæta við öðru?(y/n) ";
             cin >> selection;
             if (selection == 'y') {
-                make_other();
+                //make_other();
             }
         }
         
@@ -74,11 +76,11 @@ void SalaUI::make_order() {
         
         cout << "Sent eða sótt?" << endl;
         cin >> delivery;
-        ordertemp.addDelivery(delivery);
+        //ordertemp.addDelivery(delivery);
         
         cout << "Pöntun greidd eða ógreidd?" << endl;
         cin >> payment;
-        ordertemp.addPayment(payment);
+        //ordertemp.addPayment(payment);
         
         //Mögulega annað fall sem sér um þetta?
         vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
@@ -90,17 +92,18 @@ void SalaUI::make_order() {
         cin >> deliveryplaceSelection;
         
         if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
-            ordertemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
+            //ordertemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
         }
         
         cout << "Skrá athugasemd?(y/n) ";
         if (selection == 'y') {
             cin >> comment;
-            ordertemp.addComment(comment);
+            //ordertemp.addComment(comment);
         }
         
         orders.push_back(ordertemp);
         order_service.storeAllOrders(orders);
+        cout << "Pöntun hefur verið skráð" << endl << endl;
         
         cout << "Skrá aðra pöntun?(y/n) ";
         cin >> loopSelection;

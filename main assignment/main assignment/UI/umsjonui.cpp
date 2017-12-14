@@ -24,7 +24,8 @@ void UmsjonUI::val_umsjonUI() {
     
     char selection = '\0';
     
-    cout << "UMSJÓN" << endl << endl;
+    cout << "UMSJÓN" << endl;
+    cout << "------" << endl;
     cout << "Vinsamlegast veldu:" << endl;
     cout << "\t [1] til að skrá botn" << endl;
     cout << "\t [2] til að skrá álegg" << endl;
@@ -59,7 +60,7 @@ vector<Crust> UmsjonUI::create_crust() {
     
     vector<Crust> crusts = crust_service.retrieveAllCrust();
     
-    cout << "Listi yfir botna:" << endl;
+    cout << "Listi yfir botna í kerfi:" << endl;
     for (unsigned int i = 0; i < crusts.size(); i++) {
         cout << "[" << i+1 << "] " << crusts[i] << endl;
     }
@@ -84,7 +85,7 @@ vector<Topping> UmsjonUI::create_topping() {
     
     vector<Topping> toppings = toppings_service.retrieveAllToppings();
     
-    cout << "Listi yfir álegg:" << endl;
+    cout << "Listi yfir álegg í kerfi:" << endl;
     for (unsigned int i = 0; i < toppings.size(); i++) {
         cout << "[" << i+1 << "] " << toppings[i] << endl;
     }
@@ -104,7 +105,7 @@ vector<Topping> UmsjonUI::create_topping() {
     }
     return toppings;
 }
-
+/*
 vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
     
     vector<Crust> crusts = crust_service.retrieveAllCrust();
@@ -113,7 +114,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
     vector<PizzaMenu> pizzamenus = pizzamenu_service.retrieveAllPizzaMenus();
     PizzaMenu pizzamenu;
     
-    cout << "Listi yfir pítsur á matseðli:" << endl;
+    cout << "Listi yfir pítsur á matseðli í kerfi:" << endl;
     for (unsigned int i = 0; i < pizzamenus.size(); i++) {
         cout << "[" << i+1 << "] " << pizzamenus[i] << endl;
     }
@@ -136,7 +137,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
                     for (unsigned int i = 0; i < crusts.size(); i++) {
                         cout << "[" << i+1 << "] " << crusts[i] << endl;
                     }
-                    
+                 
                     int crustSelection = -1;
                     cout << "Vinsamlegast veldu eftirfarandi nr. fyrir botn á pítsu" << endl;
                     for (unsigned int i = 0; i < crusts.size(); i++) {
@@ -177,13 +178,80 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
             }
         }
     }
+    cout << "Pítsu hefur verið bætt á matseðil" << endl;
+    return pizzamenus;
+}
+*/
+
+vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
+    
+    vector<Crust> crusts = crust_service.retrieveAllCrust();
+    vector<Topping> toppings = toppings_service.retrieveAllToppings();
+    
+    vector<PizzaMenu> pizzamenus = pizzamenu_service.retrieveAllPizzaMenus();
+    PizzaMenu pizzamenu;
+    
+    cout << "Listi yfir pítsur á matseðli í kerfi:" << endl;
+    for (unsigned int i = 0; i < pizzamenus.size(); i++) {
+        cout << "[" << i+1 << "] " << pizzamenus[i] << endl;
+    }
+    
+    char selection = 'y';
+    Topping topping1;
+    
+    do {
+        
+        cout << "Bæta við pítsu á matseðil(y/n) ";
+        cin >> selection;
+        
+        cout << endl;
+            
+        int crustSelection = -1;
+        cout << "Vinsamlegast veldu eftirfarandi nr. fyrir botn á pítsu" << endl;
+        for (unsigned int i = 0; i < crusts.size(); i++) {
+            cout << "[" << i+1 << "] " << crusts[i] << endl;
+        }
+        cin >> crustSelection;
+            
+        if(crustSelection > 0 && crustSelection <= (int)crusts.size()) {
+            pizzamenu.addCrust(crusts[crustSelection -1]);
+        }
+            
+        cout << endl;
+        cout << "Bæta við áleggi?(y/n) ";
+        cin >> selection;
+        if (selection == 'y') {
+                
+            int toppingSelection = -1;
+            while (toppingSelection != 0) {
+                cout << "Vinsamlegast veldu eftirfarandi nr. til að bæta við áleggi (0 fyrir hætta)" << endl;
+                for (unsigned int i = 0; i < toppings.size(); i++) {
+                    cout << "[" << i+1 << "] " << toppings[i] << endl;
+                }
+                cin >> toppingSelection;
+                    
+                if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
+                    pizzamenu.addTopping(toppings[toppingSelection - 1]);
+                }
+            }
+        }
+            
+        cin >> pizzamenu;
+        pizzamenus.push_back(pizzamenu);
+            
+        cout << "Pítsu hefur verið bætt á matseðil" << endl;
+        
+    }
+    while (selection == 'y');
+    
+    return pizzamenus;
 }
 
 vector<Other> UmsjonUI::create_other() {
     
     vector<Other> other = other_service.retrieveAllOther();
     
-    cout << "Listi yfir annað:" << endl;
+    cout << "Listi yfir öðru í kerfi:" << endl;
     for (unsigned int i = 0; i < other.size(); i++) {
         cout << "[" << i+1 << "] " << other[i] << endl;
     }
@@ -208,7 +276,7 @@ vector<DeliveryPlace> UmsjonUI::create_deliveryplace() {
     
     vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
     
-    cout << "Listi yfir afhendingarstaði:" << endl;
+    cout << "Listi yfir afhendingarstaði í kerfi:" << endl;
     for (unsigned int i = 0; i < deliveryplace.size(); i++) {
         cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
     }

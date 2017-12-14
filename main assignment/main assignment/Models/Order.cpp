@@ -19,6 +19,10 @@ Order::Order(string name, int price){
     this->price = price;
 }
 
+void Order::addName(string name) {
+    
+    this->name = name;
+}
 
 int Order::getPrice() const{
     return this->price;

@@ -15,9 +15,9 @@ AfhendingUI::AfhendingUI() {
 
 void AfhendingUI::afhendingUI(){
     
-    cout << "Hver er þinn afhendingarstaður? ";
-
-    
+    cout << "AFHENDING" << endl;
+    cout << "---------" << endl;
+    cout << "Vinsamlegast sláðu inn afhendingarstað";
     
     cout << "Listi af pöntunum fyrir " << endl;
     //listi (ifstream örugglega)

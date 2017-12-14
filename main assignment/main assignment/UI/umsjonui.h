@@ -56,7 +56,7 @@ private:
     
     CrustService crust_service;
     ToppingsService toppings_service;
-    PizzaMenuSerivce pizzamenu_service;
+    PizzaMenuService pizzamenu_service;
     OtherService other_service;
     DeliveryPlaceService deliveryplace_service;
     
