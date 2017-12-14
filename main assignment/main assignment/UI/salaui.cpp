@@ -144,7 +144,7 @@ void SalaUI::make_order() {
             pizzatemp.addTopping(toppings[toppingSelection - 1]);
         }
      }
-     
+     /*
      int deliveryplaceSelection = -1;
      cout << "Vinsamlegast veldu eftirfarandi nr. fyrir afhendingarstað" << endl;
      for (unsigned int i = 0; i < deliveryplace.size(); i++) {
@@ -154,8 +154,8 @@ void SalaUI::make_order() {
      
      if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
          pizzatemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
-     }
-     cout << pizzatemp << endl;
+     }*/
+     
      pizza.push_back(pizzatemp);
      pizza_service.storeAllPizzas(pizza);
  

@@ -21,9 +21,7 @@ private:
     Crust crust;
     vector<Topping> toppings;
     DeliveryPlace deliveryplace;
-    Crust _crust;
     Topping topping;
-    DeliveryPlace _deliveryplace;
     
 public:
     Pizza();
