@@ -18,12 +18,14 @@ BaksturUI::BaksturUI(){
 
 void BaksturUI::baksturUI() {
     
-    cout << "Vinsamlegast sláðu inn afhendingarstað: ";
-    //Notandi slær inn afhendingarstað
-    
     cout << "Listi yfir pantaðar pítsur:" << endl;
     //listi
-    pizza_service.retrieveAllPizzas();
+    //pizza_service.retrieveAllPizzas();
+    vector<Pizza> pizzas = pizza_service.retrieveAllPizzas();
+    
+    for (unsigned int i = 0; i < pizzas.size(); i++) {
+        cout << pizzas[i] << endl;
+    }
     
 }
 
@@ -32,3 +34,5 @@ void BaksturUI::getPizza_list() {
     
     string pizzas = pizza_service.read_pizza();
 }
+
+

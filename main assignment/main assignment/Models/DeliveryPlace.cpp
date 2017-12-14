@@ -58,7 +58,7 @@ istream& operator >> (istream& in, DeliveryPlace& deliveryplace){
 
 ostream& operator << (ostream& out, const DeliveryPlace& deliveryplace){
     
-    out << deliveryplace.name << " ";
+    out << deliveryplace.name;
     
     return out;
 }

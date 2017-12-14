@@ -18,11 +18,12 @@
 class Pizza {
 
 private:
-    vector<Crust> crust;
+    Crust crust;
     vector<Topping> toppings;
-    vector<DeliveryPlace> deliveryplace;
-    bool verbose;
+    DeliveryPlace deliveryplace;
     Crust _crust;
+    Topping topping;
+    DeliveryPlace _deliveryplace;
     
 public:
     Pizza();
@@ -30,7 +31,9 @@ public:
     void addTopping(Topping topping);
     void addCrust(Crust crust);
     void addDeliveryPlace(DeliveryPlace deliveryplace);
-    void checkVerbose(bool v);
+    Crust getCrust() const;
+    Topping getTopping()const;
+    DeliveryPlace getDeliveryPlace() const;
     
     void write(ofstream& fout) const;
     void read(ifstream& fin);

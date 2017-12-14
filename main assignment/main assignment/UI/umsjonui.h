@@ -42,7 +42,7 @@ private:
     
     vector<Crust> create_crust();
     vector<Topping> create_topping();
-    vector<PizzaMenu> create_pizzamenu();
+    //vector<PizzaMenu> create_pizzamenu();
     vector<Other> create_other();
     vector<DeliveryPlace> create_deliveryplace();
     
@@ -56,7 +56,7 @@ private:
     
     CrustService crust_service;
     ToppingsService toppings_service;
-    PizzaMenuSerivce pizzamenu_service;
+    PizzaMenuService pizzamenu_service;
     OtherService other_service;
     DeliveryPlaceService deliveryplace_service;
     
