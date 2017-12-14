@@ -10,6 +10,7 @@
 #define __main_assignment__Order__
 
 #include "Pizza.hpp"
+#include "Other.h"
 
 #include <iostream>
 #include <string>
@@ -25,9 +26,14 @@ private:
     //Pizza pizza;
     string other;
     int price;
-    //string destination;
+    string delivery;
+    string payment;
+    string comment;
+    
+    DeliveryPlace deliveryplace;
     
     vector<Order> orders;
+    vector<Other> others;
     
 public:
     Order();
@@ -38,6 +44,11 @@ public:
     //string getDestination() const;
     
     void addName(string name);
+    void addOther(Other other);
+    void addDelivery(string delivery);
+    void addPayment(string payment);
+    void addComment(string comment);
+    void addDeliveryPlace(DeliveryPlace deliveryplace);
     
     void write(ofstream& fout) const;
     void read(ifstream& fin);

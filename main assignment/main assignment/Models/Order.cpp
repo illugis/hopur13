@@ -24,6 +24,31 @@ void Order::addName(string name) {
     this->name = name;
 }
 
+void Order::addOther(Other other) {
+    
+    others.push_back(other);
+}
+
+void Order::addDelivery(string delivery) {
+    
+    this->delivery = delivery;
+}
+
+void Order::addPayment(string payment) {
+    
+    this->payment = payment;
+}
+
+void Order::addComment(string comment) {
+    
+    this->comment = comment;
+}
+
+void Order::addDeliveryPlace(DeliveryPlace deliveryplace) {
+    
+    this->deliveryplace = deliveryplace;
+}
+
 int Order::getPrice() const{
     return this->price;
 }

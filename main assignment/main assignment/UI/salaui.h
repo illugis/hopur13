@@ -34,7 +34,7 @@ private:
     
     void make_order();
     void make_pizza();
-    //void make_other();
+    void make_other();
     
     Order create_order();
     
