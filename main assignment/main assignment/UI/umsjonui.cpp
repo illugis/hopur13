@@ -248,7 +248,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
     
     return pizzamenus;
 }
-*/
+
 vector<Other> UmsjonUI::create_other() {
     
     vector<Other> other = other_service.retrieveAllOther();
