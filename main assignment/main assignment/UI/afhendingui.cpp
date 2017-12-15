@@ -17,10 +17,17 @@ void AfhendingUI::afhendingUI(){
     
     cout << "AFHENDING" << endl;
     cout << "---------" << endl;
-    cout << "Vinsamlegast sláðu inn afhendingarstað";
+    cout << "Vinsamlegast sláðu inn afhendingarstað:" << endl;
     
     cout << "Listi af pöntunum fyrir " << endl;
     //listi (ifstream örugglega)
+    order_service.retrieveAllOrders();
+    
+    vector<Order> orders = order_service.retrieveAllOrders();
+    
+    for (unsigned int i = 0; i < orders.size(); i++) {
+        cout << orders[i] << endl;
+    }
     
     cout << "Tilbúnar pantanir fyrir " << endl;
 

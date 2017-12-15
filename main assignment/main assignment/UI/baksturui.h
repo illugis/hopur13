@@ -10,6 +10,7 @@
 #define __main_assignment__bakstur__
 
 #include "PizzaService.h"
+#include "OrderService.hpp"
 
 #include <iostream>
 
@@ -19,6 +20,8 @@ class BaksturUI {
     
 private:
     PizzaService pizza_service;
+    OrderService order_service;
+    Order order;
     
 public:
     BaksturUI();

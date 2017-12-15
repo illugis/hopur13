@@ -10,7 +10,7 @@
 #define __main_assignment__afhending__
 
 
-
+#include "OrderService.hpp"
 #include <iostream>
 
 using namespace std;
@@ -21,6 +21,7 @@ private:
     char greitt;
     char afhent;
     
+    OrderService order_service;
 public:
     AfhendingUI();
     void afhendingUI();

@@ -57,21 +57,14 @@ void Pizza::write(ofstream& fout) const {
     fout.write((char*)(&toppingCount), sizeof(toppingCount));
     
     for (int i = 0; i < toppingCount; i++) {
-        cout <<toppings[i] << endl;
         toppings[i].write(fout);
     }
-    /*
-    int deliveryPlaceCount = 1;
-    
-    fout.write((char*)(&deliveryPlaceCount), sizeof(deliveryPlaceCount));
-    
-    for(int i = 0; i < deliveryPlaceCount; i++){
-        deliveryplace.write(fout);
-    }*/
 }
 
 void Pizza::read(ifstream& fin) {
   
+    toppings.clear();
+    
     int crustCount;
     
     fin.read((char*)(&crustCount), sizeof(crustCount));
@@ -91,14 +84,6 @@ void Pizza::read(ifstream& fin) {
         addTopping(topping);
     }
     
-   /* int deliveryCount;
-    fin.read((char*)(&deliveryCount), sizeof(deliveryCount));
-    
-    DeliveryPlace deliveryplace;
-    for (int i = 0; i < deliveryCount; i++) {
-        deliveryplace.read(fin);
-        addDeliveryPlace(deliveryplace);
-    }*/
 }
 
 istream& operator >> (istream& in, Pizza& pizza){
@@ -118,11 +103,10 @@ istream& operator >> (istream& in, Pizza& pizza){
 
 ostream& operator << (ostream& out, const Pizza& pizza){
     
-    out << pizza.crust << endl;
-    
+    out << "Stærð og botn: " << pizza.crust << "kr." << endl;
     
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
-        out << pizza.toppings[i] << endl;
+        out << "Álegg " << i + 1 << ". " << pizza.toppings[i] << "kr." << endl;
     }
     //out << pizza.deliveryplace << endl;
     

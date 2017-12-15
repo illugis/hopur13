@@ -23,7 +23,7 @@ class Order {
     
 private:
     string name;
-    //Pizza pizza;
+    Pizza pizza;
     string other;
     int price;
     string delivery;
@@ -34,6 +34,7 @@ private:
     
     vector<Order> orders;
     vector<Other> others;
+    vector<Pizza> pizzas;
     
 public:
     Order();
@@ -44,12 +45,22 @@ public:
     //string getDestination() const;
     
     void addName(string name);
+    void addPizza(Pizza pizza);
     void addOther(Other other);
     void addDelivery(string delivery);
     void addPayment(string payment);
     void addComment(string comment);
     void addDeliveryPlace(DeliveryPlace deliveryplace);
+    vector<Pizza> getPizzas() const;
     
+    void writeName(ofstream& fout) const;
+    void readName(ifstream& fin);
+    void writeDelivery(ofstream& fout) const;
+    void readDelivery(ifstream& fin);
+    void writePayment(ofstream& fout) const;
+    void readPayment(ifstream& fin);
+    void writeComment(ofstream& fout) const;
+    void readComment(ifstream& fin);
     void write(ofstream& fout) const;
     void read(ifstream& fin);
     

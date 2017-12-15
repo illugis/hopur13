@@ -68,23 +68,21 @@ void SalaUI::make_order() {
                 make_pizza();
             }
         }
-        
-        while (selection == 'y') {
-            cout << "Bæta við öðru?(y/n) ";
-            cin >> selection;
-            if (selection == 'y') {
+        cout << "Bæta við öðru?(y/n) ";
+        cin >> selection;
+            
+        if (selection == 'y') {
+            
+            int otherSelection = -1;
+            while (otherSelection != 0) {
+                cout << "Vinsamlegast veldu eftirfarandi nr. fyrir annað (0 fyrir hætta)" << endl;
+                for (unsigned int i = 0; i < other.size(); i++) {
+                    cout << "[" << i+1 << "] " << other[i] << endl;
+                }
+                cin >> otherSelection;
                 
-                int otherSelection = -1;
-                while (otherSelection != 0) {
-                    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir annað (0 fyrir hætta)" << endl;
-                    for (unsigned int i = 0; i < other.size(); i++) {
-                        cout << "[" << i+1 << "] " << other[i] << endl;
-                    }
-                    cin >> otherSelection;
-                    
-                    if(otherSelection > 0 && otherSelection <= (int)other.size()) {
-                        ordertemp.addOther(other[otherSelection -1]);
-                    }
+                if(otherSelection > 0 && otherSelection <= (int)other.size()) {
+                    ordertemp.addOther(other[otherSelection -1]);
                 }
             }
         }

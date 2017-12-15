@@ -21,16 +21,22 @@ void BaksturUI::baksturUI() {
     cout << "BAKSTUR" << endl;
     cout << "-------" << endl;
     cout << "Vinsamlegast sláðu inn afhendingarstað: ";
-    //Notandi slær inn afhendingarstað
+    string afhendingarstadur;
+    cin >> afhendingarstadur;
     
     cout << "Listi yfir pantaðar pítsur:" << endl;
-    //listi
-    //pizza_service.retrieveAllPizzas();
+    
     vector<Pizza> pizzas = pizza_service.retrieveAllPizzas();
     
     for (unsigned int i = 0; i < pizzas.size(); i++) {
         cout << pizzas[i] << endl;
     }
+    
+    /*vector<Order> orders = order_service.retrieveAllOrders();
+    
+    for(int i = 0; i < order.getPizzas().size();i++){
+        cout << order.getPizzas()[i] << endl;
+    }*/
     
 }
 

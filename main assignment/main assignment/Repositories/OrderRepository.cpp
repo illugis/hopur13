@@ -25,8 +25,9 @@ void OrderRepository::storeAllOrders(const vector<Order> &order) {
     
     for (int i = 0; i < orderCount; i++) {
         order[i].write(fout);
+        cout << endl;
     }
-    
+    cout << endl;
     fout.close();
 }
 
@@ -46,6 +47,7 @@ vector<Order> OrderRepository::retrieveAllOrders() {
         for (int i = 0; i < orderCount; i++) {
             order1.read(fin);
             order.push_back(order1);
+            cout << order[i] << endl;
         }
         
         fin.close();
