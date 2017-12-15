@@ -13,6 +13,8 @@
 #include "OrderService.hpp"
 #include "Pizza.hpp"
 #include "PizzaService.h"
+#include "PizzaMenu.h"
+#include "PizzaMenuService.h"
 #include "ToppingsService.h"
 #include "Crust.h"
 #include "CrustService.h"
@@ -40,12 +42,14 @@ private:
     
     Order order;
     Pizza pizza;
+    PizzaMenu pizzamenu;
     //vector<Order> make_order();
     OrderService order_service;
     
     CrustService crust_service;
     ToppingsService toppings_service;
     PizzaService pizza_service;
+    PizzaMenuService pizzamenu_service;
     OtherService other_service;
     DeliveryPlaceService deliveryplace_service;
     

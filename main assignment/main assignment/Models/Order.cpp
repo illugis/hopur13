@@ -24,6 +24,16 @@ void Order::addName(string name) {
     this->name = name;
 }
 
+void Order::addPizza(Pizza pizza) {
+    
+    pizzas.push_back(pizza);
+}
+
+void Order::addPizzaMenu(PizzaMenu pizzamenu) {
+    
+    pizzamenus.push_back(pizzamenu);
+}
+
 void Order::addOther(Other other) {
     
     others.push_back(other);
