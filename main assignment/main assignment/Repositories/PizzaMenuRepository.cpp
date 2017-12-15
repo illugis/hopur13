@@ -38,7 +38,7 @@ vector<PizzaMenu> PizzaMenuRepository::retrieveAllPizzaMenus() {
     PizzaMenu pizza1;
     
     ifstream fin;
-    fin.open("pizzas.dat", ios::binary);
+    fin.open("pizzamenu.dat", ios::binary);
     
     if (fin.is_open()) {
         int pizzamenuCount;
@@ -48,7 +48,6 @@ vector<PizzaMenu> PizzaMenuRepository::retrieveAllPizzaMenus() {
         for (int i = 0; i < pizzamenuCount; i++) {
             pizza1.read(fin);
             pizzamenu.push_back(pizza1);
-            cout << pizzamenu[i] << endl;
         }
         
         fin.close();

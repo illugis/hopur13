@@ -131,6 +131,8 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
         }
         else {
             cout << endl;
+            
+            cin >> pizzamenu;
 
             int toppingSelection = -1;
             while (toppingSelection != 0) {
@@ -145,8 +147,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
                 }
             }
         }
-            
-        cin >> pizzamenu;
+        
         pizzamenus.push_back(pizzamenu);
             
         cout << "Pítsu hefur verið bætt á matseðil" << endl << endl;
