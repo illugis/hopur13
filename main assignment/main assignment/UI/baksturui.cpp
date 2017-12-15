@@ -53,9 +53,9 @@ void BaksturUI::baksturUI() {
     vector<Order> order = order_service.retrievePizzasForName(afhendingarstadur, name);
     
     for(int i = 0; i < orders.size();i++){
-        for(int j = 0; j < orders[i].getPizzas().size(); j++){
+        for(int j = 0; j < orders[i].getPizzas().size();j++){
             
-            cout << orders[i].getPizzas()[j] << endl;
+            cout << orders[i].getPizzas()[i] << endl;
         }
     }
     
