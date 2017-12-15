@@ -117,3 +117,32 @@ vector<Order> OrderRepository::retrieveOrderForName(string str, string name) {
     return order;
 }
 
+vector<Order> OrderRepository::retrievePizzasPlace(string str) {
+    
+    vector<Order> order;
+    Order order1;
+    
+    ifstream fin;
+    fin.open("orders.dat", ios::binary);
+    
+    if (fin.is_open()) {
+        int orderCount;
+        
+        fin.read((char*)(&orderCount), sizeof(int));
+        
+        for (int i = 0; i < orderCount; i++) {
+            order1.read(fin);
+            if(order1.getDeliveryPlaceName() == str){
+                order.push_back(order1);
+            }
+        }
+        
+        fin.close();
+    }
+    else{
+        cout << "Ekki hægt að opna skrá." << endl;
+    }
+    
+    return order;
+}
+

@@ -33,3 +33,8 @@ vector<Order> OrderService::retrieveOrderForName(string str, string name){
     return order_repo.retrieveOrderForName(str, name);
 }
 
+vector<Order> OrderService::retrievePizzasPlace(string str){
+    
+    return order_repo.retrievePizzasPlace(str);
+}
+

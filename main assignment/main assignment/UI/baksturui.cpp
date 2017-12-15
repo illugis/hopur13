@@ -28,12 +28,12 @@ void BaksturUI::baksturUI() {
     
     
     
-    vector<Order> orders = order_service.retrieveAllOrders();
+    vector<Order> orders = order_service.retrievePizzasPlace(afhendingarstadur);
     
     for(int i = 0; i < orders.size();i++){
-        for(int j = 0; j < orders[i].getPizzas().size();j++){
+        for(int j = 0; j < orders[i].getPizzas().size(); j++){
             
-            cout << orders[i].getPizzas()[i] << endl;
+            cout << orders[i].getPizzas()[j] << endl;
         }
     }
     

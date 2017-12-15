@@ -24,6 +24,7 @@ public:
     
     vector<Order> retrieveOrdersDelivery(string str);
     vector<Order> retrieveOrderForName(string str, string name);
+    vector<Order> retrievePizzasPlace(string str);
 };
 
 #endif /* OrderService_hpp */
