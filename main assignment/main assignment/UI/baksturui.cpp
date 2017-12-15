@@ -23,15 +23,9 @@ void BaksturUI::baksturUI() {
     
     vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
     int deliveryplaceSelection = -1;
-    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir afhendingarstað" << endl;
+    cout << "Afhendingarstaðir:" << endl;
     for (unsigned int i = 0; i < deliveryplace.size(); i++) {
         cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
-    }
-    cin >> deliveryplaceSelection;
-    
-    if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
-        
-        ordertemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
     }
     
     
@@ -41,9 +35,20 @@ void BaksturUI::baksturUI() {
     
     cout << "Listi yfir pantaðar pítsur:" << endl;
     
+    vector<Order> orders = order_service.retrievePizzasPlace(afhendingarstadur);
     
+    for(int i = 0; i < orders.size();i++){
+        for(int j = 0; j < orders[i].getPizzas().size(); j++){
+            
+            cout << orders[i].getPizzas()[j] << endl;
+        }
+    }
     
-    vector<Order> orders = order_service.retrieveAllOrders();
+    cout << "Sláðu inn nafn til að velja pöntun: ";
+    string name;
+    cin >> name;
+    
+    vector<Order> order = order_service.retrievePizzasForName(afhendingarstadur, name);
     
     for(int i = 0; i < orders.size();i++){
         for(int j = 0; j < orders[i].getPizzas().size();j++){

@@ -23,7 +23,7 @@ string Topping::getToppingName() const{
 }
 
 int Topping::getToppingPrice() const{
-    return this->price;
+    return this-> price;
 }
 
 void Topping::write(ofstream& fout) const {
