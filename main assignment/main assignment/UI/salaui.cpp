@@ -48,11 +48,12 @@ void SalaUI::make_order() {
     
     string name, delivery, payment, comment;
     char selection = 'y';
-    char selection2 = 'z';
+    //char selection2 = 'z';
     char pizzaSelection = '\0';
     char loopSelection = 'y';
     
     do {
+        char selection2 = 'z';
         cout << "Nafn: ";
         cin >> ws;
         getline(cin, name);
@@ -62,11 +63,13 @@ void SalaUI::make_order() {
         while (selection == 'y') {
             cout << "Bæta við pítsu?(y/n) ";
             cin >> selection;
+            cout << endl;
             if (selection == 'y') {
                 cout << "[1] bæta við pítsu að eigin vali" << endl;
                 cout << "[2] bæta við pítsu af matseðli" << endl;
                 cout << "--> ";
                 cin >> pizzaSelection;
+                cout << endl;
                 if (pizzaSelection == '1') {
                     ordertemp.addPizza(make_pizza());
                 }
@@ -79,6 +82,7 @@ void SalaUI::make_order() {
                         cout << "[" << i+1 << "] " << pizzamenus[i] << endl;
                     }
                     cin >> pizzamenuSelection;
+                    cout << endl;
                         
                     if (pizzamenuSelection > 0 && pizzamenuSelection <= (int)pizzamenus.size()) {
                         ordertemp.addPizzaMenu(pizzamenus[pizzamenuSelection -1]);
@@ -91,7 +95,7 @@ void SalaUI::make_order() {
                         cout << "[" << i+1 << "] " << crust[i] << endl;
                     }
                     cin >> crustSelection;
-                    
+                    cout << endl;
                     if(crustSelection > 0 && crustSelection <= (int)crust.size()) {
                         ordertemp.addCrust(crust[crustSelection -1]);
                     }
@@ -104,6 +108,7 @@ void SalaUI::make_order() {
         while (selection2 == 'z') {
             cout << "Bæta við öðru?(y/n) ";
             cin >> selection;
+            cout << endl;
             if (selection == 'y') {
                 
                 vector<Other> other = other_service.retrieveAllOther();
@@ -114,6 +119,7 @@ void SalaUI::make_order() {
                         cout << "[" << i+1 << "] " << other[i] << endl;
                     }
                     cin >> otherSelection;
+                    cout << endl;
                     
                     if(otherSelection > 0 && otherSelection <= (int)other.size()) {
                         ordertemp.addOther(other[otherSelection -1]);
@@ -125,17 +131,18 @@ void SalaUI::make_order() {
         }
         
         cout << "Heildarverð: ";
-        //cout << ordertemp.getCrust().getCrustPrice() << endl;
         
-        cout << ordertemp.getPrice();
+        cout << ordertemp.getPrice() << endl;
         cout << endl;
     
         cout << "Sent eða sótt?" << endl;
         cin >> delivery;
+        cout << endl;
         ordertemp.addDelivery(delivery);
         
         cout << "Pöntun greidd eða ógreidd?" << endl;
         cin >> payment;
+        cout << endl;
         ordertemp.addPayment(payment);
         
         //Mögulega annað fall sem sér um þetta?
@@ -146,6 +153,7 @@ void SalaUI::make_order() {
             cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
         }
         cin >> deliveryplaceSelection;
+        cout << endl;
         
         if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
             ordertemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
@@ -161,6 +169,7 @@ void SalaUI::make_order() {
         }
         
         orders.push_back(ordertemp);
+        cout << endl;
         cout << "Pöntun hefur verið skráð" << endl << endl;
         
         cout << "Skrá aðra pöntun?(y/n) ";
@@ -185,6 +194,7 @@ Pizza SalaUI::make_pizza() {
          cout << "[" << i+1 << "] " << crust[i] << endl;
      }
      cin >> crustSelection;
+    cout << endl;
      
      if(crustSelection > 0 && crustSelection <= (int)crust.size()) {
          pizzatemp.addCrust(crust[crustSelection -1]);
@@ -197,6 +207,7 @@ Pizza SalaUI::make_pizza() {
             cout << "[" << i+1 << "] " << toppings[i] << endl;
         }
         cin >> toppingSelection;
+         cout << endl;
  
         if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
             pizzatemp.addTopping(toppings[toppingSelection - 1]);

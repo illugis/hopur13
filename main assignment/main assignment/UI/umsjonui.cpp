@@ -133,6 +133,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
             cout << endl;
             
             cin >> pizzamenu;
+            cout << endl;
 
             int toppingSelection = -1;
             while (toppingSelection != 0) {
@@ -141,6 +142,7 @@ vector<PizzaMenu> UmsjonUI::create_pizzamenu() {
                     cout << "[" << i+1 << "] " << toppings[i] << endl;
                 }
                 cin >> toppingSelection;
+                cout << endl;
                         
                 if(toppingSelection > 0 && toppingSelection <= (int)toppings.size()) {
                     pizzamenu.addTopping(toppings[toppingSelection - 1]);

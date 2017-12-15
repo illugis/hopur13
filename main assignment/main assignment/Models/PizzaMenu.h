@@ -25,10 +25,15 @@ private:
     int price;
     vector<Crust> crust;
     vector<Topping> toppings;
+    Topping topping;
+    Crust _crust;
     
 public:
     PizzaMenu();
     PizzaMenu(string name);
+    Crust getCrust() const;
+    vector<Topping> getToppings() const;
+    int getPrice() const;
     void addTopping(Topping topping);
     void addCrust(Crust crust);
     void write(ofstream& fout) const;

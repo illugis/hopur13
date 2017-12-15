@@ -25,11 +25,12 @@ void AfhendingUI::afhendingUI(){
         cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
     }
     
-    cout << "Vinsamlegast sláðu inn afhendingarstað:";
+    cout << "Vinsamlegast sláðu inn afhendingarstað: ";
     string afhendingarstadur;
     cin >> afhendingarstadur;
-    cout << "Listi af pöntunum fyrir " << afhendingarstadur << endl;
-    //listi (ifstream örugglega)
+    cout << endl;
+    cout << "Listi af pöntunum fyrir " << afhendingarstadur << ":" << endl;
+    cout << "------------------------------------" << endl;
     
     
     vector<Order> orders = order_service.retrieveOrdersDelivery(afhendingarstadur);
@@ -38,13 +39,10 @@ void AfhendingUI::afhendingUI(){
             cout << orders[i] << endl;
     }
     
-    cout << "Tilbúnar pantanir fyrir " << endl;
-
-    //listi
-    
     cout << "Sláðu inn nafn til að velja pöntun: ";
     string name;
     cin >> name;
+    cout << endl;
     
     vector<Order> order = order_service.retrieveOrderForName(afhendingarstadur, name);
     
@@ -54,6 +52,7 @@ void AfhendingUI::afhendingUI(){
     
     cout << "Hefur pöntun verið greidd(y/n)? ";
     cin >> greitt;
+    cout << endl;
    /* if(greitt == 'y'){
         ofstream fout;
         fout....
@@ -61,5 +60,6 @@ void AfhendingUI::afhendingUI(){
     
     cout << "Hefur pöntun verið afhent(y/n)? ";
     cin >> afhent;
+    cout << endl;
     
 }

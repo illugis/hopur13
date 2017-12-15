@@ -101,6 +101,11 @@ int Order::getPrice() const{
         crustPrice += pizzas[i].getCrust().getCrustPrice();
     }
     
+    int pizzaMenuPrice = 0;
+    for(int i = 0; i < pizzamenus.size(); i++){
+        pizzaMenuPrice += pizzamenus[i].getPrice();
+    }
+    
     int currentToppingPrice = 0;
     
     for(int i = 0; i < pizzas.size() ; i++){
@@ -108,13 +113,13 @@ int Order::getPrice() const{
         currentToppingPrice += pizzas[i].getToppings()[j].getToppingPrice();
     }
     
+    
     int currentOtherPrice = 0;
     for(int i = 0; i < others.size(); i++){
         currentOtherPrice += others[i].getOtherPrice();
     }
-    //cout << currentOtherPrice << endl;
-    int totalPrice = crustPrice + currentToppingPrice + currentOtherPrice;
-    //cout << totalPrice << endl;
+    
+    int totalPrice = crustPrice + pizzaMenuPrice + currentToppingPrice + currentOtherPrice;
     
     return totalPrice;
     
@@ -225,6 +230,15 @@ void Order::write(ofstream& fout) const {
         pizzas[i].write(fout);
     }
     
+    
+    int pizzaMenuCount = pizzamenus.size();
+    
+    fout.write((char*)(&pizzaMenuCount), sizeof(pizzaMenuCount));
+    
+    for (int i = 0; i < pizzaMenuCount; i++) {
+        pizzamenus[i].write(fout);
+    }
+    
     int otherCount = others.size();
     
     fout.write((char*)(&otherCount), sizeof(otherCount));
@@ -268,6 +282,7 @@ void Order::write(ofstream& fout) const {
 
 void Order::read(ifstream& fin) {
     
+    pizzamenus.clear();
     pizzas.clear();
     others.clear();
     
@@ -287,6 +302,15 @@ void Order::read(ifstream& fin) {
     for (int i = 0; i < pizzaCount; i++) {
         pizza.read(fin);
         addPizza(pizza);
+    }
+    
+    int pizzaMenuCount;
+    fin.read((char*)(&pizzaMenuCount), sizeof(pizzaMenuCount));
+    
+    PizzaMenu pizzamenu;
+    for (int i = 0; i < pizzaMenuCount; i++) {
+        pizzamenu.read(fin);
+        addPizzaMenu(pizzamenu);
     }
     
     int otherCount;
@@ -344,6 +368,9 @@ ostream& operator << (ostream& outs, const Order& order){
     outs << "Pítsa/pítsur: " << endl;
     for (unsigned int i = 0; i < order.pizzas.size(); i++) {
         outs << order.pizzas[i] << endl;
+    }
+    for(unsigned int i = 0; i < order.pizzamenus.size(); i++){
+        outs << order.pizzamenus[i] << endl;
     }
     outs << "Annað: " << endl;
     for (unsigned int i = 0; i < order.others.size(); i++) {

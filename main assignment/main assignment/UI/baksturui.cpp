@@ -27,13 +27,15 @@ void BaksturUI::baksturUI() {
     for (unsigned int i = 0; i < deliveryplace.size(); i++) {
         cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
     }
-    
+    cout << endl;
     
     cout << "Vinsamlegast sláðu inn afhendingarstað: ";
     string afhendingarstadur;
     cin >> afhendingarstadur;
+    cout << endl;
     
     cout << "Listi yfir pantaðar pítsur:" << endl;
+    cout << "---------------------------" << endl;
     
     vector<Order> orders = order_service.retrievePizzasPlace(afhendingarstadur);
     
@@ -43,10 +45,10 @@ void BaksturUI::baksturUI() {
             cout << orders[i].getPizzas()[j] << endl;
         }
     }
-    
     cout << "Sláðu inn nafn til að velja pöntun: ";
     string name;
     cin >> name;
+    cout << endl;
     
     vector<Order> order = order_service.retrievePizzasForName(afhendingarstadur, name);
     
