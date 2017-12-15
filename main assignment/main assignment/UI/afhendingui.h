@@ -20,6 +20,7 @@ class AfhendingUI {
 private:
     char greitt;
     char afhent;
+    Order order;
     
     OrderService order_service;
 public:

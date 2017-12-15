@@ -57,6 +57,9 @@ public:
     void addPizza(Pizza pizza);
     void addPizzaMenu(PizzaMenu pizzamenu);
     
+    string getDeliveryPlaceName() const;
+    string getName() const;
+    
     void addOther(Other other);
     void addDelivery(string delivery);
     void addPayment(string payment);
@@ -75,8 +78,8 @@ public:
     void write(ofstream& fout) const;
     void read(ifstream& fin);
     
-    friend ostream& operator << (ostream& out, const Order& order);
-    friend istream& operator >> (istream& in, Order& order);
+    friend ostream& operator << (ostream& outs, const Order& order);
+    friend istream& operator >> (istream& ins, Order& order);
     
 };
 

@@ -35,7 +35,7 @@ private:
     void sala_menuUI();
     
     void make_order();
-    void make_pizza();
+    Pizza make_pizza();
     void make_other();
     
     Order create_order();

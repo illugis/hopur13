@@ -26,17 +26,16 @@ void BaksturUI::baksturUI() {
     
     cout << "Listi yfir pantaðar pítsur:" << endl;
     
-    vector<Pizza> pizzas = pizza_service.retrieveAllPizzas();
     
-    for (unsigned int i = 0; i < pizzas.size(); i++) {
-        cout << pizzas[i] << endl;
+    
+    vector<Order> orders = order_service.retrieveAllOrders();
+    
+    for(int i = 0; i < orders.size();i++){
+        for(int j = 0; j < orders[i].getPizzas().size();j++){
+            
+            cout << orders[i].getPizzas()[i] << endl;
+        }
     }
-    
-    /*vector<Order> orders = order_service.retrieveAllOrders();
-    
-    for(int i = 0; i < order.getPizzas().size();i++){
-        cout << order.getPizzas()[i] << endl;
-    }*/
     
 }
 

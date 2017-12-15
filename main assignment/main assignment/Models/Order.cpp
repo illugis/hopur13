@@ -19,7 +19,18 @@ Order::Order(string name, int price){
     this->price = price;
 }
 
+string Order::getDeliveryPlaceName() const{
+    
+    return this->deliveryplace.getDeliveryPlaceName();
+}
+
+string Order::getName() const{
+    
+    return this->name;
+}
+
 vector<Pizza> Order::getPizzas() const{
+    
     return pizzas;
 }
 
@@ -220,6 +231,9 @@ void Order::write(ofstream& fout) const {
 
 void Order::read(ifstream& fin) {
     
+    pizzas.clear();
+    others.clear();
+    
     int nameCount;
     
     fin.read((char*)(&nameCount), sizeof(nameCount));
@@ -286,32 +300,32 @@ void Order::read(ifstream& fin) {
     
 }
 
-ostream& operator << (ostream& out, const Order& order){
+ostream& operator << (ostream& outs, const Order& order){
     
-    out << "Nafn: " << order.name << endl;
+    outs << "Nafn: " << order.name << endl;
     
-    out << "Pítsa/pítsur: " << endl;
+    outs << "Pítsa/pítsur: " << endl;
     for (unsigned int i = 0; i < order.pizzas.size(); i++) {
-        out << order.pizzas[i] << endl;
+        outs << order.pizzas[i] << endl;
     }
-    out << "Annað: " << endl;
+    outs << "Annað: " << endl;
     for (unsigned int i = 0; i < order.others.size(); i++) {
-        out << order.others[i] << endl;
+        outs << order.others[i] << endl;
     }
     
-    out << "Sent eða sótt: " << order.delivery << endl;
+    outs << "Sent eða sótt: " << order.delivery << endl;
     
-    out << "Er pöntun greidd? " << order.delivery << endl;
+    outs << "Er pöntun greidd? " << order.payment << endl;
     
-    out << "Afhendingarstaður: " << order.deliveryplace << endl;
+    outs << "Afhendingarstaður: " << order.deliveryplace << endl;
     
-    out << "Athugasemd: " << order.comment << endl;
+    outs << "Athugasemd: " << order.comment << endl;
     
-    return out;
+    return outs;
 }
 
-istream& operator >> (istream& in, Order& order){
+istream& operator >> (istream& ins, Order& order){
     
     
-    return in;
+    return ins;
 }

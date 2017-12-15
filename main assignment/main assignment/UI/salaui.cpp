@@ -43,7 +43,7 @@ void SalaUI::sala_menuUI() {
 
 void SalaUI::make_order() {
     
-    vector<Order> orders;
+    vector<Order> orders = order_service.retrieveAllOrders();
     Order ordertemp;
     
     string name, delivery, payment, comment;
@@ -55,7 +55,7 @@ void SalaUI::make_order() {
     do {
         cout << "Nafn: ";
         cin >> ws;
-        getline(cin, comment);
+        getline(cin, name);
         cout << endl;
         ordertemp.addName(name);
         
@@ -68,7 +68,7 @@ void SalaUI::make_order() {
                 cout << "--> ";
                 cin >> pizzaSelection;
                 if (pizzaSelection == '1') {
-                    ordertemp.addPizza(pizza);
+                    ordertemp.addPizza(make_pizza());
                 }
                 else if (pizzaSelection == '2') {
                     
@@ -125,6 +125,7 @@ void SalaUI::make_order() {
         }
         
         cout << "Heildarverð: ";
+        
         cout << endl;
     
         cout << "Sent eða sótt?" << endl;
@@ -158,23 +159,22 @@ void SalaUI::make_order() {
         }
         
         orders.push_back(ordertemp);
-        order_service.storeAllOrders(orders);
         cout << "Pöntun hefur verið skráð" << endl << endl;
         
         cout << "Skrá aðra pöntun?(y/n) ";
         cin >> loopSelection;
     }
     while (loopSelection == 'y');
+    order_service.storeAllOrders(orders);
+
 
 }
 
- void SalaUI::make_pizza() {
+Pizza SalaUI::make_pizza() {
  
      vector<Crust> crust = crust_service.retrieveAllCrust();
      vector<Topping> toppings = toppings_service.retrieveAllToppings();
-     //vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
  
-     vector<Pizza> pizza = pizza_service.retrieveAllPizzas();
      Pizza pizzatemp;
  
      int crustSelection = -1;
@@ -200,22 +200,11 @@ void SalaUI::make_order() {
             pizzatemp.addTopping(toppings[toppingSelection - 1]);
         }
      }
-     /*
-     int deliveryplaceSelection = -1;
-     cout << "Vinsamlegast veldu eftirfarandi nr. fyrir afhendingarstað" << endl;
-     for (unsigned int i = 0; i < deliveryplace.size(); i++) {
-         cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
-     }
-     cin >> deliveryplaceSelection;
      
-     if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
-         pizzatemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
-     }*/
-     
-     pizza.push_back(pizzatemp);
-     pizza_service.storeAllPizzas(pizza);
  
      cout << endl;
+    
+    return pizzatemp;
  
  }
 /*
