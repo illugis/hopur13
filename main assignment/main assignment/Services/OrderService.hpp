@@ -21,6 +21,9 @@ public:
     OrderService();
     void storeAllOrders(const vector<Order> &order);
     vector<Order> retrieveAllOrders();
+    
+    vector<Order> retrieveOrdersDelivery(string str);
+    vector<Order> retrieveOrderForName(string str, string name);
 };
 
 #endif /* OrderService_hpp */

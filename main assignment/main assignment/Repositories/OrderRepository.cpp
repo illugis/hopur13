@@ -37,7 +37,7 @@ vector<Order> OrderRepository::retrieveAllOrders() {
     Order order1;
     
     ifstream fin;
-    fin.open("order.dat", ios::binary);
+    fin.open("orders.dat", ios::binary);
     
     if (fin.is_open()) {
         int orderCount;
@@ -47,11 +47,73 @@ vector<Order> OrderRepository::retrieveAllOrders() {
         for (int i = 0; i < orderCount; i++) {
             order1.read(fin);
             order.push_back(order1);
-            cout << order[i] << endl;
         }
         
         fin.close();
     }
+    else{
+        cout << "Ekki hægt að opna skrá." << endl;
+    }
     
     return order;
 }
+
+vector<Order> OrderRepository::retrieveOrdersDelivery(string str) {
+    
+    vector<Order> order;
+    Order order1;
+    
+    ifstream fin;
+    fin.open("orders.dat", ios::binary);
+    
+    if (fin.is_open()) {
+        int orderCount;
+        
+        fin.read((char*)(&orderCount), sizeof(int));
+        
+        for (int i = 0; i < orderCount; i++) {
+            order1.read(fin);
+            if(order1.getDeliveryPlaceName() == str){
+                order.push_back(order1);
+            }
+        }
+        
+        fin.close();
+    }
+    else{
+        cout << "Ekki hægt að opna skrá." << endl;
+    }
+    
+    return order;
+}
+
+
+vector<Order> OrderRepository::retrieveOrderForName(string str, string name) {
+    
+    vector<Order> order;
+    Order order1;
+    
+    ifstream fin;
+    fin.open("orders.dat", ios::binary);
+    
+    if (fin.is_open()) {
+        int orderCount;
+        
+        fin.read((char*)(&orderCount), sizeof(int));
+        
+        for (int i = 0; i < orderCount; i++) {
+            order1.read(fin);
+            if(order1.getDeliveryPlaceName() == str && order1.getName() == name){
+                order.push_back(order1);
+            }
+        }
+        
+        fin.close();
+    }
+    else{
+        cout << "Ekki hægt að opna skrá." << endl;
+    }
+    
+    return order;
+}
+

@@ -108,7 +108,6 @@ ostream& operator << (ostream& out, const Pizza& pizza){
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         out << "Álegg " << i + 1 << ". " << pizza.toppings[i] << "kr." << endl;
     }
-    //out << pizza.deliveryplace << endl;
     
     
     return out;

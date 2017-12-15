@@ -21,3 +21,15 @@ vector<Order> OrderService::retrieveAllOrders() {
     
     return order_repo.retrieveAllOrders();
 }
+
+
+vector<Order> OrderService::retrieveOrdersDelivery(string str){
+    
+    return order_repo.retrieveOrdersDelivery(str);
+}
+
+vector<Order> OrderService::retrieveOrderForName(string str, string name){
+    
+    return order_repo.retrieveOrderForName(str, name);
+}
+
