@@ -100,10 +100,10 @@ istream& operator >> (istream& in, PizzaMenu& pizzamenu){
 ostream& operator << (ostream& out, const PizzaMenu& pizzamenu){
     
     out << pizzamenu.name << " ";
-    out << pizzamenu.price;
-    for (unsigned int i = 0; i < pizzamenu.toppings.size(); i++) {
+    out << pizzamenu.price << "kr.";
+    /*for (unsigned int i = 0; i < pizzamenu.toppings.size(); i++) {
         out << "Álegg " << i + 1 << ". " << pizzamenu.toppings[i] << "kr." << endl;
-    }
+    }*/
     
     
     return out;

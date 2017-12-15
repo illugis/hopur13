@@ -49,6 +49,11 @@ vector<Pizza> Order::getPizzas() const{
     return pizzas;
 }
 
+vector<PizzaMenu> Order::getPizzamenus() const{
+    
+    return pizzamenus;
+}
+
 void Order::addName(string name) {
     
     this->name = name;

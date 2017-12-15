@@ -34,8 +34,8 @@ void BaksturUI::baksturUI() {
     cin >> afhendingarstadur;
     cout << endl;
     
-    cout << "Listi yfir pantaðar pítsur:" << endl;
-    cout << "---------------------------" << endl;
+    cout << "Listi yfir pantaðar pítsur fyrir " << afhendingarstadur << ":" << endl;
+    cout << "---------------------------------------------" << endl;
     
     vector<Order> orders = order_service.retrievePizzasPlace(afhendingarstadur);
     
@@ -45,19 +45,35 @@ void BaksturUI::baksturUI() {
             cout << orders[i].getPizzas()[j] << endl;
         }
     }
+    for(int i = 0; i < orders.size();i++){
+        for(int j = 0; j < orders[i].getPizzamenus().size(); j++){
+            
+            cout << orders[i].getPizzamenus()[j] << endl;
+        }
+    }
+    cout << endl;
+    
     cout << "Sláðu inn nafn til að velja pöntun: ";
     string name;
-    cin >> name;
+    cin >> ws;
+    getline(cin, name);
     cout << endl;
     
     vector<Order> order = order_service.retrievePizzasForName(afhendingarstadur, name);
     
-    for(int i = 0; i < orders.size();i++){
-        for(int j = 0; j < orders[i].getPizzas().size();j++){
+    for(int i = 0; i < order.size();i++){
+        for(int j = 0; j < order[i].getPizzas().size(); j++){
             
-            cout << orders[i].getPizzas()[i] << endl;
+            cout << order[i].getPizzas()[j] << endl;
         }
     }
+    for(int i = 0; i < order.size();i++){
+        for(int j = 0; j < order[i].getPizzamenus().size(); j++){
+            
+            cout << order[i].getPizzamenus()[j] << endl;
+        }
+    }
+    cout << endl;
     
 }
 

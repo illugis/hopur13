@@ -71,6 +71,7 @@ public:
     void addComment(string comment);
     void addDeliveryPlace(DeliveryPlace deliveryplace);
     vector<Pizza> getPizzas() const;
+    vector<PizzaMenu> getPizzamenus() const;
     
     void writeName(ofstream& fout) const;
     void readName(ifstream& fin);

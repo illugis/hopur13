@@ -41,7 +41,8 @@ void AfhendingUI::afhendingUI(){
     
     cout << "Sláðu inn nafn til að velja pöntun: ";
     string name;
-    cin >> name;
+    cin >> ws;
+    getline(cin, name);
     cout << endl;
     
     vector<Order> order = order_service.retrieveOrderForName(afhendingarstadur, name);
