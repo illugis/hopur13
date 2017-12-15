@@ -43,13 +43,13 @@ void SalaUI::sala_menuUI() {
 
 void SalaUI::make_order() {
     
-    vector<Other> other = other_service.retrieveAllOther();
-    
     vector<Order> orders;
     Order ordertemp;
     
     string name, delivery, payment, comment;
     char selection = 'y';
+    char selection2 = 'z';
+    char pizzaSelection = '\0';
     char loopSelection = 'y';
     
     do {
@@ -59,35 +59,61 @@ void SalaUI::make_order() {
         cout << endl;
         ordertemp.addName(name);
         
-        
         while (selection == 'y') {
             cout << "Bæta við pítsu?(y/n) ";
             cin >> selection;
             if (selection == 'y') {
-                //ordertemp.addPizza
-                make_pizza();
+                cout << "[1] bæta við pítsu að eigin vali" << endl;
+                cout << "[2] bæta við pítsu af matseðli" << endl;
+                cout << "--> ";
+                cin >> pizzaSelection;
+                if (pizzaSelection == '1') {
+                    ordertemp.addPizza(pizza);
+                }
+                else if (pizzaSelection == '2') {
+                    
+                    vector<PizzaMenu> pizzamenus = pizzamenu_service.retrieveAllPizzaMenus();
+                    int pizzamenuSelection = -1;
+                    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir pítsu af matseðli" << endl;
+                    for (unsigned int i = 0; i < pizzamenus.size(); i++) {
+                        cout << "[" << i+1 << "] " << pizzamenus[i] << endl;
+                    }
+                    cin >> pizzamenuSelection;
+                        
+                    if (pizzamenuSelection > 0 && pizzamenuSelection <= (int)pizzamenus.size()) {
+                        ordertemp.addPizzaMenu(pizzamenus[pizzamenuSelection -1]);
+                    }
+                }
+                //make_pizza();
             }
         }
-        cout << "Bæta við öðru?(y/n) ";
-        cin >> selection;
-            
-        if (selection == 'y') {
-            
-            int otherSelection = -1;
-            while (otherSelection != 0) {
-                cout << "Vinsamlegast veldu eftirfarandi nr. fyrir annað (0 fyrir hætta)" << endl;
-                for (unsigned int i = 0; i < other.size(); i++) {
-                    cout << "[" << i+1 << "] " << other[i] << endl;
-                }
-                cin >> otherSelection;
+
+        
+        while (selection2 == 'z') {
+            cout << "Bæta við öðru?(y/n) ";
+            cin >> selection;
+            if (selection == 'y') {
                 
-                if(otherSelection > 0 && otherSelection <= (int)other.size()) {
-                    ordertemp.addOther(other[otherSelection -1]);
+                vector<Other> other = other_service.retrieveAllOther();
+                int otherSelection = -1;
+                while (otherSelection != 0) {
+                    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir annað (0 fyrir hætta)" << endl;
+                    for (unsigned int i = 0; i < other.size(); i++) {
+                        cout << "[" << i+1 << "] " << other[i] << endl;
+                    }
+                    cin >> otherSelection;
+                    
+                    if(otherSelection > 0 && otherSelection <= (int)other.size()) {
+                        ordertemp.addOther(other[otherSelection -1]);
+                    }
                 }
             }
+            
+            selection2 = 'x';
         }
         
         cout << "Heildarverð: ";
+        cout << endl;
     
         cout << "Sent eða sótt?" << endl;
         cin >> delivery;
@@ -113,6 +139,7 @@ void SalaUI::make_order() {
         cout << "Skrá athugasemd?(y/n) ";
         cin >> selection;
         if (selection == 'y') {
+            cout << "Athugasemd: ";
             cin >> ws;
             getline(cin, comment);
             ordertemp.addComment(comment);

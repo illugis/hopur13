@@ -33,27 +33,16 @@ using namespace std;
 class UmsjonUI {
     
 private:
-    Pizza pizza;
-    
-    Crust crust;
-    Topping topping;
-    Other other;
-    DeliveryPlace deliveryplace;
-    
+    void val_umsjonUI();
     vector<Crust> create_crust();
     vector<Topping> create_topping();
     vector<PizzaMenu> create_pizzamenu();
     vector<Other> create_other();
     vector<DeliveryPlace> create_deliveryplace();
-    
-    void val_umsjonUI();
-    void val_pizzaUI();
-    void val_menu_pizzaUI();
-    
-    //Pizza create_pizza();
-
-    PizzaService pizza_service;
-    
+    Crust crust;
+    Topping topping;
+    Other other;
+    DeliveryPlace deliveryplace;
     CrustService crust_service;
     ToppingsService toppings_service;
     PizzaMenuService pizzamenu_service;
@@ -61,6 +50,7 @@ private:
     DeliveryPlaceService deliveryplace_service;
     
 public:
+    //Gerir þessi smiður eitthvað?
     UmsjonUI();
     void umsjonUI();
     
