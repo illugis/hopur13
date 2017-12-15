@@ -146,3 +146,64 @@ vector<Order> OrderRepository::retrievePizzasPlace(string str) {
     return order;
 }
 
+
+vector<Order> OrderRepository::retrievePizzasForName(string str, string name) {
+    
+    vector<Order> order;
+    Order order1;
+    
+    ifstream fin;
+    fin.open("orders.dat", ios::binary);
+    
+    if (fin.is_open()) {
+        int orderCount;
+        
+        fin.read((char*)(&orderCount), sizeof(int));
+        
+        for (int i = 0; i < orderCount; i++) {
+            order1.read(fin);
+            if(order1.getDeliveryPlaceName() == str && order1.getName() == name){
+                order.push_back(order1);
+            }
+        }
+        
+        fin.close();
+    }
+    else{
+        cout << "Ekki hægt að opna skrá." << endl;
+    }
+    
+    return order;
+}
+
+
+bool OrderRepository::update_payment(const Order& order) {
+    
+    vector<Order> orderList;
+    Order order1;
+    
+    ifstream fin;
+    fin.open("orders.dat", ios::binary);
+    
+    if (fin.is_open()) {
+        int orderCount;
+        
+        fin.read((char*)(&orderCount), sizeof(int));
+        
+        for (int i = 0; i < orderCount; i++) {
+            order1.read(fin);
+            if(order1.getPayment() == "ogreidd"){
+                orderList.push_back(order1);
+                orderList[i].setPayment(order.getPayment());
+            }
+        }
+        
+        fin.close();
+    }
+    else{
+        cout << "Ekki hægt að opna skrá." << endl;
+    }
+    
+    return false;
+}
+

@@ -22,10 +22,12 @@ public:
     OrderRepository();
     void storeAllOrders(const vector<Order> &order);
     vector<Order> retrieveAllOrders();
+    bool update_payment(const Order& order);
     
     vector<Order> retrieveOrdersDelivery(string str);
     vector<Order> retrieveOrderForName(string str, string name);
     vector<Order> retrievePizzasPlace(string str);
+    vector<Order> retrievePizzasForName(string str, string name);
 };
 
 

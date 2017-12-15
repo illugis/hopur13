@@ -31,6 +31,9 @@ void Pizza::addDeliveryPlace(DeliveryPlace deliveryplace) {
     this->deliveryplace = deliveryplace;
 }
 
+vector<Topping> Pizza::getToppings() const{
+    return toppings;
+}
 
 Crust Pizza::getCrust() const{
     return this->crust;

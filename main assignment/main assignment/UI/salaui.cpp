@@ -125,7 +125,9 @@ void SalaUI::make_order() {
         }
         
         cout << "Heildarverð: ";
+        //cout << ordertemp.getCrust().getCrustPrice() << endl;
         
+        cout << ordertemp.getPrice();
         cout << endl;
     
         cout << "Sent eða sótt?" << endl;

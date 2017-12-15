@@ -27,12 +27,13 @@ private:
     string name;
     Pizza pizza;
     string other;
-    int price;
     string delivery;
     string payment;
     string comment;
+    int price;
     
     Crust crust;
+    Topping topping;
     
     DeliveryPlace deliveryplace;
     
@@ -40,6 +41,7 @@ private:
     
     vector<Pizza> pizzas;
     vector<PizzaMenu> pizzamenus;
+    vector<Topping> toppings;
     
     vector<Other> others;
     
@@ -59,6 +61,9 @@ public:
     
     string getDeliveryPlaceName() const;
     string getName() const;
+    Crust getCrust() const;
+    string getPayment() const;
+    void setPayment(const string payment);
     
     void addOther(Other other);
     void addDelivery(string delivery);

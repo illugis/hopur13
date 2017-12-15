@@ -38,3 +38,8 @@ vector<Order> OrderService::retrievePizzasPlace(string str){
     return order_repo.retrievePizzasPlace(str);
 }
 
+vector<Order> OrderService::retrievePizzasForName(string str, string name){
+    
+    return order_repo.retrievePizzasForName(str, name);
+}
+

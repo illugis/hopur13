@@ -19,9 +19,24 @@ Order::Order(string name, int price){
     this->price = price;
 }
 
+void Order::setPayment(const string payment){
+    
+    this->payment = payment;
+}
+
+string Order::getPayment() const{
+    
+    return this->payment;
+}
+
 string Order::getDeliveryPlaceName() const{
     
     return this->deliveryplace.getDeliveryPlaceName();
+}
+
+Crust Order::getCrust() const{
+    
+    return this->crust;
 }
 
 string Order::getName() const{
@@ -80,7 +95,29 @@ void Order::addDeliveryPlace(DeliveryPlace deliveryplace) {
 }
 
 int Order::getPrice() const{
-    return this->price;
+    
+    int crustPrice = 0;
+    for(int i = 0; i < pizzas.size(); i++){
+        crustPrice += pizzas[i].getCrust().getCrustPrice();
+    }
+    
+    int currentToppingPrice = 0;
+    
+    for(int i = 0; i < pizzas.size() ; i++){
+        for(int j = 0; j < pizzas[i].getToppings().size(); j++)
+        currentToppingPrice += pizzas[i].getToppings()[j].getToppingPrice();
+    }
+    
+    int currentOtherPrice = 0;
+    for(int i = 0; i < others.size(); i++){
+        currentOtherPrice += others[i].getOtherPrice();
+    }
+    //cout << currentOtherPrice << endl;
+    int totalPrice = crustPrice + currentToppingPrice + currentOtherPrice;
+    //cout << totalPrice << endl;
+    
+    return totalPrice;
+    
 }
 void Order::writeName(ofstream& fout) const{
     

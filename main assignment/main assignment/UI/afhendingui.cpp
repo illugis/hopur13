@@ -17,7 +17,15 @@ void AfhendingUI::afhendingUI(){
     
     cout << "AFHENDING" << endl;
     cout << "---------" << endl;
-    cout << "Vinsamlegast sláðu inn afhendingarstað:" << endl;
+    
+    vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
+    int deliveryplaceSelection = -1;
+    cout << "Afhendingarstaðir:" << endl;
+    for (unsigned int i = 0; i < deliveryplace.size(); i++) {
+        cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
+    }
+    
+    cout << "Vinsamlegast sláðu inn afhendingarstað:";
     string afhendingarstadur;
     cin >> afhendingarstadur;
     cout << "Listi af pöntunum fyrir " << afhendingarstadur << endl;

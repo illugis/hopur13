@@ -32,6 +32,7 @@ public:
     Crust getCrust() const;
     Topping getTopping()const;
     DeliveryPlace getDeliveryPlace() const;
+    vector<Topping> getToppings() const;
     
     void write(ofstream& fout) const;
     void read(ifstream& fin);

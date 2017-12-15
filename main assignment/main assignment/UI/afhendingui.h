@@ -11,6 +11,7 @@
 
 
 #include "OrderService.hpp"
+#include "DeliveryPlaceService.hpp"
 #include <iostream>
 
 using namespace std;
@@ -23,6 +24,7 @@ private:
     Order order;
     
     OrderService order_service;
+    DeliveryPlaceService deliveryplace_service;
 public:
     AfhendingUI();
     void afhendingUI();
