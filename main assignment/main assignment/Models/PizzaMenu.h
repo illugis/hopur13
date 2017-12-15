@@ -22,6 +22,7 @@ class PizzaMenu {
     
 private:
     string name;
+    int price;
     vector<Crust> crust;
     vector<Topping> toppings;
     

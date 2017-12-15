@@ -28,6 +28,11 @@ void Order::addName(string name) {
     this->name = name;
 }
 
+void Order::addCrust(Crust crust){
+    
+    this->crust = crust;
+}
+
 void Order::addPizza(Pizza pizza) {
     
     pizzas.push_back(pizza);

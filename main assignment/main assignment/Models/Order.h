@@ -11,6 +11,7 @@
 
 #include "Pizza.hpp"
 #include "PizzaMenu.h"
+#include "Crust.h"
 #include "Other.h"
 
 #include <iostream>
@@ -31,6 +32,8 @@ private:
     string payment;
     string comment;
     
+    Crust crust;
+    
     DeliveryPlace deliveryplace;
     
     vector<Order> orders;
@@ -49,6 +52,7 @@ public:
     //string getDestination() const;
     
     void addName(string name);
+    void addCrust(Crust crust);
     
     void addPizza(Pizza pizza);
     void addPizzaMenu(PizzaMenu pizzamenu);

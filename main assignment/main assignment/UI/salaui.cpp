@@ -83,6 +83,18 @@ void SalaUI::make_order() {
                     if (pizzamenuSelection > 0 && pizzamenuSelection <= (int)pizzamenus.size()) {
                         ordertemp.addPizzaMenu(pizzamenus[pizzamenuSelection -1]);
                     }
+                    
+                    vector<Crust> crust = crust_service.retrieveAllCrust();
+                    int crustSelection = -1;
+                    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir botn á pítsu" << endl;
+                    for (unsigned int i = 0; i < crust.size(); i++) {
+                        cout << "[" << i+1 << "] " << crust[i] << endl;
+                    }
+                    cin >> crustSelection;
+                    
+                    if(crustSelection > 0 && crustSelection <= (int)crust.size()) {
+                        ordertemp.addCrust(crust[crustSelection -1]);
+                    }
                 }
                 //make_pizza();
             }
@@ -160,7 +172,7 @@ void SalaUI::make_order() {
  
      vector<Crust> crust = crust_service.retrieveAllCrust();
      vector<Topping> toppings = toppings_service.retrieveAllToppings();
-     vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
+     //vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
  
      vector<Pizza> pizza = pizza_service.retrieveAllPizzas();
      Pizza pizzatemp;
