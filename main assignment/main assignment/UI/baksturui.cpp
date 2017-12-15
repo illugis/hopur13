@@ -20,6 +20,21 @@ void BaksturUI::baksturUI() {
     
     cout << "BAKSTUR" << endl;
     cout << "-------" << endl;
+    
+    vector<DeliveryPlace> deliveryplace = deliveryplace_service.retriveAllDeliveryPlaces();
+    int deliveryplaceSelection = -1;
+    cout << "Vinsamlegast veldu eftirfarandi nr. fyrir afhendingarstað" << endl;
+    for (unsigned int i = 0; i < deliveryplace.size(); i++) {
+        cout << "[" << i+1 << "] " << deliveryplace[i] << endl;
+    }
+    cin >> deliveryplaceSelection;
+    
+    if (deliveryplaceSelection > 0 && deliveryplaceSelection <= (int)deliveryplace.size()) {
+        
+        ordertemp.addDeliveryPlace(deliveryplace[deliveryplaceSelection - 1]);
+    }
+    
+    
     cout << "Vinsamlegast sláðu inn afhendingarstað: ";
     string afhendingarstadur;
     cin >> afhendingarstadur;

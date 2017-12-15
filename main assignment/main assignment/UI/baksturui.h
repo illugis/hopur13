@@ -11,6 +11,8 @@
 
 #include "PizzaService.h"
 #include "OrderService.hpp"
+#include "DeliveryPlace.hpp"
+#include "DeliveryPlaceService.hpp"
 
 #include <iostream>
 
@@ -21,6 +23,9 @@ class BaksturUI {
 private:
     PizzaService pizza_service;
     OrderService order_service;
+    
+    DeliveryPlaceService deliveryplace_service;
+    
     Order order;
     
 public:
